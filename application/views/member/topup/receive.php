@@ -2,7 +2,7 @@
     <div class="col-12 col-lg-8 col-xl-6">
         <div class="container" style="margin-bottom: 8rem;">
             <div class="app-container py-5">
-                <?php $this->load->view("tamplate/banner-nofiat"); ?>
+                <?php $this->load->view("tamplate/banner-nofiat-balance"); ?>
                 <div class="row d-flex justify-content-center">
                     <div class="col-12">
                         <div class="col-12 receive-note d-flex justify-content-center text-start my-4">
