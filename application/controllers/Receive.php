@@ -13,21 +13,23 @@ class Receive extends CI_Controller
 
     public function index()
     {
-        /*$currency = $_SESSION["currency"];
-        $url = URLAPI. "/v1/bank/getBank?currency=" . $currency;
-        $result = apitrackless($url);
-        print_r();
-        if ($result->code != 200) {
-            $body["bank"] = NULL;
-        } else {
-            $body["bank"] = $result->message;
-        }
-*/
-        $data['title'] = NAMETITLE . " - Add Receive";
+        $data['title'] = NAMETITLE . " - Top Up";
+
+        // print_r(json_encode($_SESSION));
+        // print_r($this->session->userdata['logged_status'])
+        // die;
+
+        // $data = array(
+        //     'title'     = NAMETITLE . " - Top Up",
+        //     'header'
+        // );
+
+        // print_r($this->session->role);
+        // die;
 
         $this->load->view('tamplate/header', $data);
-        $this->load->view('tamplate/navbar-top', $data);
-        $this->load->view('tamplate/navbar-bottom', $data);
+        $this->load->view('tamplate/navbar-top');
+        $this->load->view('tamplate/navbar-bottom');
         $this->load->view('member/topup/receive');
         $this->load->view('tamplate/footer');
     }
@@ -37,17 +39,59 @@ class Receive extends CI_Controller
         $currency = $_SESSION["currency"];
         $url = URLAPI . "/v1/trackless/bank/getBank?currency=" . $currency;
         $result = apitrackless($url);
+
         if ($result->code != 200) {
-            $body["bank"] = NULL;
+            $body['bank'] = NULL;
         } else {
-            $body["bank"] = $result->message;
+            $body['bank'] = $result->message;
         }
 
         $body["currency"] = $currency;
-        $data['title'] = NAMETITLE . " - Add Receive";
+        $data['title'] = NAMETITLE . " - Top Up";
+        
+        $this->load->view('tamplate/header', $data);
+        $this->load->view('tamplate/navbar-top');
+        $this->load->view('member/topup/localbank', $body);
+        $this->load->view('tamplate/footer');
+    }
+    
+    public function localbank_confirm()
+    {
+
+        $this->form_validation->set_rules('ucode', 'Unique Code', 'trim|required');
+        $this->form_validation->set_rules('amount', 'Amount', 'trim|required|greater_than[0]');
+        $this->form_validation->set_rules('confirm_amount', 'Confirm Amount', 'trim|required|greater_than[0]|matches[amount]');
+
+        if ($this->form_validation->run() == FALSE) {
+            $this->session->set_flashdata('failed', "<p style='color:black'>" . validation_errors() . "</p>");
+            redirect("receive/localbank");
+            return;
+        }
+
+        $input        = $this->input;
+        $ucode        = $this->security->xss_clean($input->post("ucode"));
+        $amount             = $this->security->xss_clean($input->post("amount"));
+        $name_circuit        = $this->security->xss_clean($input->post("name_circuit")); 
+        $number_circuit      = $this->security->xss_clean($input->post("number_circuit")); 
+        $routing_circuit        = $this->security->xss_clean($input->post("routing_circuit")); 
+        $address_circuit        = $this->security->xss_clean($input->post("address_circuit")); 
+        
+        $infolist = array(
+            'ucode'          => $ucode,
+            'amount'         => $amount,
+            'name_circuit'    => $name_circuit,
+            'name_circuit'    => $name_circuit,
+            'number_circuit'  => $number_circuit,
+            'routing_circuit' => $routing_circuit,
+            'address_circuit' => $address_circuit,
+        );
+
+        $data['title'] = NAMETITLE . " - Wallet to Wallet";
+        $body["data"] = $infolist;
 
         $this->load->view('tamplate/header', $data);
-        $this->load->view('member/topup/localbank', $body);
+        $this->load->view('tamplate/navbar-top');
+        $this->load->view('member/topup/localbank_confirm', $body);
         $this->load->view('tamplate/footer');
     }
 
@@ -66,7 +110,7 @@ class Receive extends CI_Controller
             $body["bank"] = $result->message;
         }
 
-        $data['title'] = NAMETITLE . " - Add Receive";
+        $data['title'] = NAMETITLE . " - Top Up";
 
         $this->load->view('tamplate/header', $data);
         $this->load->view('member/topup/interbank', $body);
@@ -84,7 +128,7 @@ class Receive extends CI_Controller
             $body["bank"] = $result->message;
         }
 
-        $data['title'] = NAMETITLE . " - Add Receive";
+        $data['title'] = NAMETITLE . " - Top Up";
 
         $this->load->view('tamplate/header', $data);
         $this->load->view('member/topup/cash', $body);

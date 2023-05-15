@@ -10,7 +10,7 @@ class MY_Security extends CI_Security {
     public function csrf_show_error()
     {
         if ($_SERVER['HTTP_HOST'] == 'localhost') {
-            $addurl = '/'.'speedybank.net/'; 
+            $addurl = '/'.'libertybank/'; 
         }else{
             $addurl = '/'; 
         }
