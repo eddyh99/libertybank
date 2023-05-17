@@ -98,10 +98,6 @@ line-height: 180%;
 color: rgba(255, 255, 255, 0.8);
 }
 
-
-
-
-
 /*--------------------------------------------------------------
 # Registrasi & Login
 --------------------------------------------------------------*/
@@ -602,6 +598,10 @@ color: rgba(255, 255, 255, 0.8);
   font-size: 40px;
 }
 
+.guide-wallet ol li {
+  margin-bottom: 10px;
+}
+
 
 /*--------------------------------------------------------------
 # Breadcrumbs
@@ -768,17 +768,17 @@ color: rgba(255, 255, 255, 0.8);
   width: 130px;
   height: 50px;
   font-size: 14px;
-  background: #0F4E97;
+  background: linear-gradient(88.92deg, #319CFF 0.54%, #B7DCFF 47.28%, #0B86F8 96.97%);
   box-shadow: 0px 15px 50px rgba(222, 95, 143, 0.12);
   border-radius: 99999px;
   border: 0px solid transparent;
   margin: auto;
-  color: white;
+  color: #000000;
 }
 
 .btn-unique-code:hover {
-  background-color: #0F4E97;
-  color: whitesmoke;
+  background: linear-gradient(88.92deg, #B7DCFF 0.54%, #0B86F8 47.28%, #0B86F8 96.97%);
+  color: #000000;
 }
 
 .text-findme {
@@ -3234,6 +3234,13 @@ color: #000000;
   background-clip: text;
 }
 
+.text-blue-freedy.linear {
+  background: linear-gradient(263.23deg, #319CFF 6.67%, #B7DCFF 70.3%, #0B86F8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .text-blue-freedy.black {
   color: #000 !important;
 }
@@ -3770,7 +3777,7 @@ color: #000000;
   }
 
   .content-freedy.circle ul li {
-    background: url(../img/speedybank/list-circle-blue.png) no-repeat left 5px !important;
+    background: url(../img/list-circle-blue.png) no-repeat left 5px !important;
     background-size: 15px !important;
     padding: 0 0 0 2rem;
     margin: 0;
@@ -3836,9 +3843,9 @@ color: #000000;
     line-height: 0;
     padding: 1.5rem 4rem;
     transition: 0.5s;
-    color: #fff;
+    color: #000000;
     border: 0px solid transparent;
-    background: #0F4E97;
+    background: linear-gradient(88.92deg, #319CFF 0.54%, #B7DCFF 47.28%, #0B86F8 96.97%);
     border-radius: 44px;
   }
 
@@ -5175,7 +5182,7 @@ color: #000000;
   }
 
   .freedy-accordion-item {
-    border: 6px solid #709fd7 !important;
+    border: 3px solid #0066FF !important;
     filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.25));
     border-radius: 10px;
   }
@@ -5280,12 +5287,12 @@ color: #000000;
   .freedy-accordion-body p {
     font-weight: 400;
     font-size: 12px;
-    line-height: 180%;
+    line-height: 254%;
     color: #000000;
   }
 
   .freedy-card {
-    border: 4px solid #00A7DC ;
+    border: 4px solid #0066FF ;
     border-radius: 5px;
     padding: 0.75rem;
     min-height: auto;
@@ -5323,7 +5330,7 @@ color: #000000;
 
 
   .freedy-card.piggy {
-    background: #84D3FF;
+    background: linear-gradient(88.92deg, #319CFF 0.54%, #B7DCFF 47.28%, #0B86F8 96.97%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
     border: none;
@@ -6120,7 +6127,7 @@ color: #000000;
   }
 
   .content-freedy.circle ul li {
-    background: url(../img/speedybank/list-circle-blue.png) no-repeat left 5px !important;
+    background: url(../img/list-circle-blue.png) no-repeat left 5px !important;
     background-size: 15px !important;
     padding: 0 0 0 2rem;
     margin: 0;
@@ -6186,9 +6193,9 @@ color: #000000;
     line-height: 0;
     padding: 1.5rem 4rem;
     transition: 0.5s;
-    color: #fff;
+    color: #000000;
     border: 0px solid transparent;
-    background: #0F4E97;
+    background: linear-gradient(88.92deg, #319CFF 0.54%, #B7DCFF 47.28%, #0B86F8 96.97%);
     border-radius: 44px;
   }
 
@@ -7581,7 +7588,7 @@ color: #000000;
   }
 
   .freedy-accordion-item {
-    border: 6px solid #709fd7 !important;
+    border: 3px solid #0066FF !important;
     filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.25));
     border-radius: 10px;
   }
@@ -7618,7 +7625,7 @@ color: #000000;
   .freedy-accordion-body p {
     font-weight: 400;
     font-size: 12px;
-    line-height: 180%;
+    line-height: 254%;
     color: #000000;
   }
 
@@ -7660,7 +7667,7 @@ color: #000000;
   }
 
   .freedy-card.piggy {
-    background: #84D3FF;
+    background: linear-gradient(88.92deg, #319CFF 0.54%, #B7DCFF 47.28%, #0B86F8 96.97%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
     border: none;
@@ -8421,7 +8428,7 @@ color: #000000;
   }
 
   .content-freedy.circle ul li {
-    background: url(../img/speedybank/list-circle-blue.png) no-repeat left 5px !important;
+    background: url(../img/list-circle-blue.png) no-repeat left 5px !important;
     background-size: 15px !important;
     padding: 0 0 0 2rem;
     margin: 0;
@@ -8487,9 +8494,9 @@ color: #000000;
     line-height: 0;
     padding: 1.5rem 4rem;
     transition: 0.5s;
-    color: #fff;
+    color: #000000;
     border: 0px solid transparent;
-    background: #0F4E97;
+    background: linear-gradient(88.92deg, #319CFF 0.54%, #B7DCFF 47.28%, #0B86F8 96.97%);
     border-radius: 44px;
   }
 
@@ -9870,7 +9877,7 @@ color: #000000;
   }
 
   .freedy-accordion-item {
-    border: 6px solid #709fd7 !important;
+    border: 3px solid #0066FF !important;
     filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.25));
     border-radius: 10px;
   }
@@ -9906,12 +9913,12 @@ color: #000000;
   .freedy-accordion-body p {
     font-weight: 400;
     font-size: 14px;
-    line-height: 180%;
+    line-height: 254%;
     color: #000000;
   }
 
   .freedy-card {
-    border: 4px solid #00A7DC ;
+    border: 4px solid #0066FF ;
     border-radius: 5px;
     padding: 0.75rem;
     min-height: 275px;
@@ -9948,7 +9955,7 @@ color: #000000;
   }
 
   .freedy-card.piggy {
-    background: #84D3FF;
+    background: linear-gradient(88.92deg, #319CFF 0.54%, #B7DCFF 47.28%, #0B86F8 96.97%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
     border: none;
@@ -11132,7 +11139,7 @@ color: #000000;
   }
 
   .content-freedy.circle ul li {
-    background: url(../img/speedybank/list-circle-blue.png) no-repeat left 5px !important;
+    background: url(../img/list-circle-blue.png) no-repeat left 5px !important;
     background-size: 15px !important;
     padding: 0 0 0 2rem;
     margin: 0;
@@ -11209,9 +11216,9 @@ color: #000000;
     line-height: 0;
     padding: 1.5rem 4rem;
     transition: 0.5s;
-    color: #fff;
+    color: #000000;
     border: 0px solid transparent;
-    background: #0F4E97;
+    background: linear-gradient(88.92deg, #319CFF 0.54%, #B7DCFF 47.28%, #0B86F8 96.97%);
     border-radius: 44px;
   }
 
@@ -12604,7 +12611,7 @@ color: #000000;
   }
 
   .freedy-accordion-item {
-    border: 6px solid #709fd7 !important;
+    border: 3px solid #0066FF !important;
     filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.25));
     border-radius: 10px;
   }
@@ -12640,12 +12647,12 @@ color: #000000;
   .freedy-accordion-body p {
     font-weight: 400;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 254%;
     color: #000000;
   }
 
   .freedy-card {
-    border: 4px solid #00A7DC ;
+    border: 4px solid  #0066FF;
     border-radius: 5px;
     padding: 0.75rem;
     min-height: 400px;
@@ -12683,7 +12690,7 @@ color: #000000;
 
 
   .freedy-card.piggy {
-    background: #84D3FF;
+    background: linear-gradient(88.92deg, #319CFF 0.54%, #B7DCFF 47.28%, #0B86F8 96.97%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
     border: none;
@@ -13204,7 +13211,7 @@ color: #000000;
 
 .tbl-piggy-service tr td,
 .tbl-piggy-service tr th {
-  border: 2px solid #0F4E97;
+  border: 4px solid #0066FF;
 }
 
 .text-blackgr {
@@ -13321,7 +13328,7 @@ color: #000000;
 }
 
 .in-crypto .box-crypto {
-  background: #BCE7FF;
+  background: linear-gradient(88.92deg, #319CFF 0.54%, #B7DCFF 47.28%, #0B86F8 96.97%);
   border: 1px solid #0F4E97;
   border-radius: 10px;
   padding: 1rem;
@@ -13339,7 +13346,7 @@ color: #000000;
 }
 
 .box-p-crypto {
-  background: #BCE7FF;
+  background: linear-gradient(97.98deg, #319CFF 8.71%, #AED8FF 42.93%, #0B86F8 122.46%);
   border: 1px solid #0F4E97;
   padding: 1rem;
   margin: 2rem 0;

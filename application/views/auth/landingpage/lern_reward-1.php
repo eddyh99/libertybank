@@ -13,7 +13,7 @@
                         </div>
                     </div>
                     <div class="icon">
-                        <img src="<?=base_url()?>assets/img/speedybank/icon-service-1.png" alt="icon">
+                        <img src="<?=base_url()?>assets/img/icon-service-1.svg" alt="icon">
                     </div>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                         </div>
                     </div>
                     <div class="icon">
-                        <img src="<?=base_url()?>assets/img/speedybank/icon-service-2.png" alt="icon">
+                        <img src="<?=base_url()?>assets/img/icon-service-2.svg" alt="icon">
                     </div>
                 </div>
             </div>
@@ -43,13 +43,13 @@
                         </div>
                         <div class="bot">
                             <p>
-                                Invite people/companies to register on <span translate="no"> SpeedyBank </span>
+                                Invite people/companies to register on <span translate="no"> LibertyBank </span>
                                 using your link
                             </p>
                         </div>
                     </div>
                     <div class="icon">
-                        <img src="<?=base_url()?>assets/img/speedybank/icon-service-3.png" alt="icon">
+                        <img src="<?=base_url()?>assets/img/icon-service-3.svg" alt="icon">
                     </div>
                 </div>
             </div>
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                     <div class="icon">
-                        <img src="<?=base_url()?>assets/img/speedybank/icon-service-4.png" alt="icon">
+                        <img src="<?=base_url()?>assets/img/icon-service-4.svg" alt="icon">
                     </div>
                 </div>
             </div>

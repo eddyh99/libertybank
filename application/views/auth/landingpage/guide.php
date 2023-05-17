@@ -5,7 +5,7 @@
             <div class="col-12">
                 <div class="link-back p-0">
                     <a href="<?= base_url() ?>#guide">
-                        <img src="<?= base_url() ?>assets/img/speedybank/back-link.png" alt="">
+                        <img src="<?= base_url() ?>assets/img/back-link.png" alt="">
                     </a>
                 </div>
             </div>
@@ -26,36 +26,56 @@
             <!-- Start Wallet -->
             <?php if ($guide == 1) { ?>
                 <div class="col-12 my-5 ">
+                    <div class="d-flex justify-content-center">
+                        <img src="<?= base_url()?>assets/img/icon-guide-1.svg" alt="img">
+                    </div>
                     <div class="logo-text wallet text-center">
                         <span class="fw-bolder text-blue-freedy f-hahmlet py-3">Wallet</span>
                     </div>
                 </div>
                 <div class="position-relative mb-0 mb-lg-5">
                     <div class="position-absolute element-banking d-none d-lg-block">
-                        <svg width="111" height="349" viewBox="0 0 111 349" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M-195 4.99999C-195 2.23857 -192.761 0 -190 0H106C108.761 0 111 2.23858 111 5V344C111 346.761 108.761 349 106 349H-190C-192.761 349 -195 346.761 -195 344V4.99999Z" fill="#0F4E97"/>
-                        </svg>
+                    <svg width="111" height="349" viewBox="0 0 111 349" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M-195 4.99999C-195 2.23857 -192.761 0 -190 0H106C108.761 0 111 2.23858 111 5V344C111 346.761 108.761 349 106 349H-190C-192.761 349 -195 346.761 -195 344V4.99999Z" fill="url(#paint0_linear_104_17080)"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_104_17080" x1="-195" y1="247.208" x2="132.905" y2="241.764" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#319CFF"/>
+                        <stop offset="0.444301" stop-color="#B7DCFF"/>
+                        <stop offset="0.916667" stop-color="#0B86F8"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
+
                     </div>
                     <div class="position-absolute element-banking right d-none d-lg-block">
                         <svg width="106" height="349" viewBox="0 0 106 349" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="306" height="349" rx="5" fill="#0F4E97"/>
+                            <rect width="306" height="349" rx="5" fill="url(#paint0_linear_104_17079)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_104_17079" x1="5.08901e-08" y1="247.208" x2="327.905" y2="241.764" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#319CFF"/>
+                            <stop offset="0.444301" stop-color="#B7DCFF"/>
+                            <stop offset="0.916667" stop-color="#0B86F8"/>
+                            </linearGradient>
+                            </defs>
                         </svg>
+
                     </div>
                     <div class="container p-r mb-5 pb-5">
                         <div class="row gx-0 features-text">
                             <div class="col-12 col-lg-7 mx-auto ">
                                 <div class="content-freedy text-center">
                                     <h3 class="d-inline-block p-r f-hahmlet text-black">
-                                        The Importance of the <span class="text-blue-freedy"> Unique Code </span>
+                                        The Importance of the <span class="text-blue-freedy"> Short Code </span>
                                     </h3>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-7 mx-auto text-center mt-4 f-jakarta">
                                 <p>
-                                    Your wallet is identified through the ‘’Unique Code’’ <br> (you can find it on the homepage of your  wallet ). You have to use your Unique Code in order to top up your wallet and receive incoming transfers.
+                                    Your wallet is identified through the ‘’Short Code’’ <br> (you can find it on the homepage of your  wallet ). <br>
+                                    You have to use your Short Code in order to top up your wallet and receive incoming transfers.
                                 </p>
                                 <p >
-                                    <span translate="no"> SpeedyBank </span> offers the possibility of making bank transfers, directly from your wallet, to any  bank accounts, even not under your name,without any documentation required and anonymously.
+                                    <span translate="no"> LibertyBank </span> offers the possibility of making bank transfers, directly from your wallet, to any  bank accounts, even not under your name,without any documentation required and anonymously.
                                 </p>
                             </div>
                         </div>
@@ -129,7 +149,7 @@
             <?php if ($guide == 2) { ?>
                 <div class="col-12 my-5">
                     <div class="logo-text text-center features-text">
-                        <img src="<?= base_url() ?>assets/img/speedybank/iconin-guide-2.png" alt="icon-2">
+                        <img src="<?= base_url() ?>assets/img/icon-guide-2.svg" alt="icon-2">
                         <span class="fw-bolder title-top-header text-blue-freedy f-hahmlet">Capital Exportation</span>
                     </div>
                 </div>
@@ -137,8 +157,8 @@
                     <div class="col-12 col-lg-8 text-center mb-5 mx-auto">
                         <p class="f-jakarta">
                             Given the increasingly stringent and restrictive regulations on international bank transfers,
-                            <span translate="no"> SpeedyBank </span> offers a simple, risk-free and 100% legal solution.
-                            The user who wants to send capital abroad will have to open a <span translate="no"> SpeedyBank
+                            <span translate="no"> LibertyBank </span> offers a simple, risk-free and 100% legal solution. <br>
+                            The user who wants to send capital abroad will have to open a <span translate="no"> LibertyBank
                             </span> account and will
                             have to carry out the following procedure to remain in the legality and away from tax
                             assessments:
@@ -180,10 +200,10 @@
                     <div class="col-12 text-center mb-5 features-text">
                         <h3 class="text-dark f-hahmlet fw-bold">How we make this service possible?</h3>
                         <div class="col-12 col-md-8 mx-auto my-4">
-                            <img src="<?= base_url() ?>assets/img/speedybank/img-13.png" alt="" class="img-fluid">
+                            <img src="<?= base_url() ?>assets/img/img-13.svg" alt="logo" class="img-fluid">
                         </div>
                         <p class="col-12 col-lg-9 mx-auto f-jakarta">
-                            <span translate="no"> SpeedyBank, </span> making use of the licensee company's capitals, partners and offices, in order to respect the laws in force on the matter, will not carry out an international transfer but will send a national transfer from the current account of the country of destination to the current account required by the sender, in the same country, carrying out an internal clearing only afterwards (the internal clearing procedure is 100% legal).
+                            <span translate="no"> LibertyBank, </span> making use of the licensee company's capitals, partners and offices, in order to respect the laws in force on the matter, will not carry out an international transfer but will send a national transfer from the current account of the country of destination to the current account required by the sender, in the same country, carrying out an internal clearing only afterwards (the internal clearing procedure is 100% legal).
                         </p>
                     </div>
                 </div>
@@ -194,12 +214,12 @@
             <?php if ($guide == 3) { ?>
                 <div class="col-12 my-5 features-text">
                     <div class="logo-text text-center">
-                        <img src="<?= base_url() ?>assets/img/speedybank/iconin-guide-3.png" alt="">
-                        <span class="fw-bold title-top-header f-hahmlet text-blue-freedy mt-4">Business Trips</span>
+                        <img src="<?= base_url() ?>assets/img/icon-guide-3.svg" alt="icon">
+                        <span class="fw-bold title-top-header f-hahmlet text-blue-freedy mt-4">During trips</span>
                     </div>
                 </div>
                 <div class="col-12 mb-5 text-center  features-text">
-                    <h3 class="fw-semibold f-hahmlet">With <span translate="no"> Speedybank </span> your money travels with you.</h3>
+                    <h3 class="fw-semibold f-hahmlet">With <span translate="no"> LibertyBank </span> your money travels with you.</h3>
                     <p class="f-jakarta col-12 col-lg-7 mx-auto mt-3">Follow few easy steps to instant convert FIAT currencies and make easy payments from wherever
                         you want
                     </p>
@@ -208,7 +228,7 @@
                 <div class="col-12 mb-5">
                     <div class="d-flex flex-column flex-md-row flex-wrap justify-content-center">
                         <div class="col-12 col-md-6 col-lg-3 text-center px-2 py-2">
-                            <h5 class="card-title my-3 text-blue-freedy fw-bold ">Step 1</h5>
+                            <h5 class="card-title my-3 text-blue-freedy linear fw-bold ">Step 1</h5>
                             <div class="card freedy-card text-center">
                                 <div class="card-body">
                                     <p class="card-text">
@@ -224,7 +244,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-3 text-center px-2 py-2">
-                            <h5 class="card-title my-3 text-blue-freedy fw-bold">Step 2</h5>
+                            <h5 class="card-title my-3 text-blue-freedy linear fw-bold">Step 2</h5>
                             <div class="card freedy-card text-center">
                                 <div class="card-body">
                                     <p class="card-text">
@@ -238,7 +258,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-3 text-center px-2 py-2">
-                            <h5 class="card-title my-3 text-blue-freedy fw-bold">Step 3</h5>
+                            <h5 class="card-title my-3 text-blue-freedy linear fw-bold">Step 3</h5>
                             <div class="card freedy-card text-center">
                                 <div class="card-body">
                                     <p class="card-text">
@@ -254,7 +274,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-3 text-center px-2 py-2">
-                            <h5 class="card-title my-3 text-blue-freedy fw-bold">Step 4</h5>
+                            <h5 class="card-title my-3 text-blue-freedy linear fw-bold">Step 4</h5>
                             <div class="card freedy-card text-center">
                                 <div class="card-body">
                                     <p class="card-text">
@@ -276,7 +296,7 @@
             <?php if ($guide == 4) { ?>
                 <div class="col-12 my-5">
                     <div class="logo-text text-center">
-                        <img src="<?= base_url() ?>assets/img/speedybank/iconin-guide-4.png" alt="">
+                        <img src="<?= base_url() ?>assets/img/icon-guide-4.svg" alt="icon">
                         <span class="f-hahmlet fw-bold text-blue-freedy">Daily use</span>
                     </div>
                 </div>
@@ -284,7 +304,7 @@
                     <div class="row">
                         <div class="col-12 col-md-8 features-text">
                             <p class="f-jakarta">
-                                The wallet functions of <span translate="no"> SpeedyBank </span> are suitable for all daily
+                                The wallet functions of <span translate="no"> LibertyBank </span> are suitable for all daily
                                 payments, even for small
                                 amounts; everywhere in the world.
                             </p>
@@ -304,7 +324,7 @@
                             </div>
                         </div>
                         <div class="col-4 d-none d-md-grid">
-                            <img src="<?= base_url() ?>assets/img/speedybank/img-12.png" alt="" class="img-fluid">
+                            <img src="<?= base_url() ?>assets/img/img-14.svg" alt="icon" class="img-fluid">
                         </div>
                     </div>
                 </div>
@@ -316,20 +336,36 @@
                 <div class="col-12 mt-5"></div>
                 <div class="position-relative mt-5 mb-0 mb-lg-5">
                     <div class="position-absolute element-banking d-none d-lg-block">
-                        <svg width="109" height="500" viewBox="0 0 109 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M-225 4.99999C-225 2.23857 -222.761 0 -220 0H104C106.761 0 109 2.23858 109 5V559C109 561.761 106.761 564 104 564H-220C-222.761 564 -225 561.761 -225 559V4.99999Z" fill="#0F4E97"/>
+                        <svg width="109" height="517" viewBox="0 0 109 517" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M-225 4.99999C-225 2.23856 -222.761 0 -220 0H104C106.761 0 109 2.23858 109 5V512C109 514.761 106.761 517 104 517H-220C-222.761 517 -225 514.761 -225 512V4.99999Z" fill="url(#paint0_linear_104_16354)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_104_16354" x1="-225" y1="366.208" x2="132.954" y2="361.83" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#319CFF"/>
+                            <stop offset="0.444301" stop-color="#B7DCFF"/>
+                            <stop offset="0.916667" stop-color="#0B86F8"/>
+                            </linearGradient>
+                            </defs>
                         </svg>
-
                     </div>
                     <div class="position-absolute element-banking right d-none d-lg-block">
-                        <svg width="112" height="500" viewBox="0 0 112 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="348" height="500" rx="5" fill="#0F4E97"/>
+                        <svg width="109" height="517" viewBox="0 0 109 517" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M-225 4.99999C-225 2.23856 -222.761 0 -220 0H104C106.761 0 109 2.23858 109 5V512C109 514.761 106.761 517 104 517H-220C-222.761 517 -225 514.761 -225 512V4.99999Z" fill="url(#paint0_linear_104_16354)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_104_16354" x1="-225" y1="366.208" x2="132.954" y2="361.83" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#319CFF"/>
+                            <stop offset="0.444301" stop-color="#B7DCFF"/>
+                            <stop offset="0.916667" stop-color="#0B86F8"/>
+                            </linearGradient>
+                            </defs>
                         </svg>
                     </div>
                     <div class="container p-r mb-5 pb-5">
                         <div class="row gx-0">
                             <div class="col-12 col-lg-7 mx-auto ">
                                 <div class="content-freedy text-center">
+                                    <div>
+                                        <img src="<?= base_url()?>assets/img/icon-guide-5.svg" alt="icon">
+                                    </div>
                                     <h3 class="d-inline-block p-r f-hahmlet text-blue-freedy">
                                         Buy and sell crypto using Fiat currencies <span translate="no"> ‘’Trade-Off </span> Platform’’
                                     </h3>
@@ -337,14 +373,14 @@
                             </div>
                             <div class="col-12 col-lg-9 mx-auto text-center mt-4 features-text">
                                 <p class="text-black f-jakarta">
-                                    <span translate="no"> SpeedyBank </span> offers the possibility to buy and sell cryptocurrencies using FIAT, directly from any FIAT balance of your <span translate="no"> SpeedyBank </span>  wallet.
+                                    <span translate="no"> LibertyBank </span> offers the possibility to buy and sell cryptocurrencies using FIAT, directly from any FIAT balance of your <span translate="no"> LibertyBank </span>  wallet.
                                     <br>
-                                    <span translate="no"> SpeedyBank </span> also gives the possibility to withdraw
+                                    <span translate="no"> LibertyBank </span> also gives the possibility to withdraw
                                     your funds by converting them INTO ANY FIAT CURRENCY; after conversion you can send your funds to any bank account, even if it is not under your name,
                                     thanks to the integrated <span translate="no"> trade-off </span> platform.
                                 </p>
                                 <p class="text-black f-jakarta">
-                                    On <span translate="no"> SpeedyBank, </span> being a trade-off platform,  the ‘’Buy’’ and ‘’Sell’’ orders are just  ‘’LIMIT’’ orders.
+                                    On <span translate="no"> LibertyBank, </span> being a trade-off platform,  the ‘’Buy’’ and ‘’Sell’’ orders are just  ‘’LIMIT’’ orders.
                                 </p>
                             </div>
                         </div>
@@ -356,23 +392,23 @@
                     <div class="col-12 text-center mb-5">
                         <h3 class="fw-bold text-blue-freedy f-hahmlet">How to top up crypto wallet</h3>
 
-                        <p class="mt-3 f-jakarta">In order to topup your <span translate="no"> Speedybank </span> crypto wallet follow the procedure below :</p>
+                        <p class="mt-3 f-jakarta">In order to topup your <span translate="no"> LibertyBank </span> crypto wallet follow the procedure below :</p>
 
                     </div>
                     <div class="d-flex flex-row justify-content-center flex-wrap">
                         <div class="in-crypto">
                             <span>Step 1</span>
                             <div class="box-crypto">
-                                <p class="mb-3">Log in to your <b class="fw-semibold translate="no"> SpeedyBank </b> wallet and select
+                                <p class="mb-3">Log in to your <b class="fw-semibold" translate="no"> LibertyBank </b> wallet and select
                                     crypto</p>
-                                <img class="my-auto img-fluid" src="<?= base_url() ?>assets/img/speedybank/crypto-1.png" alt="crypto-1">
+                                <img class="my-auto img-fluid" src="<?= base_url() ?>assets/img/crypto-1.svg" alt="crypto-1">
                             </div>
                         </div>
                         <div class="in-crypto">
                             <span>Step 2</span>
                             <div class="box-crypto">
-                                <p class="mb-3">Click top up button</p>
-                                <img class="my-auto img-fluid" src="<?= base_url() ?>assets/img/speedybank/crypto-2.png" alt="">
+                                <p class="mb-3">Click top up <br> button</p>
+                                <img class="my-auto img-fluid" src="<?= base_url() ?>assets/img/crypto-2.svg" alt="">
                             </div>
                         </div>
                         <div class="in-crypto">
@@ -386,7 +422,7 @@
                             <span>Step 4</span>
                             <div class="box-crypto">
                                 <p class="mb-3">After clicking convert make sure that all data are correct and then click
-                                    on the button confirm</p>
+                                    on the confirm button</p>
                             </div>
                         </div>
                         <div class="in-crypto">
@@ -423,7 +459,7 @@
                             <span>Step 1</span>
                             <div class="box-crypto">
                                 <p class="mb-3">From your wallet, in crypto section, click the button withdraw</p>
-                                <img class="my-auto img-fluid" src="<?= base_url() ?>assets/img/speedybank/crypto-3.png" alt="">
+                                <img class="my-auto img-fluid" src="<?= base_url() ?>assets/img/crypto-3.svg" alt="icon">
                             </div>
                         </div>
                         <div class="in-crypto">
@@ -490,7 +526,7 @@
             <?php if ($guide == 6) { ?>
                 <div class="col-12 my-5">
                     <div class="logo-text text-center">
-                        <img src="<?= base_url() ?>assets/img/speedybank/iconin-guide-6.png" alt="">
+                        <img src="<?= base_url() ?>assets/img/icon-guide-6.svg" alt="icon">
                         <span class="f-hahmlet fw-bolder text-blue-freedy">Search</span>
                     </div>
                 </div>
@@ -498,11 +534,11 @@
                     <div class="row">
                         <div class="col-12 col-md-6 my-auto features-text">
                             <p class="f-jakarta px-5">With this function integrated into your wallet, you will be able to see all the activities
-                                that accept <span translate="no"> SpeedyBank </span> as a collection and payment system.
+                                that accept <span translate="no"> LibertyBank </span> as a collection and payment system.
                             </p>
                         </div>
                         <div class="col-6 d-none d-md-grid mx-auto">
-                            <img src="<?= base_url() ?>assets/img/speedybank/img-14.png" alt="" class="img-fluid">
+                            <img src="<?= base_url() ?>assets/img/img-15.svg" alt="img" class="img-fluid">
                         </div>
                     </div>
                 </div>
@@ -522,14 +558,14 @@
                 <div class="col-12 mb-5">
                     <div class="row features-text d-flex align-items-start">
                         <div class="col-12 col-md-6 text-md-start">
-                            <p class="f-jakarta"><span translate="no"> SpeedyBank </span> allows you to increase the visibility of your business
+                            <p class="f-jakarta"><span translate="no"> LibertyBank </span> allows you to increase the visibility of your business
                                 by including it in the
                                 search section that will be in every single wallet of all the users.
                                 <br>
                                 In this way your company will be easily accessible and traceable by all users who use
-                                <span translate="no"> SpeedyBank </span> for daily payments.
+                                <span translate="no"> LibertyBank </span> for daily payments.
                             </p>
-                            <h6 class="fw-bolder f-hahmlet mt-5 " style="color: #1D003F;">
+                            <h6 class="fw-bolder f-hahmlet mt-5 " style="color: #0066FF;">
                                 START TO APPLY NOW FOR FIND ME SERVICE
                             </h6>
                             <form id="form-input-unique-code" action="<?=base_url()?>link/getref" method="post" class="w-100 my-3">
@@ -568,7 +604,7 @@
                         </div>
                             
                         <div class="col-6 d-none d-md-block mx-auto">
-                            <img src="<?= base_url() ?>assets/img/speedybank/img-15.png" alt="" class="img-fluid">
+                            <img src="<?= base_url() ?>assets/img/img-17.svg" alt="img" class="img-fluid">
                         </div>
                         
                         <div class="d-none d-md-block col-12 col-lg-10 features-text mt-4">
@@ -581,7 +617,7 @@
                             </p>
 
                             <p class="fw-semibold f-jakarta text-decoration-underline">
-                                    contact@SpeedyBank.com
+                                    contact@libertybank.com
                             </p>
                         </div>
                     </div>
@@ -594,7 +630,7 @@
             <?php if ($guide == 8) { ?>
                 <div class="col-12 my-5">
                     <div class="logo-text text-center features-text">
-                        <img src="<?= base_url() ?>assets/img/speedybank/iconin-guide-8.png" alt="">
+                        <img src="<?= base_url() ?>assets/img/icon-guide-8.svg" alt="icon">
                         <span class="f-hahmlet title-top-header fw-bolder text-blue-freedy mt-4">Collections and Payments</span>
                     </div>
                 </div>
@@ -603,7 +639,7 @@
                         <div class="row features-text mx-auto">
                             <div class="col-12 col-md-7">
                                 <p class="f-jakarta">
-                                    <span translate="no"> SpeedyBank </span> offers your company, a multi-currency collection
+                                    <span translate="no"> LibertyBank </span> offers your company, a multi-currency collection
                                     and payment system that
                                     can
                                     be easily integrated into your e-commerce :
@@ -613,7 +649,7 @@
                                         <ul class="ps-0 f-jakarta">
                                             <li class="ali text-black">Integration is free of charge</li>
                                             <li class="ali text-black">No monthly and no annual fees</li>
-                                            <li class="ali text-black">Collections in real time from users of the <span translate="no"> TracklessBank </span> circuit
+                                            <li class="ali text-black">Collections in real time from users of the <span translate="no"> LibertyBank </span> circuit
                                             </li>
                                             <li class="ali text-black">Cheaper than credit cards</li>
                                             <li class="ali text-black">Reception and sending of national and international bank transfers at the lowest rates on the market</li>
@@ -628,7 +664,7 @@
                             </div>
 
                             <div class="col-5 d-none d-md-block ">
-                                <img src="<?= base_url() ?>assets/img/speedybank/img-23.png" alt="" class="img-fluid">
+                                <img src="<?= base_url() ?>assets/img/img-16.svg" alt="img" class="img-fluid">
                             </div>
                             <div class="col-12 features-text">
                                 <h4 class="text-dark f-jakarta">Request the service by contacting : ........@trackless.com</h4>
