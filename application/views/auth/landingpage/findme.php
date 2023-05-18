@@ -32,7 +32,7 @@
                     <div class="col-12 mb-5 pb-5">
                         <div class="link-back p-0">
                             <a href="<?= base_url(); ?>link/guide?guide=<?= base64_encode('7')?>">
-                                <img src="<?= base_url() ?>assets/img/speedybank/back-link.png" alt="speedybank/back-link">
+                                <img src="<?= base_url() ?>assets/img/back-link.png" alt="back-link">
                             </a>
                         </div>
                     </div>
@@ -73,14 +73,14 @@
                       <!-- End Select Region  -->
             
                       <div class="d-flex justify-content-center align-items-center">
-                            <button type="submit" class="btn-unique-code mx-auto d-block btn my-3">
-                                <div class="circle-btn-unique-code">
-                                    <i class="ri-arrow-right-line fs-4"></i>
-                                </div>
-                                <div class="pt-2 fw-semibold text-black">
-                                    next
-                                </div>
-                            </button>
+                        <button type="submit" class="btn-unique-code d-flex justify-content-center align-items-center btn my-3">
+                            <span class="mx-3">
+                                Next
+                            </span>
+                            <div class="circle-btn-unique-code flex justify-content-center">
+                                <i class="ri-arrow-right-line fs-4"></i>
+                            </div>
+                        </button>
                       </div>
             
             
@@ -100,7 +100,7 @@
                     <div class="col-12 mb-5 pb-5">
                         <div class="link-back p-0">
                             <a href="<?= base_url(); ?>link/findme?findme=<?= base64_encode('1')?>">
-                                <img src="<?= base_url() ?>assets/img/speedybank/back-link.png" alt="speedybank/back-link">
+                                <img src="<?= base_url() ?>assets/img/back-link.png" alt="back-link">
                             </a>
                         </div>
                     </div>
@@ -152,12 +152,12 @@
                       <!-- End Other Category  -->
             
                       <div class="d-flex justify-content-center align-items-center">
-                        <button type="submit" class="btn-unique-code mx-auto d-block btn my-3">
-                            <div class="circle-btn-unique-code">
+                        <button type="submit" class="btn-unique-code d-flex justify-content-center align-items-center btn my-3">
+                            <span class="mx-3">
+                                Next
+                            </span>
+                            <div class="circle-btn-unique-code flex justify-content-center">
                                 <i class="ri-arrow-right-line fs-4"></i>
-                            </div>
-                            <div class="pt-2 fw-semibold text-black">
-                                next
                             </div>
                         </button>
                       </div>
@@ -178,7 +178,7 @@
                     <div class="col-12 mb-5 pb-5">
                         <div class="link-back p-0">
                             <a href="<?= base_url(); ?>link/findme?findme=<?= base64_encode('1')?>">
-                                <img src="<?= base_url() ?>assets/img/speedybank/back-link.png" alt="">
+                                <img src="<?= base_url() ?>assets/img/back-link.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -219,7 +219,7 @@
                                 <li>Paste on our form "Google maps"</li>
                               </ol>
                               <div class="d-flex justify-content-center">
-                                <img class="img-fluid" src="<?= base_url(); ?>assets/img/speedybank/sharemaps.png" alt="sharemaps">
+                                <img class="img-fluid" src="<?= base_url(); ?>assets/img/sharemaps.png" alt="sharemaps">
                               </div>
                             </div>
                           </div>
@@ -239,7 +239,7 @@
                           </div>
                           <div class="row  mt-3">
                             <div class="col-12 d-flex flex-column flex-sm-row">
-                              <img id="image-container" src="<?= base_url()?>assets/img/speedybank/preview_image.png"/>
+                              <img id="image-container" src="<?= base_url()?>assets/img/preview_image.png"/>
                               <span class="p-4 fw-bolder">
                                 <p class="text-findme text-start">*Maximum 1MB</p>
                                 <p class="text-findme text-start">*png, jpg, jpeg</p>
@@ -253,7 +253,7 @@
             
                       <div class="text-center mb-5">
                           <button type="submit"
-                              class="btn-footer-signin mt-2 scrollto d-inline-flex align-items-center justify-content-center align-self-center f-lexend px-5 link-lp">
+                              class="btn-footer-signin mt-2 scrollto d-inline-flex align-items-center justify-content-center align-self-center f-lexend px-5 link-lp fw-bold">
                               <span>Confirm</span>
                           </button>
                       </div>

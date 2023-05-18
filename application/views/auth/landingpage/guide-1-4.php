@@ -2,9 +2,9 @@
     <div class="col-12 mb-3">
         <div class="row">            
             <div class="col-4 m-auto d-none d-md-grid">
-                <img src="<?= base_url() ?>assets/img/speedybank/img-11.png" alt="" class="img-fluid">
+                <img src="<?= base_url() ?>assets/img/img-12.svg" alt="img" class="img-fluid">
             </div>
-            <div class="col-12 col-md-6 fw-bold">
+            <div class="col-12 guide-wallet col-md-6 fw-bold">
                 <ol>
                     <li>Login into your wallet</li>
                     <li>Choose the currency that you want to send </li>

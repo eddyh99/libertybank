@@ -10,7 +10,7 @@
                 <li>
                     <a class="f-hahmlet nav-link navbar-freedy scrollto" href="#guide">Guide</a></li>
                 <li>
-                    <a class="f-bevietnam nav-link navbar-freedy scrollto" href="#prices">Prices</a>
+                    <a class="f-bevietnam nav-link navbar-freedy scrollto" href="<?= base_url() ?>link/lern_transparency">Prices</a>
                 </li>
                 <li>
                     <a class="f-bevietnam nav-link navbar-freedy scrollto" href="<?= base_url() ?>link/translate">Translate</a></li>
@@ -29,7 +29,7 @@
     </div>
 </header>
 <!-- Navbar For Margin -->
-<header id="header" class="header">
+<header id="headertop" class="header">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
         <a class="logo d-flex align-items-center">
             <img class="img-fluid" src="<?= base_url() ?>assets/img/logo.png" alt="mylogo">
@@ -40,7 +40,7 @@
                 <li>
                     <a class="f-hahmlet nav-link navbar-freedy scrollto" href="#guide">Guide</a></li>
                 <li>
-                    <a class="f-bevietnam nav-link navbar-freedy scrollto" href="#prices">Prices</a>
+                    <a class="f-bevietnam nav-link navbar-freedy scrollto" href="<?= base_url() ?>link/lern_transparency">Prices</a>
                 </li>
                 <li>
                     <a class="f-bevietnam nav-link navbar-freedy scrollto" href="<?= base_url() ?>link/translate">Translate</a></li>
@@ -98,7 +98,7 @@
 
 <main id="main">
     <!-- ======= Start Where The Banking World ======= -->
-    <section id="service" class="about position-relative">
+    <section id="multicurrency" class="about position-relative">
         <div class="container p-r">
             <div class="row gx-0">
                 <div class="row transfer-money">
@@ -166,7 +166,7 @@
         </div>
     </section>
 
-    <section class="about position-relative">
+    <section id="crypto" class="about position-relative">
         <div class="container p-r">
             <div class="row gx-0">
                 <div class="row">
@@ -211,7 +211,7 @@
                                 </span>
                             </div>
                             <div class="text-start mt-4 ms-4">
-                                <a href="<?= base_url(); ?>auth/signup" class="btn-content-silver d-inline-flex align-items-center justify-content-center align-self-center">
+                                <a href="<?= base_url(); ?>link/crypto" class="btn-content-silver d-inline-flex align-items-center justify-content-center align-self-center">
                                     <span class="">Read more</span>
                                 </a>
                             </div>
@@ -333,7 +333,7 @@
                             You will be rewarded for every single FIAT and crypto buy & sell transaction made by those who signed up using your personal referral link.
                         </p>
                         <div class="text-start mt-4">
-                            <a href="<?= base_url(); ?>auth/signup" class="btn-content-silver d-inline-flex align-items-center justify-content-center align-self-center">
+                            <a href="<?= base_url(); ?>link/lern_reward" class="btn-content-silver d-inline-flex align-items-center justify-content-center align-self-center">
                                 <span class="">Read more</span>
                             </a>
                         </div>
@@ -515,7 +515,7 @@
                     <img src="<?= base_url() ?>assets/img/logo.png" alt="mylogo" class="logo">
                 </a>
             </div>
-            <div class="col-lg-6 col-12 pe-2 my-5 footer-links text-center">
+            <div class="col-lg-5 col-12 pe-2 my-5 footer-links text-center">
                 <div class="d-flex flex-row flex-wrap align-items-center justify-content-center w-100">
                     <a href="https://tracklessbank.com/" target="_blank">
                         <img src="<?= base_url() ?>assets/img/cayman-logo-small.png" alt="logo-cayman" class="trackless">
@@ -523,7 +523,7 @@
                 </div>
                 <p class="copyright py-3 m-0"> <b translate="no"> LibertyBank </b> (PAN) 
             </div>
-            <div class="col-lg-3 col-12 text-center text-black mb-5 d-flex flex-column justify-content-start align-items-center align-items-lg-start">
+            <div class="col-lg-4 col-12 text-center text-black mb-5 d-flex flex-column justify-content-start align-items-center align-items-lg-start">
                 <div class="mb-2">
                     <span class="fw-semibold">Contact service</span>
                     <span>

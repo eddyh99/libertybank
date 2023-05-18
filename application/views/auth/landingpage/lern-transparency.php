@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="link-back p-0">
-                    <a href="<?= base_url() ?>#specifications">
+                    <a href="<?= base_url() ?>#headertop">
                         <img src="<?= base_url() ?>assets/img/speedybank/back-link.png" alt="">
                     </a>
                 </div>
@@ -61,6 +61,9 @@
                     <div class="col-12 text-start mx-auto">
                         <h2 class="title-top-header mb-5 fw-bold f-hahmlet text-blue-freedy py-2">Fees for Fiat to crypto and crypto to FIAT</h2>
                     </div>
+                    <div class="col-12 my-5 text-start">
+                        <h3>Coming soon!</h3>
+                    </div>
                     <div class="col-12 text-start mx-auto table-responsive">
                         <table class="table tbl-piggy-service fw-bold text-center">
                             <tr>
@@ -80,9 +83,7 @@
                             </tr>
                         </table>
                     </div>
-                    <div class="col-12 my-5 text-center">
-                        <h3>Coming soon!</h3>
-                    </div>
+
                 </div>
             </div>
         </div>
