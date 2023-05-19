@@ -150,8 +150,8 @@ class Auth extends CI_Controller
 		if ($result->code == 200) {
 			//kirim email registrasi
 
-			$subject = "SpeedyBank Registration";
-			$message = "Thank you for registering on SpeedyBank<br><br>
+			$subject = "LibertyBank Registration";
+			$message = "Thank you for registering on LibertyBank<br><br>
 			username : " . $email . "<br>
 			password : (your chosen password)<br><br>
 			click this <a href='" . base_url("auth/activate?token=") . $result->message->token . "'>link</a> to activate your account<br><br>
@@ -369,7 +369,7 @@ class Auth extends CI_Controller
 		$result = apitrackless($url);
 		if (!empty(@$result->code == 200)) {
 
-			$subject = "Reset Password for Speedybank Account";
+			$subject = "Reset Password for LibertyBank Account";
 			// kirim email forgot password dengan token validasi, lebih dari 1jam expired tokennya
 			$message = "Hi,<br><br>
 
@@ -401,7 +401,7 @@ class Auth extends CI_Controller
 
 		if ($this->form_validation->run() == FALSE) {
 			$this->session->set_flashdata('failed', "<p style='color:black'>" . validation_errors() . "</p>");
-			redirect(base_url() . "auth/login");
+			redirect(base_url() . "auth/updatepassword");
 			return;
 		}
 
@@ -421,7 +421,7 @@ class Auth extends CI_Controller
 			redirect(base_url() . "auth/login");
 		} else {
 			$this->session->set_flashdata("failed", $result->message);
-			redirect(base_url() . "auth/forget_pass");
+			redirect(base_url() . "auth/updatepassword");
 		}
 	}
 

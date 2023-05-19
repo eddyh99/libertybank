@@ -3916,20 +3916,20 @@ color: #000000;
   }
 
   .bg-login {
-    background: url(../img/bg-mobile.png);
+    background: url(../img/bg-login.png);
     background-color: rgba(255, 255, 255, 1);
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: cover;
     background-attachment: fixed;
     background-position: top right;
     height: 100% !important;
   }
 
   .bg-signin {
-    background: url(../img/bg-mobile.png);
+    background: url(../img/bg-signin.png);
     background-color: rgba(255, 255, 255, 1);
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: cover;
     background-attachment: fixed;
     background-position: top right;
     height: 100% !important;
@@ -3957,14 +3957,11 @@ color: #000000;
 
   .box-form {
     background: #ffffff;
-
     box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-
     min-height: 600px;
     height: auto;
-
-    padding: 2.5rem;
+    padding: 2.5rem 2rem;
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
     position: relative;
@@ -4004,7 +4001,7 @@ color: #000000;
     font-size: 24px;
     line-height: 110%;
 
-    color: #CB0000;
+    color: #000000;
   }
 
   .box-form img {
@@ -4121,15 +4118,13 @@ color: #000000;
   }
 
   .form-login-freedy .btn-login {
-    background: #0F4E97;
+    background: linear-gradient(180deg, #5B90F7 0%, #3E79EA 100%);
     border-radius: 5px;
     font-weight: 500;
     font-size: 12px;
     line-height: 26px;
-
     letter-spacing: 0.46px;
     text-transform: uppercase;
-
     color: #ffffff;
   }
 
@@ -4162,14 +4157,29 @@ color: #000000;
     line-height: 20px;
     color: #0F4E97;
     text-align: center;
-    border: 1px solid #0F4E97;
-    border-radius: 10px;
+    border: 1px solid #319CFF;
+    border-radius: 9999px;
     padding: 0 1rem;
+  }
+
+  .navbar-app>.box-navbar-freedy a.logout {
+    background: linear-gradient(97.98deg, #319CFF 8.71%, #AED8FF 42.93%, #0B86F8 122.46%);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    color: #000000;
+    text-align: center;
+    border-radius: 9999px;
+    padding: 0 1rem;
+  }
+
+  .navbar-app>.box-navbar-freedy a.logout:hover {
+    background: linear-gradient(97.98deg, #AED8FF 8.71%, #0B86F8 42.93%, #319CFF 122.46%);
   }
 
   .navbar-app>.box-navbar-freedy a .icon-menus {
     color: #0F4E97;
-    padding: 1rem 0.25rem;
+    padding: 0.5rem 0.25rem;
   }
 
   .navbar-app>.box-navbar-freedy a .icon-menus>svg {
@@ -4193,7 +4203,7 @@ color: #000000;
   }
 
   .box-code-freedy {
-    border: 3px solid #0F4E97;
+    border: 3px solid #0066FF;
     border-radius: 25px;
   }
 
@@ -4277,7 +4287,7 @@ color: #000000;
 
   .copy-refcode input {
     background: #D2E4F5;
-    color: #0F4E97 !important;
+    color: #0066FF !important;
   }
 
   .copy-uqcode input {
@@ -4304,9 +4314,8 @@ color: #000000;
 
   .menus-list-app a {
     background: #ffffff;
-    border: 1px solid #0F4E97;
+    border: 2px solid #0066FF;
     border-radius: 5px;
-
     font-weight: 500;
     font-size: 21px;
     line-height: 32px;
@@ -4326,7 +4335,7 @@ color: #000000;
   }
 
   .menus-list-app a.menus-blue:hover {
-    background: linear-gradient(180deg, #00A7DC 0%, #0F4E97 100%);
+    background: linear-gradient(180deg, #0066FF 50%, #D2E2F5 100%);
     border: 1px solid #c6c6c6;
     color: #fff;
   }
@@ -4364,7 +4373,7 @@ color: #000000;
   }
 
   .curencies-list-app .curencies-list {
-    border: 1px solid #00A7DC;
+    border: 1px solid #0066FF;
     border-radius: 5px;
     color: #000000;
 
@@ -4374,7 +4383,7 @@ color: #000000;
   }
 
   .curencies-list-app .curencies-list:hover {
-    background: linear-gradient(180deg, #00A7DC 0%, #0F4E97 100%);
+    background: linear-gradient(180deg, #0066FF 50%, #D2E2F5 100%);
     border: 1px solid #c6c6c6;
     border-radius: 5px;
 
@@ -5248,9 +5257,23 @@ color: #000000;
     color: #CB0000 !important;
   }
 
+  .title-top-header.multi {
+    font-weight: 600;
+    font-size: 24px !important;
+    line-height: 150%;
+    color: #CB0000 !important;
+  }
+
   .subtitle-top-header {
     font-weight: 600;
     font-size: 24px !important;
+    line-height: 110%;
+    color: #000000 !important;
+  }
+
+  .subtitle-top-header.multi {
+    font-weight: 600;
+    font-size: 16px !important;
     line-height: 110%;
     color: #000000 !important;
   }
@@ -5296,6 +5319,18 @@ color: #000000;
     border-radius: 5px;
     padding: 0.75rem;
     min-height: auto;
+  }
+
+  .freedy-card.multibtop {
+    background: linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(to right, #1C5385, #B7DCFF, #175187) border-box;
+    border-top-width: 7px;
+    border-top-style: solid;
+    border-top-color: transparent;
+  }
+    
+  .multibtop {
+    border: 6px solid #1C5385;
   }
 
   .freedy-card.btop.one {
@@ -5758,14 +5793,29 @@ color: #000000;
     line-height: 20px;
     color: #0F4E97;
     text-align: center;
-    border: 1px solid #0F4E97;
-    border-radius: 10px;
+    border: 1px solid #319CFF;
+    border-radius: 9999px;
     padding: 0 1rem;
+  }
+
+  .navbar-app>.box-navbar-freedy a.logout {
+    background: linear-gradient(97.98deg, #319CFF 8.71%, #AED8FF 42.93%, #0B86F8 122.46%);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    color: #000000;
+    text-align: center;
+    border-radius: 9999px;
+    padding: 0 1rem;
+  }
+
+  .navbar-app>.box-navbar-freedy a.logout:hover {
+    background: linear-gradient(97.98deg, #AED8FF 8.71%, #0B86F8 42.93%, #319CFF 122.46%);
   }
 
   .navbar-app>.box-navbar-freedy a .icon-menus {
     color: #0F4E97;
-    padding: 1rem 0.25rem;
+    padding: 0.5rem 0.25rem;
   }
 
   .navbar-app>.box-navbar-freedy a .icon-menus>svg {
@@ -6266,20 +6316,20 @@ color: #000000;
   }
 
   .bg-login {
-    background: url(../img/bg-mobile.png);
+    background: url(../img/bg-login.png);
     background-color: rgba(255, 255, 255, 1);
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: cover;
     background-attachment: fixed;
     background-position: top right;
     height: 100% !important;
   }
 
   .bg-signin {
-    background: url(../img/bg-mobile.png);
+    background: url(../img/bg-signin.png);
     background-color: rgba(255, 255, 255, 1);
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: cover;
     background-attachment: fixed;
     background-position: top right;
     height: 100% !important;
@@ -6339,7 +6389,7 @@ color: #000000;
     font-size: 24px;
     line-height: 110%;
 
-    color: #CB0000;
+    color: #000000;
   }
 
   .box-form img {
@@ -6456,15 +6506,13 @@ color: #000000;
   }
 
   .form-login-freedy .btn-login {
-    background: #0F4E97;
+    background: linear-gradient(180deg, #5B90F7 0%, #3E79EA 100%);
     border-radius: 5px;
     font-weight: 500;
     font-size: 14px;
     line-height: 26px;
-
     letter-spacing: 0.46px;
     text-transform: uppercase;
-
     color: #ffffff;
   }
 
@@ -6499,14 +6547,29 @@ color: #000000;
     line-height: 20px;
     color: #0F4E97;
     text-align: center;
-    border: 1px solid #0F4E97;
-    border-radius: 10px;
+    border: 1px solid #319CFF;
+    border-radius: 9999px;
     padding: 0 1rem;
+  }
+
+  .navbar-app>.box-navbar-freedy a.logout {
+    background: linear-gradient(97.98deg, #319CFF 8.71%, #AED8FF 42.93%, #0B86F8 122.46%);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    color: #000000;
+    text-align: center;
+    border-radius: 9999px;
+    padding: 0 1rem;
+  }
+
+  .navbar-app>.box-navbar-freedy a.logout:hover {
+    background: linear-gradient(97.98deg, #AED8FF 8.71%, #0B86F8 42.93%, #319CFF 122.46%);
   }
 
   .navbar-app>.box-navbar-freedy a .icon-menus {
     color: #0F4E97;
-    padding: 1rem 0.25rem;
+    padding: 0.5rem 0.25rem;
   }
 
   .navbar-app>.box-navbar-freedy a .icon-menus>svg {
@@ -6530,7 +6593,7 @@ color: #000000;
   }
 
   .box-code-freedy {
-    border: 3px solid #0F4E97;
+    border: 3px solid #0066FF;
     border-radius: 25px;
   }
 
@@ -6614,7 +6677,7 @@ color: #000000;
 
   .copy-refcode input {
     background: #D2E4F5;
-    color: #0F4E97 !important;
+    color: #0066FF !important;
   }
 
   .copy-uqcode input {
@@ -6641,7 +6704,7 @@ color: #000000;
 
   .menus-list-app a {
     background: #ffffff;
-    border: 1px solid #0F4E97;
+    border: 2px solid #0066FF;
     border-radius: 5px;
 
     font-weight: 500;
@@ -6663,7 +6726,7 @@ color: #000000;
   }
 
   .menus-list-app a.menus-blue:hover {
-    background: linear-gradient(180deg, #00A7DC 0%, #0F4E97 100%);
+    background: linear-gradient(180deg, #0066FF 50%, #D2E2F5 100%);
     border: 1px solid #c6c6c6;
     color: #fff;
   }
@@ -6701,7 +6764,7 @@ color: #000000;
   }
 
   .curencies-list-app .curencies-list {
-    border: 1px solid #00A7DC;
+    border: 1px solid #0066FF;
     border-radius: 5px;
     color: #000000;
 
@@ -6711,7 +6774,7 @@ color: #000000;
   }
 
   .curencies-list-app .curencies-list:hover {
-    background: linear-gradient(180deg, #00A7DC 0%, #0F4E97 100%);
+    background: linear-gradient(180deg, #0066FF 50%, #D2E2F5 100%);
     border: 1px solid #c6c6c6;
     border-radius: 5px;
 
@@ -7580,9 +7643,23 @@ color: #000000;
     color: #CB0000 !important;
   }
 
+  .title-top-header.multi {
+    font-weight: 600;
+    font-size: 24px !important;
+    line-height: 150%;
+    color: #CB0000 !important;
+  }
+
   .subtitle-top-header {
     font-weight: 600;
     font-size: 24px !important;
+    line-height: 110%;
+    color: #000000 !important;
+  }
+
+  .subtitle-top-header.multi {
+    font-weight: 600;
+    font-size: 16px !important;
     line-height: 110%;
     color: #000000 !important;
   }
@@ -7634,6 +7711,18 @@ color: #000000;
     border-radius: 5px;
     padding: 0.75rem;
     min-height: auto;
+  }
+
+  .freedy-card.multibtop {
+    background: linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(to right, #1C5385, #B7DCFF, #175187) border-box;
+    border-top-width: 7px;
+    border-top-style: solid;
+    border-top-color: transparent;
+  }
+    
+  .multibtop {
+    border: 6px solid #1C5385;
   }
 
   .freedy-card.btop.one {
@@ -8567,20 +8656,20 @@ color: #000000;
   }
 
   .bg-login {
-    background: url(../img/bg-mobile.png);
+    background: url(../img/bg-login.png);
     background-color: rgba(255, 255, 255, 1);
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: cover;
     background-attachment: fixed;
     background-position: top right;
     height: 100% !important;
   }
 
   .bg-signin {
-    background: url(../img/bg-mobile.png);
+    background: url(../img/bg-signin.png);
     background-color: rgba(255, 255, 255, 1);
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: cover;
     background-attachment: fixed;
     background-position: top right;
     height: 100% !important;
@@ -8628,7 +8717,7 @@ color: #000000;
     font-size: 24px;
     line-height: 110%;
 
-    color: #CB0000;
+    color: #000000;
   }
 
   .box-form img {
@@ -8745,15 +8834,13 @@ color: #000000;
   }
 
   .form-login-freedy .btn-login {
-    background: #0F4E97;
+    background: linear-gradient(180deg, #5B90F7 0%, #3E79EA 100%);
     border-radius: 5px;
     font-weight: 500;
     font-size: 15px;
     line-height: 26px;
-
     letter-spacing: 0.46px;
     text-transform: uppercase;
-
     color: #ffffff;
   }
 
@@ -8787,14 +8874,29 @@ color: #000000;
     line-height: 20px;
     color: #0F4E97;
     text-align: center;
-    border: 1px solid #0F4E97;
-    border-radius: 10px;
+    border: 1px solid #319CFF;
+    border-radius: 9999px;
     padding: 0 1rem;
+  }
+
+  .navbar-app>.box-navbar-freedy a.logout {
+    background: linear-gradient(97.98deg, #319CFF 8.71%, #AED8FF 42.93%, #0B86F8 122.46%);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    color: #000000;
+    text-align: center;
+    border-radius: 9999px;
+    padding: 0 1rem;
+  }
+
+  .navbar-app>.box-navbar-freedy a.logout:hover {
+    background: linear-gradient(97.98deg, #AED8FF 8.71%, #0B86F8 42.93%, #319CFF 122.46%);
   }
 
   .navbar-app>.box-navbar-freedy a .icon-menus {
     color: #0F4E97;
-    padding: 1rem 0.25rem;
+    padding: 0.5rem 0.25rem;
   }
 
   .navbar-app>.box-navbar-freedy a .icon-menus>svg {
@@ -8818,7 +8920,7 @@ color: #000000;
   }
 
   .box-code-freedy {
-    border: 3px solid #0F4E97;
+    border: 3px solid #0066FF;
     border-radius: 25px;
   }
 
@@ -8902,7 +9004,7 @@ color: #000000;
 
   .copy-refcode input {
     background: #D2E4F5;
-    color: #0F4E97 !important;
+    color: #0066FF !important;
   }
 
   .copy-uqcode input {
@@ -8929,7 +9031,7 @@ color: #000000;
 
   .menus-list-app a {
     background: #ffffff;
-    border: 1px solid #0F4E97;
+    border: 2px solid #0066FF;
     border-radius: 5px;
 
     font-weight: 500;
@@ -8951,7 +9053,7 @@ color: #000000;
   }
 
   .menus-list-app a.menus-blue:hover {
-    background: linear-gradient(180deg, #00A7DC 0%, #0F4E97 100%);
+    background: linear-gradient(180deg, #0066FF 50%, #D2E2F5 100%);
     border: 1px solid #c6c6c6;
     color: #fff;
   }
@@ -8989,7 +9091,7 @@ color: #000000;
   }
 
   .curencies-list-app .curencies-list {
-    border: 1px solid #00A7DC;
+    border: 1px solid #0066FF;
     border-radius: 5px;
     color: #000000;
 
@@ -8999,7 +9101,7 @@ color: #000000;
   }
 
   .curencies-list-app .curencies-list:hover {
-    background: linear-gradient(180deg, #00A7DC 0%, #0F4E97 100%);
+    background: linear-gradient(180deg, #0066FF 50%, #D2E2F5 100%);
     border: 1px solid #c6c6c6;
     border-radius: 5px;
 
@@ -9869,9 +9971,22 @@ color: #000000;
     color: #CB0000 !important;
   }
 
+  .title-top-header.multi {
+    font-weight: 600;
+    font-size: 26px !important;
+    line-height: 150%;
+    color: #CB0000 !important;
+  }
+
   .subtitle-top-header {
     font-weight: 600;
     font-size: 26px !important;
+    line-height: 110%;
+    color: #000000 !important;
+  }
+  .subtitle-top-header.multi {
+    font-weight: 600;
+    font-size: 16px !important;
     line-height: 110%;
     color: #000000 !important;
   }
@@ -9922,6 +10037,19 @@ color: #000000;
     border-radius: 5px;
     padding: 0.75rem;
     min-height: 275px;
+  }
+
+  .freedy-card.multibtop {
+    background: linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(to right, #1C5385, #B7DCFF, #175187) border-box;
+    border-top-width: 7px;
+    border-top-style: solid;
+    border-top-color: transparent;
+    height: 348px;
+  }
+    
+  .multibtop {
+    border: 6px solid #1C5385;
   }
 
   .freedy-card.btop.one {
@@ -10378,6 +10506,19 @@ color: #000000;
     min-height: 400px;
   }
 
+  .freedy-card.multibtop {
+    background: linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(to right, #1C5385, #B7DCFF, #175187) border-box;
+    border-top-width: 7px;
+    border-top-style: solid;
+    border-top-color: transparent;
+    height: 480px;
+  }
+    
+  .multibtop {
+    border: 6px solid #1C5385;
+  }
+
   .freedy-card.btop.one {
     background: linear-gradient(#ffffff, #ffffff) padding-box,
     linear-gradient(to right, #04D6BD, #2262ac, #8A01D7) border-box;
@@ -10496,20 +10637,20 @@ color: #000000;
   }
 
   .bg-login {
-    background: url(../img/bg-mobile.png);
+    background: url(../img/bg-login.png);
     background-color: rgba(255, 255, 255, 1);
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: cover;
     background-attachment: fixed;
     background-position: top right;
     height: 100% !important;
   }
 
   .bg-signin {
-    background: url(../img/bg-mobile.png);
+    background: url(../img/bg-signin.png);
     background-color: rgba(255, 255, 255, 1);
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: cover;
     background-attachment: fixed;
     background-position: top right;
     height: 100% !important;
@@ -10544,7 +10685,7 @@ color: #000000;
     min-height: 550px;
     height: auto;
 
-    padding: 2.5rem 5rem;
+    padding: 2.5rem 2rem;
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
   }
@@ -10567,7 +10708,7 @@ color: #000000;
     font-size: 24px;
     line-height: 110%;
 
-    color: #CB0000;
+    color: #000000;
   }
 
   .box-form img {
@@ -10684,15 +10825,13 @@ color: #000000;
   }
 
   .form-login-freedy .btn-login {
-    background: #0F4E97;
+    background: linear-gradient(180deg, #5B90F7 0%, #3E79EA 100%);
     border-radius: 5px;
     font-weight: 500;
     font-size: 15px;
     line-height: 26px;
-
     letter-spacing: 0.46px;
     text-transform: uppercase;
-
     color: #ffffff;
   }
 
@@ -11292,21 +11431,23 @@ color: #000000;
     background: url(../img/bg-login.png);
     background-color: rgba(255, 255, 255, 1);
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: cover;
     background-attachment: fixed;
     background-position: top right;
     height: 100% !important;
   }
 
-  .bg-signin {
-    background: url(../img/bg-login.png);
+  .bg-signin{
+    background: url(../img/bg-signin.png);
     background-color: rgba(255, 255, 255, 1);
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: cover;
     background-attachment: fixed;
-    background-position: top right;
+    background-position: bottom top;
     height: 100% !important;
   }
+
+
 
   .bg-signin-succes {
     background: url(../img/bg-login.png);
@@ -11337,7 +11478,7 @@ color: #000000;
     min-height: 550px;
     height: auto;
 
-    padding: 2.5rem 5rem;
+    padding: 2.5rem 2rem;
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
     position: relative;
@@ -11362,7 +11503,7 @@ color: #000000;
     font-size: 24px;
     line-height: 110%;
 
-    color: #CB0000;
+    color: #000000;
   }
 
   .box-form img {
@@ -11478,16 +11619,18 @@ color: #000000;
   }
 
   .form-login-freedy .btn-login {
-    background: #0F4E97;
+    background: linear-gradient(180deg, #5B90F7 0%, #3E79EA 100%);
     border-radius: 5px;
     font-weight: 500;
     font-size: 15px;
     line-height: 26px;
-
     letter-spacing: 0.46px;
     text-transform: uppercase;
-
     color: #ffffff;
+  }
+
+  .form-login-freedy h5 {
+    line-height: 180%;
   }
 
   .footer-login {
@@ -11521,14 +11664,29 @@ color: #000000;
     line-height: 20px;
     color: #0F4E97;
     text-align: center;
-    border: 1px solid #0F4E97;
-    border-radius: 10px;
+    border: 1px solid #319CFF;
+    border-radius: 9999px;
     padding: 0 1rem;
+  }
+
+  .navbar-app>.box-navbar-freedy a.logout {
+    background: linear-gradient(97.98deg, #319CFF 8.71%, #AED8FF 42.93%, #0B86F8 122.46%);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    color: #000000;
+    text-align: center;
+    border-radius: 9999px;
+    padding: 0 1rem;
+  }
+
+  .navbar-app>.box-navbar-freedy a.logout:hover {
+    background: linear-gradient(97.98deg, #AED8FF 8.71%, #0B86F8 42.93%, #319CFF 122.46%);
   }
 
   .navbar-app>.box-navbar-freedy a .icon-menus {
     color: #0F4E97;
-    padding: 1rem 0.25rem;
+    padding: 0.5rem 0.25rem;
   }
 
   .navbar-app>.box-navbar-freedy a .icon-menus>svg {
@@ -11552,7 +11710,7 @@ color: #000000;
   }
 
   .box-code-freedy {
-    border: 3px solid #0F4E97;
+    border: 3px solid #0066FF;
     border-radius: 25px;
   }
 
@@ -11636,7 +11794,7 @@ color: #000000;
 
   .copy-refcode input {
     background: #D2E4F5;
-    color: #0F4E97 !important;
+    color: #0066FF !important;
   }
 
   .copy-uqcode input {
@@ -11663,7 +11821,7 @@ color: #000000;
 
   .menus-list-app a {
     background: #ffffff;
-    border: 1px solid #0F4E97;
+    border: 2px solid #0066FF;
     border-radius: 5px;
 
     font-weight: 500;
@@ -11685,7 +11843,7 @@ color: #000000;
   }
 
   .menus-list-app a.menus-blue:hover {
-    background: linear-gradient(180deg, #00A7DC 0%, #0F4E97 100%);
+    background: linear-gradient(180deg, #0066FF 50%, #D2E2F5 100%);
     border: 1px solid #c6c6c6;
     color: #fff;
   }
@@ -11723,7 +11881,7 @@ color: #000000;
   }
 
   .curencies-list-app .curencies-list {
-    border: 1px solid #00A7DC;
+    border: 1px solid #0066FF;
     border-radius: 5px;
     color: #000000;
 
@@ -11733,7 +11891,7 @@ color: #000000;
   }
 
   .curencies-list-app .curencies-list:hover {
-    background: linear-gradient(180deg, #00A7DC 0%, #0F4E97 100%);
+    background: linear-gradient(180deg, #0066FF 50%, #D2E2F5 100%);
     border: 1px solid #c6c6c6;
     border-radius: 5px;
 
@@ -12603,9 +12761,23 @@ color: #000000;
     color: #CB0000 !important;
   }
 
+  .title-top-header.multi {
+    font-weight: 600;
+    font-size: 30px !important;
+    line-height: 150%;
+    color: #CB0000 !important;
+  }
+
   .subtitle-top-header {
     font-weight: 600;
     font-size: 40px !important;
+    line-height: 110%;
+    color: #000000 !important;
+  }
+
+  .subtitle-top-header.multi {
+    font-weight: 600;
+    font-size: 18px !important;
     line-height: 110%;
     color: #000000 !important;
   }
@@ -12656,6 +12828,19 @@ color: #000000;
     border-radius: 5px;
     padding: 0.75rem;
     min-height: 400px;
+  }
+
+  .freedy-card.multibtop {
+    background: linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(to right, #1C5385, #B7DCFF, #175187) border-box;
+    border-top-width: 10px;
+    border-top-style: solid;
+    border-top-color: transparent;
+    height: 550px;
+  }
+  
+  .multibtop {
+    border: 6px solid #1C5385;
   }
 
   .freedy-card.btop.one {
@@ -13183,8 +13368,8 @@ color: #000000;
 }
 
 .btn-head-crypto {
-  border: 1px solid #0F4E97;
-  border-radius: 8px;
+  border: 1px solid #0066FF;
+  border-radius: 2px;
 }
 
 .btn-head-crypto .crypto {
@@ -13199,13 +13384,15 @@ color: #000000;
 }
 
 .btn-head-crypto .crypto.active {
-  background: #0F4E97;
-  border-radius: 5px;
+  background: #0066FF;
+  border-radius: 1px;
   color: #ffffff;
 }
 
-.btn-head-crypto .crypto:hover,
 .btn-head-crypto .crypto.active:hover {
+  color: #ffffff;
+}
+.btn-head-crypto .crypto:hover{
   color: #000000;
 }
 
