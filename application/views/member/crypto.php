@@ -3,7 +3,7 @@
         style="background-color: #1E1E1E;">
         <a href="<?= base_url() ?>homepage" class="d-flex align-items-center border-0 ms-0 me-auto">
             <div class="icon-menus d-flex align-items-center home-svg py-0">
-                <img src="<?= base_url() ?>assets/img/speedybank/logo.png" alt="logo">
+                <img src="<?= base_url() ?>assets/img/logo.png" alt="logo">
             </div>
         </a>
 

@@ -109,7 +109,7 @@
                 <div class="row mt-5 pt-3">
                     <div class="col-12 col-lg-6 d-flex flex-column justify-content-center mb-5 ps-lg-5">
                         <div class="content-freedy p-r">
-                            <span class="fw-bold">FEATURES OF THE ANONYMOUS <a href="" class="text-decoration-underline">MULTI CURRENCIES ACCOUNT </a></span>
+                            <span class="fw-bold">FEATURES OF THE ANONYMOUS <a href="<?= base_url()?>link/multi_currencies" class="text-decoration-underline">MULTI CURRENCIES ACCOUNT </a></span>
                             <ul class="p-0 f-roboto fw-semibold">
                                 <li>
                                     Account opening allows you to have banks accounts in 10 currencies  
@@ -247,7 +247,7 @@
                     <h4 class="f-hahmlet text-center" style="color: #0066FF;">The Bank Of The Future</h4>
                     <h5 class="f-hahmlet text-center mt-4">Opening a multi-currency encrypted current account on our platform requires only an email and a password without any KYC procedure, thus guaranteeing maximum protection of privacy for each FIAT or crypto transaction carried out.</h5>
                     <div class="text-center mt-4">
-                        <a href="<?= base_url(); ?>auth/signup" class="btn-content-silver d-inline-flex align-items-center justify-content-center align-self-center">
+                        <a href="<?= base_url()?>link/multi_currencies" class="btn-content-silver d-inline-flex align-items-center justify-content-center align-self-center">
                             <span class="">Discover more</span>
                         </a>
                     </div>
@@ -510,7 +510,7 @@
 <footer id="contactus" class="footer p-0 p-r">
     <div class="container py-5">
         <div class="row d-flex align-items-center gy-4">
-            <div class="col-lg-3 col-12 pe-2 footer-links d-flex align-items-center justify-content-center">
+            <div class="col-lg-3 col-12 my-5 pe-2 footer-links d-flex align-items-start justify-content-start">
                 <a href="<?= base_url() ?>" class="text-decoration-none">
                     <img src="<?= base_url() ?>assets/img/logo.png" alt="mylogo" class="logo">
                 </a>
@@ -523,28 +523,31 @@
                 </div>
                 <p class="copyright py-3 m-0"> <b translate="no"> LibertyBank </b> (PAN) 
             </div>
-            <div class="col-lg-4 col-12 text-center text-black mb-5 d-flex flex-column justify-content-start align-items-center align-items-lg-start">
-                <div class="mb-2">
-                    <span class="fw-semibold">Contact service</span>
-                    <span>
-                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.0972 10.9882L10.2918 15.7857V17.4165H11.9227L16.7202 12.6111L15.0972 10.9882ZM17.971 10.7507L16.9577 9.73734C16.8785 9.65025 16.7677 9.60275 16.6568 9.60275C16.5381 9.61067 16.4272 9.65025 16.3481 9.73734L15.5564 10.529L17.1793 12.1123L17.971 11.3207C18.1214 11.1623 18.1214 10.909 17.971 10.7507ZM8.7085 14.2498H3.16683V6.33317L9.50016 10.2915L15.8335 6.33317V7.9165H17.4168V4.74984C17.4168 3.879 16.7043 3.1665 15.8335 3.1665H3.16683C2.296 3.1665 1.5835 3.879 1.5835 4.74984V14.2498C1.5835 15.1207 2.296 15.8332 3.16683 15.8332H8.7085V14.2498ZM15.8335 4.74984L9.50016 8.70817L3.16683 4.74984H15.8335Z" fill="black"/>
-                        </svg>
-                    </span>
-                </div>
-                <div class="d-flex justify-content-between align-items-center">
-                    <form class="d-flex justify-content-between align-items-center" action="" method="post">
-                        <input class="in-footer d-block" type="text" placeholder="Enter your email address">
-                        <button type="submit" class="btn-in-footer d-block ms-2">Contact us</button>
-                    </form>
-                </div>
-                <div class="mt-3">
-                    <a href="<?= base_url() ?>link/lern_transparency" class="fw-bold text-black text-decoration-underline">
-                        Price lists
-                    </a>
-                    <a href="<?= base_url() ?>#" class="fw-bold text-black text-decoration-underline ms-5">
-                        About Us
-                    </a>
+            <div class="col-lg-4 col-12 text-center text-black my-5 d-flex flex-column justify-content-end align-items-end align-items-lg-end">
+                <div class="d-flex flex-column justify-content-start align-items-start">
+                    <div class="mb-2">
+                        <span class="fw-semibold">Contact service</span>
+                        <span>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.0972 10.9882L10.2918 15.7857V17.4165H11.9227L16.7202 12.6111L15.0972 10.9882ZM17.971 10.7507L16.9577 9.73734C16.8785 9.65025 16.7677 9.60275 16.6568 9.60275C16.5381 9.61067 16.4272 9.65025 16.3481 9.73734L15.5564 10.529L17.1793 12.1123L17.971 11.3207C18.1214 11.1623 18.1214 10.909 17.971 10.7507ZM8.7085 14.2498H3.16683V6.33317L9.50016 10.2915L15.8335 6.33317V7.9165H17.4168V4.74984C17.4168 3.879 16.7043 3.1665 15.8335 3.1665H3.16683C2.296 3.1665 1.5835 3.879 1.5835 4.74984V14.2498C1.5835 15.1207 2.296 15.8332 3.16683 15.8332H8.7085V14.2498ZM15.8335 4.74984L9.50016 8.70817L3.16683 4.74984H15.8335Z" fill="black"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <form class="d-flex justify-content-between align-items-center" action="<?= base_url(); ?>link/send_message" method="POST">
+                            <input type="hidden" id="token" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
+                            <input name="email" autocomplete="off" class="in-footer d-block" type="text" placeholder="Enter your email address">
+                            <button type="submit" class="btn-in-footer d-block ms-2">Contact us</button>
+                        </form>
+                    </div>
+                    <div class="mt-3">
+                        <a href="<?= base_url() ?>link/lern_transparency" class="fw-bold text-black text-decoration-underline">
+                            Price lists
+                        </a>
+                        <a href="<?= base_url() ?>#" class="fw-bold text-black text-decoration-underline ms-5">
+                            About Us
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,27 +1,40 @@
-<div class="login bg-signup">
+<div class="login bg-signin">
     <div class="container">
-        <div class="row d-flex d-lg-inline-grid justify-content-center justify-content-xl-start">
-            <div class="col-10 col-sm-9 col-md-7 col-lg-5 hide-bg mx-auto text-center">
+        <div class="row d-flex d-lg-inline-grid justify-content-center">
+            <div class="col-10 col-sm-9 col-md-8 col-lg-7 col-xl-5 box-form">
                 <form class="form-login-freedy d-flex align-items-start flex-column" style="height: 100%;" method="POST"
-                    action="<?= base_url(); ?>member">
-                    <div class="mt-5">
-                        <h1 class="text-white f-poppins fw-bold">Welcome to SpeedyBank</h1>
-                        <a href="<?= base_url() ?>">
-                            <img src="<?= base_url(); ?>assets/img/speedybank/logo-white.png" alt="logo-white" class="img-fluid">
-                        </a>
-                        <div class="text-white f-poppins">
-                            To activate your <b translate="no"> SpeedyBank </b> account
-                            click
-                            the link receive in
-                            your registration email
-                            <br>
-                            <b>ATTENTION:</b>
-                            <div>You will received the email within 15 minutes</div>
-                            <div> If you don’t see it check into the SPAM folder</div>
-                        </div>
+                    action="<?= base_url(); ?>auth/resetpass">
+                    <input type="hidden" id="token" name="<?php echo $this->security->get_csrf_token_name(); ?>"
+                        value="<?php echo $this->security->get_csrf_hash(); ?>">
+
+                    <?php if (@isset($_SESSION["failed"])) { ?>
+                    <div class="col-12 alert alert-danger alert-dismissible fade show" role="alert">
+                        <span class="notif-login f-poppins"><?= $_SESSION["failed"] ?></span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
-                    <div class="col-12 d-grid gap-2 mt-5">
-                        <a href="<?= base_url() ?>" class="btn btn-login f-poppins">Back</a>
+                    <?php } ?>
+                    <?php if (@isset($_SESSION["success"])) { ?>
+                    <div class="col-12 alert alert-success alert-dismissible fade show" role="alert">
+                        <span class="notif-login f-poppins"><?= @$_SESSION["success"] ?></span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <?php } ?>
+                    <div class="col-12 mb-4 d-flex justify-content-center">
+                        <img src="<?= base_url('assets/img/logo.png')?>" alt="logo">
+                    </div>
+                    <div class="col-12 mb-auto mt-4">
+                        <h5 class="text-center text-blue-freedy fw-semibold">
+                            To activate your LibertyBank account
+                            click the link received in your registration email
+                            <br>
+                            ATTENTION : 
+                            <br>
+                            You will receive the email within 15 minutes
+                            If you don’t see it check into the SPAM folder
+                        </h5>
+                    </div>
+                    <div class="col-12 d-grid gap-2">
+                        <a href="<?= base_url(); ?>" class="btn btn-login f-roboto text-white">BACK</a>
                     </div>
                 </form>
             </div>

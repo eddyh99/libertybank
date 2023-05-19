@@ -113,18 +113,6 @@ class Link extends CI_Controller
         $this->load->view('tamplate/wrapper', $data);
     }
 
-    public function spec()
-    {
-        $spec = base64_decode($_GET['spec']);
-
-        $data = array(
-            "title"     => NAMETITLE,
-            "content"   => "auth/landingpage/specifications",
-            "spec"   => $spec,
-        );
-
-        $this->load->view('tamplate/wrapper', $data);
-    }
 
     public function features()
     {
@@ -319,7 +307,7 @@ class Link extends CI_Controller
     public function about()
     {
         $data = array(
-            "title"     => NAMETITLE . " - About SpeedyBank",
+            "title"     => NAMETITLE . " - About LibertyBank",
             "content"   => "auth/landingpage/aboutus",
             "extra"     => "auth/landingpage/js/js_index",
         );
@@ -333,6 +321,16 @@ class Link extends CI_Controller
             "title"     => NAMETITLE,
             "content"   => "auth/landingpage/crypto",
             "extra"     => "auth/landingpage/js/js_index",
+        );
+
+        $this->load->view('tamplate/wrapper', $data);
+    }
+
+    public function multi_currencies()
+    {
+        $data = array(
+            "title"     => NAMETITLE,
+            "content"   => "auth/landingpage/multi-currencies",
         );
 
         $this->load->view('tamplate/wrapper', $data);
@@ -360,7 +358,7 @@ class Link extends CI_Controller
         $this->load->view('tamplate/wrapper', $data);
     }
 
-        public function getref()
+    public function getref()
     {
         $this->form_validation->set_rules('ucode', 'Unique Code', 'trim|required');
 
@@ -537,6 +535,15 @@ class Link extends CI_Controller
                 );
             $url = URLAPI . "/v1/member/findme/set_business";
             $result   = apitrackless($url, json_encode($mdata));
+            // print_r(json_encode($result));
+            // die;
+
+            if (@$result->code == 5055) {
+                $this->session->set_flashdata('failed', $result->message);
+                redirect(base_url('link/findme?findme=MQ=='));
+                return;
+            }
+
             if (@$result->code != 200) {
                 $this->session->set_flashdata('failed', "Failed to submit data, please contact administrator");
                 redirect(base_url('link/findme?findme=MQ=='));
