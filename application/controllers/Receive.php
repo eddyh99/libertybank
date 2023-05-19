@@ -39,13 +39,11 @@ class Receive extends CI_Controller
         $currency = $_SESSION["currency"];
         $url = URLAPI . "/v1/trackless/bank/getBank?currency=" . $currency;
         $result = apitrackless($url);
-
         if ($result->code != 200) {
-            $body['bank'] = NULL;
+            $body["bank"] = NULL;
         } else {
-            $body['bank'] = $result->message;
+            $body["bank"] = $result->message;
         }
-
         $body["currency"] = $currency;
         $data['title'] = NAMETITLE . " - Top Up";
         
@@ -58,7 +56,6 @@ class Receive extends CI_Controller
     public function localbank_confirm()
     {
 
-        $this->form_validation->set_rules('ucode', 'Unique Code', 'trim|required');
         $this->form_validation->set_rules('amount', 'Amount', 'trim|required|greater_than[0]');
         $this->form_validation->set_rules('confirm_amount', 'Confirm Amount', 'trim|required|greater_than[0]|matches[amount]');
 
@@ -68,30 +65,79 @@ class Receive extends CI_Controller
             return;
         }
 
-        $input        = $this->input;
-        $ucode        = $this->security->xss_clean($input->post("ucode"));
+        $input              = $this->input;
         $amount             = $this->security->xss_clean($input->post("amount"));
-        $name_circuit        = $this->security->xss_clean($input->post("name_circuit")); 
-        $number_circuit      = $this->security->xss_clean($input->post("number_circuit")); 
-        $routing_circuit        = $this->security->xss_clean($input->post("routing_circuit")); 
-        $address_circuit        = $this->security->xss_clean($input->post("address_circuit")); 
         
         $infolist = array(
-            'ucode'          => $ucode,
             'amount'         => $amount,
-            'name_circuit'    => $name_circuit,
-            'name_circuit'    => $name_circuit,
-            'number_circuit'  => $number_circuit,
-            'routing_circuit' => $routing_circuit,
-            'address_circuit' => $address_circuit,
         );
 
-        $data['title'] = NAMETITLE . " - Wallet to Wallet";
+        $data['title'] = NAMETITLE . " - Top up Confirmation";
         $body["data"] = $infolist;
 
         $this->load->view('tamplate/header', $data);
         $this->load->view('tamplate/navbar-top');
         $this->load->view('member/topup/localbank_confirm', $body);
+        $this->load->view('tamplate/footer');
+    }
+
+    public function localbank_notif()
+    {
+
+        $this->form_validation->set_rules('amount', 'Amount', 'trim|required|greater_than[0]');
+
+        if ($this->form_validation->run() == FALSE) {
+            $this->session->set_flashdata('failed', "<p style='color:black'>" . validation_errors() . "</p>");
+            redirect("receive/localbank");
+            return;
+        }
+
+        $input              = $this->input;
+        $amount             = $this->security->xss_clean($input->post("amount"));
+        
+        $mdata = array(
+            'userid'        => $_SESSION["user_id"],
+            'amount'        => $amount,
+            'currency'      => $_SESSION["currency"],
+            'transfer_type' => 'topup circuit'
+        );
+
+        $result = apitrackless(URLAPI . "/v1/member/wallet/topup", json_encode($mdata));
+
+        if (@$result->code != "200") {
+            $this->session->set_flashdata('failed', $result->message);
+            redirect("receive/localbank");
+            return;
+        }
+
+        // $mdata=array(
+        //         "currency"  => "EUR",
+        //         "details"   => array(
+        //             array(
+        //                 "type"  => "recipientName",
+        //                 "label" => "Recipient name",
+        //                 "value" => "TransferWise Europe SA"
+        //             ),
+        //             array(
+        //                 "type"  => "IBAN",
+        //                 "label" => "IBAN name",
+        //                 "value" => "BE79967040785533"
+        //             ),
+        //             array(
+        //                 "type"  => "BIC",
+        //                 "label" => "Bank code (BIC/SWIFT)",
+        //                 "value" => "TRWIBEB1XXX"
+        //             ),
+        //         )
+        //     );
+        print_r($result->message);
+        die;
+        $data['title'] = NAMETITLE . " - Top Up Process";
+        $body["data"] = json_encode($mdata);//$result->message;
+
+        $this->load->view('tamplate/header', $data);
+        $this->load->view('tamplate/navbar-top');
+        $this->load->view('member/topup/localbank_notif', $body);
         $this->load->view('tamplate/footer');
     }
 

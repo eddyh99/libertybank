@@ -19,19 +19,9 @@
                     <div class="col-12 infobank-list-app input-piggy-style my-4">
                         <div class="py-4">
                             <div class="tutorial-box p-3">
-                                <span class="title mb-3 d-inline-block text-blue-freedy">Top up procedure :</span>
-                                <ol class="m-">
-                                    <li>Copy all the fields below</li>
-                                    <li class="pe-5">Paste on your online bank form
-                                        (make sure to copy exactly the Causal*,
-                                        as it identifies the destination wallet)</li>
-                                    <li>Send the amount chosen</li>
-                                </ol>
+                                <span class="title mb-3 d-inline-block text-blue-freedy">Top up procedure :</span>                                
                             </div>
                             <div class="noted-tutor px-3">
-                                <p class="my-3">
-                                    *In case you’ve written wrong Causal it is possible to manually recover the funds by clicking bellow:
-                                </p>
                                 <a href="">
                                     <button class="btn btn-content-">Problem support</button>
                                 </a>
@@ -48,21 +38,6 @@
                                 <input type="hidden" id="token"
                                     name="<?php echo $this->security->get_csrf_token_name(); ?>"
                                     value="<?php echo $this->security->get_csrf_hash(); ?>">
-
-                                <input type="hidden" name="name_circuit" id="name_circuit"
-                                    value="<?= @$bank->name_circuit ?>" >
-                                <input type="hidden" name="number_circuit" id="number_circuit"
-                                    value="<?= @$bank->number_circuit ?>" >
-                                <input type="hidden" name="routing_circuit" id="routing_circuit"
-                                    value="<?= @$bank->routing_circuit ?>" >
-                                <input type="hidden" name="address_circuit" id="address_circuit"
-                                    value="<?= @$bank->address_circuit ?>" >
-
-                                <div class="my-3">
-                                    <label class="ms-2 form-label">RECIPIENT’S UNIQUE CODE</label>
-                                    <input type="text" class="form-control" name="ucode" id="ucode" 
-                                        value="<?= @$ucode ?>" <?php echo (empty($ucode) ? "" : "readonly")?> >
-                                </div>
 
                                 <div class="my-3">
                                     <label class="ms-2 form-label">AMOUNT</label>

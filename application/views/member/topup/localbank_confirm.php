@@ -10,38 +10,18 @@
                         </div>
                     </div>
                     <div class="col-12 infobank-list-app f-jakarta my-4">
+                        <div class="col-12">
+                            <div class="text-center">
+                                <span class="me-auto f-hahmlet text-blue-freedy fs-2 title-top-navbar">Do you want to make deposit following amount to your account?</span>
+                            </div>
+                        </div>
                         <div class="col-12 py-4">
                             <form method="POST" action="<?= base_url() ?>receive/localbank_notif" id="form_submit" onsubmit="return validate()">
                                 <input type="hidden" id="token" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                                 <div class="col-12 list-send-wallet d-flex flex-column mb-3">
                                     <span>Amount: </span>
                                     <span class="fs-6 text-blue-freedy"><?= $data["amount"] ?></span>
-                                    <input type="text" class="form-control mb-4" name="amount" id="amount" placeholder="Unique code" value="<?= $data["amount"] ?>" hidden>
-                                </div>
-                                <div class="col-12 list-send-wallet d-flex flex-column mb-3">
-                                    <span>Account Holder: </span>
-                                    <span class="fs-6 text-blue-freedy"><?= $data["name_circuit"] ?></span>
-                                    <input type="text" class="form-control mb-4" name="name_circuit" id="name_circuit" value="<?= $data["name_circuit"] ?>" hidden>
-                                </div>
-                                <div class="col-12 list-send-wallet d-flex flex-column mb-3">
-                                    <span>IBAN <small>(country belgium)</small>: </span>
-                                    <span class="fs-6 text-blue-freedy"><?= $data["number_circuit"] ?></span>
-                                    <input type="text" class="form-control mb-4" name="number_circuit" id="number_circuit" value="<?= $data["number_circuit"] ?>" hidden>
-                                </div>
-                                <div class="col-12 list-send-wallet d-flex flex-column mb-3">
-                                    <span>BIC: </span>
-                                    <span class="fs-6 text-blue-freedy"><?= $data["routing_circuit"] ?></span>
-                                    <input type="text" class="form-control mb-4" name="routing_circuit" id="routing_circuit" value="<?= $data["routing_circuit"] ?>" hidden>
-                                </div>
-                                <div class="col-12 list-send-wallet d-flex flex-column mb-3">
-                                    <span>Causal: </span>
-                                    <span class="fs-6 text-blue-freedy">SC<?= $data["ucode"] ?></span>
-                                    <input type="text" class="form-control mb-4" name="ucode" id="ucode" value="SC<?= $data["ucode"] ?>" hidden>
-                                </div>
-                                <div class="col-12 list-send-wallet d-flex flex-column mb-3">
-                                    <span>Company Address: </span>
-                                    <span class="fs-6 text-blue-freedy"><?= $data["address_circuit"] ?></span>
-                                    <input type="text" class="form-control mb-4" name="address_circuit" id="address_circuit" value="<?= $data["address_circuit"] ?>" hidden>
+                                    <input type="text" class="form-control mb-4" name="amount" id="amount" placeholder="Amount" value="<?= $data["amount"] ?>" hidden>
                                 </div>
                                 <div class="col-12 d-flex flex-row mt-5">
                                     <a href="<?= base_url() ?>receive/localbank" class="btn btn-wallet-cancle py-2 me-auto">Cancel</a>
