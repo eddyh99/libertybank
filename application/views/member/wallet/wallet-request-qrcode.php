@@ -37,7 +37,7 @@
 </div>
 
 <div class="navbar-app fixed-bottom d-flex justify-content-center">
-    <div class="col-12 col-lg-8 col-xl-6 box-navbar-freedy d-flex justify-content-start align-items-center">
+    <div class="col-12 col-lg-8 col-xl-6 box-navbar-freedy d-flex justify-content-start align-items-center top">
         <a href="<?= base_url() ?>wallet" class="d-flex align-items-center border-0">
             <div class="icon-menus d-flex align-items-center home-svg">
                 <svg width="41" height="35" viewBox="0 0 41 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,8 +49,8 @@
                     <defs>
                         <linearGradient id="paint0_linear_30_4821" x1="20.5" y1="0" x2="20.5" y2="35"
                             gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#0F4E97" />
-                            <stop offset="1" stop-color="#0F4E97" />
+                            <stop stop-color="#0066FF" />
+                            <stop offset="1" stop-color="#0053CF" />
                         </linearGradient>
                     </defs>
                 </svg>

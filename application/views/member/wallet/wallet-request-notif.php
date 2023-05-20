@@ -19,7 +19,7 @@
                     <div class="col-12 my-4">
                         <div class="col-12 py-4">
                             <div class="d-flex flex-column justify-content-center align-items-center">
-                                <img src="<?= base_url() ?>assets/img/logo.png" alt="" style="width: 100px;"
+                                <img src="<?= base_url() ?>assets/img/logo-only.svg" alt="" style="width: 100px;"
                                     class="mt-5">
                                 <span class="b-qr">Your transfer successed</span>
                             </div>

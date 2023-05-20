@@ -16,7 +16,7 @@
                             </div>
                         </div>
                         <div class="col-12 py-4">
-                            <form method="POST" action="<?= base_url() ?>receive/localbank_notif" id="form_submit" onsubmit="return validate()">
+                            <form method="POST" action="<?= base_url() ?>receive/interbank_notif" id="form_submit" onsubmit="return validate()">
                                 <input type="hidden" id="token" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                                 <div class="col-12 list-send-wallet d-flex flex-column mb-3">
                                     <span>Amount: </span>
@@ -24,7 +24,7 @@
                                     <input type="text" class="form-control mb-4" name="amount" id="amount" placeholder="Amount" value="<?= $data["amount"] ?>" hidden>
                                 </div>
                                 <div class="col-12 d-flex flex-row mt-5">
-                                    <a href="<?= base_url() ?>receive/localbank" class="btn btn-wallet-cancle py-2 me-auto">Cancel</a>
+                                    <a href="<?= base_url() ?>receive/interbank" class="btn btn-wallet-cancle py-2 me-auto">Cancel</a>
                                     <button class="btn btn-confirm" type="submit" id="btnconfirm">Confirm</button>
                                 </div>
                             </form>
@@ -38,7 +38,7 @@
 
 <div class="navbar-app fixed-bottom d-flex justify-content-center">
     <div class="col-12 col-lg-8 col-xl-6 box-navbar-freedy d-flex justify-content-start align-items-center top">
-        <a href="<?= base_url() ?>receive/localbank" class="d-flex align-items-center border-0">
+        <a href="<?= base_url() ?>receive/interbank" class="d-flex align-items-center border-0">
             <div class="icon-menus d-flex align-items-center home-svg">
                 <svg width="41" height="35" viewBox="0 0 41 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="41" height="35" fill="url(#paint0_linear_30_4821)" />

@@ -36,6 +36,9 @@ h6 {
   font-family: "Nunito", sans-serif;
 }
 
+.form-control:focus {
+  box-shadow: none;
+}
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
@@ -163,17 +166,6 @@ color: rgba(255, 255, 255, 0.8);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-/* 
-.loginin,
-.image {
-  min-height: 100vh;
-}
-
-.bg-image {
-  background-image: url(../img/speedybank/bg-signup.png);
-  background-size: cover;
-  background-position: center center;
-} */
 
 
 
@@ -3370,7 +3362,6 @@ color: #000000;
 
 .noted-tutor button {
   font-size: 12px;
-  margin-left: 13px;
   margin-bottom: 6px;
   padding: 0.7rem 2rem;
   font-weight: 600;
@@ -3387,7 +3378,7 @@ color: #000000;
 }
 
 .attention-box {
-  background: linear-gradient(180deg, #00A7DC 0%, #0F4E97 100%);
+  background: linear-gradient(180deg, #0066ff 0%, #0F4E97 100%);
   border: 3px solid #0F4E97;
   border-radius: 10px;
 }
@@ -4157,7 +4148,7 @@ color: #000000;
     line-height: 20px;
     color: #0F4E97;
     text-align: center;
-    border: 1px solid #319CFF;
+    border: 2px solid #319CFF;
     border-radius: 9999px;
     padding: 0 1rem;
   }
@@ -4172,9 +4163,17 @@ color: #000000;
     border-radius: 9999px;
     padding: 0 1rem;
   }
-
+  
   .navbar-app>.box-navbar-freedy a.logout:hover {
     background: linear-gradient(97.98deg, #AED8FF 8.71%, #0B86F8 42.93%, #319CFF 122.46%);
+  }
+
+  .navbar-app>.box-navbar-freedy a.back {
+    border:3px solid #0000;
+    border-radius:999999px;
+    background:
+      linear-gradient(white,white) padding-box,
+      linear-gradient(#319CFF,#AED8FF) border-box;
   }
 
   .navbar-app>.box-navbar-freedy a .icon-menus {
@@ -4743,7 +4742,7 @@ color: #000000;
     margin-left: 0 !important;
     width: 3.5em;
     height: 1.5em;
-    background-color: #00A7DC !important;
+    background-color: #0066FF !important;
     background: url(../img/speedybank/checkbox-ball-chacked.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -5131,7 +5130,7 @@ color: #000000;
   }
 
   .recive-bank a {
-    background: linear-gradient(90deg, #00A7DC 0%, #0F4E97 100%);
+    background: linear-gradient(90deg, #0066FF 0%, #0047B1 100%);
     color: #FFFFFF;
     border-radius: 8px;
     font-weight: 600;
@@ -5140,7 +5139,7 @@ color: #000000;
   }
 
   .recive-bank a:hover {
-    background: linear-gradient(90deg, #0F4E97 0%,  #00A7DC 100%);
+    background: linear-gradient(90deg, #0047B1 0%,  #0066FF 100%);
     color: #FFFFFF;
     border-radius: 8px;
     font-weight: 600;
@@ -5150,7 +5149,7 @@ color: #000000;
 
   .infobank-list-app {
     background: #ffffff;
-    border: 1px solid #00A7DC;
+    border: 1px solid #000000;
     border-radius: 5px;
   }
 
@@ -5159,17 +5158,13 @@ color: #000000;
     font-size: 15px;
     line-height: 22px;
     color: #ffffff;
-    background-color: #0F4E97;
-    border-radius: 14px;
+    background-color: #0066FF;
+    border-radius: 99999px;
   }
 
   .btn-receive-bank:hover {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
+    background-color: #0055D4;
     color: #ffffff;
-    background-color: #03336B;
-    border-radius: 14px;
   }
 
   .btn-wallet-cancle {
@@ -5793,7 +5788,7 @@ color: #000000;
     line-height: 20px;
     color: #0F4E97;
     text-align: center;
-    border: 1px solid #319CFF;
+    border: 2px solid #319CFF;
     border-radius: 9999px;
     padding: 0 1rem;
   }
@@ -5811,6 +5806,14 @@ color: #000000;
 
   .navbar-app>.box-navbar-freedy a.logout:hover {
     background: linear-gradient(97.98deg, #AED8FF 8.71%, #0B86F8 42.93%, #319CFF 122.46%);
+  }
+
+  .navbar-app>.box-navbar-freedy a.back {
+    border:3px solid #0000;
+    border-radius:999999px;
+    background:
+      linear-gradient(white,white) padding-box,
+      linear-gradient(#319CFF,#AED8FF) border-box;
   }
 
   .navbar-app>.box-navbar-freedy a .icon-menus {
@@ -6547,7 +6550,7 @@ color: #000000;
     line-height: 20px;
     color: #0F4E97;
     text-align: center;
-    border: 1px solid #319CFF;
+    border: 2px solid #319CFF;
     border-radius: 9999px;
     padding: 0 1rem;
   }
@@ -6565,6 +6568,14 @@ color: #000000;
 
   .navbar-app>.box-navbar-freedy a.logout:hover {
     background: linear-gradient(97.98deg, #AED8FF 8.71%, #0B86F8 42.93%, #319CFF 122.46%);
+  }
+
+  .navbar-app>.box-navbar-freedy a.back {
+    border:3px solid #0000;
+    border-radius:999999px;
+    background:
+      linear-gradient(white,white) padding-box,
+      linear-gradient(#319CFF,#AED8FF) border-box;
   }
 
   .navbar-app>.box-navbar-freedy a .icon-menus {
@@ -7134,7 +7145,7 @@ color: #000000;
     margin-left: 0 !important;
     width: 3.5em;
     height: 1.5em;
-    background-color: #00A7DC !important;
+    background-color: #0066FF !important;
     background: url(../img/speedybank/checkbox-ball-chacked.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -7523,7 +7534,7 @@ color: #000000;
   }
 
   .recive-bank a {
-    background: linear-gradient(90deg, #00A7DC 0%, #0F4E97 100%);
+    background: linear-gradient(90deg, #0066FF 0%, #0047B1 100%);
     color: #FFFFFF;
     border-radius: 8px;
     font-weight: 600;
@@ -7532,7 +7543,7 @@ color: #000000;
   }
 
   .recive-bank a:hover {
-    background: linear-gradient(90deg, #0F4E97 0%,  #00A7DC 100%);
+    background: linear-gradient(90deg, #0047B1 0%,  #0066FF 100%);
     color: #FFFFFF;
     border-radius: 8px;
     font-weight: 600;
@@ -7542,7 +7553,7 @@ color: #000000;
 
   .infobank-list-app {
     background: #ffffff;
-    border: 1px solid #00A7DC;
+    border: 1px solid #000000;
     border-radius: 5px;
   }
 
@@ -7551,17 +7562,13 @@ color: #000000;
     font-size: 18px;
     line-height: 22px;
     color: #ffffff;
-    background-color: #0F4E97;
-    border-radius: 14px;
+    background-color: #0066FF;
+    border-radius: 99999px;
   }
 
   .btn-receive-bank:hover {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
+    background-color: #0055D4;
     color: #ffffff;
-    background-color: #03336B;
-    border-radius: 14px;
   }
 
   .btn-wallet-cancle {
@@ -8874,7 +8881,7 @@ color: #000000;
     line-height: 20px;
     color: #0F4E97;
     text-align: center;
-    border: 1px solid #319CFF;
+    border: 2px solid #319CFF;
     border-radius: 9999px;
     padding: 0 1rem;
   }
@@ -8892,6 +8899,14 @@ color: #000000;
 
   .navbar-app>.box-navbar-freedy a.logout:hover {
     background: linear-gradient(97.98deg, #AED8FF 8.71%, #0B86F8 42.93%, #319CFF 122.46%);
+  }
+
+  .navbar-app>.box-navbar-freedy a.back {
+    border:3px solid #0000;
+    border-radius:999999px;
+    background:
+      linear-gradient(white,white) padding-box,
+      linear-gradient(#319CFF,#AED8FF) border-box;
   }
 
   .navbar-app>.box-navbar-freedy a .icon-menus {
@@ -9461,7 +9476,7 @@ color: #000000;
     margin-left: 0 !important;
     width: 3.5em;
     height: 1.5em;
-    background-color: #00A7DC !important;
+    background-color: #0066FF !important;
     background: url(../img/speedybank/checkbox-ball-chacked.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -9850,7 +9865,7 @@ color: #000000;
   }
 
   .recive-bank a {
-    background: linear-gradient(90deg, #00A7DC 0%, #0F4E97 100%);
+    background: linear-gradient(90deg, #0066FF 0%, #0047B1 100%);
     color: #FFFFFF;
     border-radius: 8px;
     font-weight: 600;
@@ -9859,7 +9874,7 @@ color: #000000;
   }
 
   .recive-bank a:hover {
-    background: linear-gradient(90deg, #0F4E97 0%,  #00A7DC 100%);
+    background: linear-gradient(90deg, #0047B1 0%,  #0066FF 100%);
     color: #FFFFFF;
     border-radius: 8px;
     font-weight: 600;
@@ -9869,7 +9884,7 @@ color: #000000;
 
   .infobank-list-app {
     background: #ffffff;
-    border: 1px solid #00A7DC;
+    border: 1px solid #000000;
     border-radius: 5px;
   }
 
@@ -9878,17 +9893,13 @@ color: #000000;
     font-size: 18px;
     line-height: 22px;
     color: #ffffff;
-    background-color: #0F4E97;
-    border-radius: 14px;
+    background-color: #0066FF;
+    border-radius: 99999px;
   }
 
   .btn-receive-bank:hover {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
+    background-color: #0055D4;
     color: #ffffff;
-    background-color: #03336B;
-    border-radius: 14px;
   }
 
 
@@ -11664,7 +11675,7 @@ color: #000000;
     line-height: 20px;
     color: #0F4E97;
     text-align: center;
-    border: 1px solid #319CFF;
+    border: 2px solid #319CFF;
     border-radius: 9999px;
     padding: 0 1rem;
   }
@@ -11682,6 +11693,14 @@ color: #000000;
 
   .navbar-app>.box-navbar-freedy a.logout:hover {
     background: linear-gradient(97.98deg, #AED8FF 8.71%, #0B86F8 42.93%, #319CFF 122.46%);
+  }
+
+  .navbar-app>.box-navbar-freedy a.back {
+    border:3px solid #0000;
+    border-radius:999999px;
+    background:
+      linear-gradient(white,white) padding-box,
+      linear-gradient(#319CFF,#AED8FF) border-box;
   }
 
   .navbar-app>.box-navbar-freedy a .icon-menus {
@@ -12251,7 +12270,7 @@ color: #000000;
     margin-left: 0 !important;
     width: 3.5em;
     height: 1.5em;
-    background-color: #00A7DC !important;
+    background-color: #0066FF !important;
     background: url(../img/speedybank/checkbox-ball-chacked.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -12640,7 +12659,7 @@ color: #000000;
   }
 
   .recive-bank a {
-    background: linear-gradient(90deg, #00A7DC 0%, #0F4E97 100%);
+    background: linear-gradient(90deg, #0066FF 0%, #0047B1 100%);
     color: #FFFFFF;
     border-radius: 8px;
     font-weight: 600;
@@ -12649,7 +12668,7 @@ color: #000000;
   }
 
   .recive-bank a:hover {
-    background: linear-gradient(90deg, #0F4E97 0%,  #00A7DC 100%);
+    background: linear-gradient(90deg, #0F4E97 0%,  #0066FF 100%);
     color: #FFFFFF;
     border-radius: 8px;
     font-weight: 600;
@@ -12659,7 +12678,7 @@ color: #000000;
 
   .infobank-list-app {
     background: #ffffff;
-    border: 1px solid #00A7DC;
+    border: 1px solid #000000;
     border-radius: 5px;
   }
 
@@ -12668,17 +12687,13 @@ color: #000000;
     font-size: 18px;
     line-height: 22px;
     color: #ffffff;
-    background-color: #0F4E97;
-    border-radius: 14px;
+    background-color: #0066FF;
+    border-radius: 9999px;
   }
 
   .btn-receive-bank:hover {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
+    background-color: #0055D4;
     color: #ffffff;
-    background-color: #03336B;
-    border-radius: 14px;
   }
 
 

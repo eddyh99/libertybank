@@ -270,7 +270,7 @@ class Auth extends CI_Controller
 
 			$srcrefwlogo = base_url() . 'qr/ref/' . $result->message->ucode . 'wlogo.png';
 			if (@getimagesize($srcrefwlogo) == FALSE) {
-				$this->ciqrcode->addLogo($result->message->ucode, '/qr/ref/', '/assets/img/speedybank/logoQR.png');
+				$this->ciqrcode->addLogo($result->message->ucode, '/qr/ref/', '/assets/img/logoQR.png');
 			}
 
 			if (empty($this->session->userdata('wallet_req'))) {
@@ -510,6 +510,7 @@ class Auth extends CI_Controller
 		$banks = URLAPI . "/v1/member/wallet/getAllbank";
 		$symbol = URLAPI . "/v1/trackless/currency/getsymbol?currency=" . base64_decode($curr);
 
+
 		if ($amount) {
 			$data['urlamount'] = "&amount=" . base64_decode($amount);
 		}
@@ -519,7 +520,6 @@ class Auth extends CI_Controller
 		$data['ucode'] = base64_decode($ucode);
 		$data['amount'] = base64_decode(@$amount);
 		$data['causal'] = base64_decode(@$causal);
-
 
 		$data['title'] = NAMETITLE . " - Request";
 
