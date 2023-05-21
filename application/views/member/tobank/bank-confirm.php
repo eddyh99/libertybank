@@ -132,12 +132,24 @@
     </div>
 </div>
 
+
 <div class="navbar-app fixed-bottom d-flex justify-content-center">
-    <div class="col-12 col-lg-8 col-xl-6 box-navbar-freedy d-flex justify-content-center align-items-center">
+    <div class="col-12 col-lg-8 col-xl-6 box-navbar-freedy d-flex justify-content-start align-items-center top">
         <a href="<?= base_url() ?>bank" class="d-flex align-items-center border-0">
             <div class="icon-menus d-flex align-items-center home-svg">
-                <svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.875 9.5L10.125 1.25M1.875 9.5L10.125 17.75M1.875 9.5H21.125" stroke="#0F4E97" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <svg width="41" height="35" viewBox="0 0 41 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="41" height="35" fill="url(#paint0_linear_30_4821)" />
+                    <path d="M32.4584 17.5236H8.54175" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M20.5001 27.7338L8.54175 17.5245L20.5001 7.31531" stroke="white" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <defs>
+                        <linearGradient id="paint0_linear_30_4821" x1="20.5" y1="0" x2="20.5" y2="35"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#0066FF" />
+                            <stop offset="1" stop-color="#0053CF" />
+                        </linearGradient>
+                    </defs>
                 </svg>
             </div>
         </a>

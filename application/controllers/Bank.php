@@ -481,7 +481,6 @@ class Bank extends CI_Controller
         );
 
         $result = apitrackless(URLAPI . "/v1/member/wallet/bankSummary", json_encode($mdata));
-
         if (@$result->code != 200) {
             $this->session->set_flashdata("failed", $result->message);
             redirect(base_url() . "bank/" . $this->security->xss_clean($input->post("url")));
@@ -1910,6 +1909,9 @@ class Bank extends CI_Controller
         }
 
         $result = apitrackless(URLAPI . "/v1/member/wallet/bankTransfer", json_encode($mdata));
+
+        // print_r(json_encode($result));
+        // die;
 
         if (@$result->code != 200) {
             if (@$result->code == 5055) {

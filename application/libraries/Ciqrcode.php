@@ -140,7 +140,7 @@ class Ciqrcode
 
 	public function createThumbnail($name, $dirrqr)
 	{
-		$QR = imagecreatefrompng(FCPATH . '/assets/img/speedybank/' . 'thumbnail.png');
+		$QR = imagecreatefrompng(FCPATH . '/assets/img/' . 'thumbnail.png');
 
 		// memulai menggambar logo dalam file qrcode
 		$logo = imagecreatefromstring(file_get_contents(FCPATH . $dirrqr . $name . 'wlogo.png'));

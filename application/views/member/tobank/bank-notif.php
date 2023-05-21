@@ -19,8 +19,8 @@
                     <div class="col-12 my-4">
                         <div class="col-12 py-4">
                             <div class="d-flex flex-column justify-content-center align-items-center">
-                                <img src="<?= base_url() ?>assets/img/speedybank/logo.png" alt="" style="width: 100px;"
-                                    class="mt-5">
+                                <img src="<?= base_url() ?>assets/img/logo-only.svg" alt="" style="width: 100px;"
+                                    class="mt-5 mb-3">
                                 <span class="b-qr">Your transfer successed</span>
                             </div>
                         </div>

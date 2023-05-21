@@ -47,12 +47,12 @@
                                 ($_SESSION["currency"] == "RON")
                             ) { 
                                 if ($_SESSION["currency"] == "EUR") {?>
-                            <a href="<?= base_url() ?>receive/localbank" class="col-8 py-3 my-2">National SEPA
+                            <a href="<?= base_url() ?>receive/localbank" class="col-8 py-3 my-2 f-hahmlet">National SEPA
                                 Circuit</a>
                             <?php } elseif ($_SESSION["currency"] == "USD") { ?>
-                            <a href="<?= base_url() ?>receive/localbank" class="col-8 py-3 my-2">USA bank circuit</a>
+                            <a href="<?= base_url() ?>receive/localbank" class="col-8 py-3 my-2 f-hahmlet">USA bank circuit</a>
                             <?php }else{?>
-                            <a href="<?= base_url() ?>receive/localbank" class="col-8 py-3 my-2">Local bank</a>
+                            <a href="<?= base_url() ?>receive/localbank" class="col-8 py-3 my-2 f-hahmlet">Local bank</a>
                             <?php } 
 
                                 if (($_SESSION["currency"] == "USD") ||
@@ -60,10 +60,10 @@
                                     ($_SESSION["currency"] == "GBP")
                                 ) { 
                                     if ($_SESSION["currency"] == "EUR") {?>
-                            <a href="<?= base_url() ?>receive/interbank" class="col-8 py-3 my-2">International
+                            <a href="<?= base_url() ?>receive/interbank" class="col-8 py-3 my-2 f-hahmlet">International
                                 BIC/Swift</a>
                             <?php }else{?>
-                            <a href="<?= base_url() ?>receive/interbank" class="col-8 py-3 my-2">International Swift</a>
+                            <a href="<?= base_url() ?>receive/interbank" class="col-8 py-3 my-2 f-hahmlet">International Swift</a>
                             <?php } 
                                 } 
                             } else{ ?>
@@ -78,9 +78,9 @@
                                 <hr>
                             </div>
 
-                            <a href="<?= base_url() ?>receive/interbank?currency=USD" class="col-8 py-3 my-2">USD
+                            <a href="<?= base_url() ?>receive/interbank?currency=USD" class="col-8 py-3 my-2 f-hahmlet">USD
                                 International</a>
-                            <a href="<?= base_url() ?>receive/interbank?currency=EUR" class="col-8 py-3 my-2">EUR
+                            <a href="<?= base_url() ?>receive/interbank?currency=EUR" class="col-8 py-3 my-2 f-hahmlet">EUR
                                 International</a>
                             <div class="receive-note">
                                 <span class="text-blue-freedy">
