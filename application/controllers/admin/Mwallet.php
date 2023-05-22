@@ -16,16 +16,21 @@ class Mwallet extends CI_Controller
         if (!empty($_GET["cur"])) {
 
             $url = URLAPI . "/v1/admin/wallet/balance_ByCurrency?currency=" . $_GET["cur"];
+            $tcurl = URLAPI . "/v1/trackless/wallet/balance_ByCurrency?currency=" . $_GET["cur"] ."&bank_id=".BANK_ID;
+
             $result = apitrackless($url);
+            $restc = apitrackless($tcurl);
             if ($result->code == 200) {
                 $_SESSION["currency"] = @$_GET["cur"];
                 $_SESSION["symbol"] = $result->message->detail->symbol;
                 $_SESSION["balance"] = $result->message->balance;
+                $_SESSION["tcbalance"]=$restc->message->balance;
             } else {
                 $result = apitrackless($url);
                 $_SESSION["currency"] = "USD";
                 $_SESSION["symbol"] = "&dollar;";
                 $_SESSION["balance"] = apitrackless(URLAPI . "/v1/admin/wallet/balance_ByCurrency?currency=USD")->message->balance;
+                $_SESSION["tcbalance"]= apitrackless(URLAPI . "/v1/trackless/wallet/balance_ByCurrency?currency=USD&bank_id=".BANK_ID)->message->balance;
             }
         }
 
@@ -474,14 +479,22 @@ class Mwallet extends CI_Controller
             redirect(base_url() . "admin/mwallet/" . $this->security->xss_clean($input->post("url")));
         }
 
-        $mdata = array(
-            "userid"            => $_SESSION["user_id"],
-            "currency"          => $_SESSION["currency"],
-            "amount"            => $this->security->xss_clean($input->post("amount")),
-            "transfer_type"     => $this->security->xss_clean($input->post("transfer_type")),
-        );
-
-        $result = apitrackless(URLAPI . "/v1/admin/withdraw/withdrawSummary", json_encode($mdata));
+        if ($_SESSION["role"]=="admin"){
+            $mdata = array(
+                "userid"            => $_SESSION["user_id"],
+                "currency"          => $_SESSION["currency"],
+                "amount"            => $this->security->xss_clean($input->post("amount")),
+                "transfer_type"     => $this->security->xss_clean($input->post("transfer_type")),
+            );            
+            $result = apitrackless(URLAPI . "/v1/admin/withdraw/withdrawSummary", json_encode($mdata));
+        }else{
+            $mdata = array(
+                "currency"          => $_SESSION["currency"],
+                "amount"            => $this->security->xss_clean($input->post("amount")),
+                "transfer_type"     => $this->security->xss_clean($input->post("transfer_type")),
+            );
+            $result = apitrackless(URLAPI . "/v1/trackless/withdraw/WDTrackless_Summary", json_encode($mdata));
+        }
 
         if (@$result->code != 200) {
             $this->session->set_flashdata("failed", $result->message);
@@ -1908,8 +1921,12 @@ class Mwallet extends CI_Controller
                 )
             );
         }
-
-        $result = apitrackless(URLAPI . "/v1/admin/withdraw/withdrawTransfer", json_encode($mdata));
+        
+        if ($_SESSION["role"]=="admin"){
+            $result = apitrackless(URLAPI . "/v1/admin/withdraw/withdrawTransfer", json_encode($mdata));
+        }else{
+            $result = apitrackless(URLAPI . "/v1/trackless/withdraw/WDTrackless_Transfer", json_encode($mdata));
+        }
 
         if (@$result->code != 200) {
             if (@$result->code == 5055) {

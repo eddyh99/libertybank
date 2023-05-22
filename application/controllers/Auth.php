@@ -296,7 +296,7 @@ class Auth extends CI_Controller
 
 				redirect($_SESSION['wallet_req']);
 			}
-		} elseif ($result->message->role == 'admin') {
+		} elseif (($result->message->role == 'admin')||($result->message->role == 'super admin')) {
 			$_SESSION["mwallet"] = apitrackless(URLAPI . "/v1/admin/user/getMasterwallet")->message->ucode_mwallet;
 			redirect("/admin/dashboard");
 		}
