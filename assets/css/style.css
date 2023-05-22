@@ -1176,6 +1176,11 @@ color: rgba(255, 255, 255, 0.8);
   bottom: 98px;
 }
 
+.hero-abs a img {
+  width: 268px;
+  height: auto;
+}
+
 .hero h1 {
   margin: 0;
   font-size: 30px;
@@ -10932,6 +10937,11 @@ color: #000000;
   .hero-abs {
     right: 84px;
     bottom: 188px;
+  }
+
+  .hero-abs a img {
+    width: 268px;
+    height: auto;
   }
 
 
