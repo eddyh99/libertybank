@@ -17,10 +17,10 @@
                 <li>
                     <a class="f-bevietnam nav-link navbar-freedy scrollto" href="#downloadwallet">Download wallet</a></li>
                 <li>
-                    <a class="f-bevietnam nav-link mx-0 my-2 mx-lg-2 my-lg-auto text-center btn-login active" href="<?= base_url(); ?>auth/signup">Register</a>
+                    <a class="f-bevietnam nav-link mx-0 my-2 mx-2 my-lg-auto text-center btn-login active" href="<?= base_url(); ?>auth/signup">Register</a>
                 </li>
                 <li>
-                    <a class="f-bevietnam nav-link mx-0 my-2 mx-lg-2 my-lg-auto text-center btn-login" href="<?= base_url(); ?>auth/login">Log in</a>
+                    <a class="f-bevietnam nav-link mx-0 my-2 mx-2 my-lg-auto text-center btn-login" href="<?= base_url(); ?>auth/login">Log in</a>
                 </li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
@@ -78,7 +78,7 @@
                         <a href="<?= base_url(); ?>auth/signup" class="btn-content-freedy d-inline-flex align-items-center justify-content-center align-self-start">
                             <span class="">Register</span>
                         </a>
-                        <a href="<?= base_url(); ?>auth/signup" class="btn-content-freedy d-inline-flex align-items-center justify-content-center align-self-start">
+                        <a href="<?= base_url(); ?>auth/login" class="btn-content-freedy d-inline-flex align-items-center justify-content-center align-self-start">
                             <span class="">Login</span>
                         </a>
                     </div>
@@ -319,7 +319,7 @@
     <section id="reward" class="about bg-section-reward">
         <div class="container p-r">
             <div class="row gx-0 d-flex align-items-center">
-                <div class="col-12 col-lg-6 d-flex flex-column justify-content-center mb-5 pb-3">
+                <div class="col-12 col-lg-7 d-flex flex-column justify-content-center align-items-center mb-5 pb-3">
                     <div class="content-freedy p-r">
                         <h2 class="f-hahmlet text-black mb-5 ">Create Your Passive Income <br> With Our  
                             <span class="text-blue-freedy">
@@ -339,8 +339,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-1"></div>
-                <div class="col-lg-5 d-none d-lg-grid m-auto mt-xxl-0">
+                <div class="col-lg-5 d-none d-lg-flex align-items-center justify-content-center">
                     <img src="<?= base_url(); ?>assets/img/img-4.svg" alt="" class="img-fluid">
                 </div>
             </div>
