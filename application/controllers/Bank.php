@@ -1915,17 +1915,16 @@ class Bank extends CI_Controller
 
         if (@$result->code != 200) {
             if (@$result->code == 5055) {
-                $this->session->set_flashdata("failed", $result->message);
+                $this->session->set_flashdata("failed", @$result->message[0]->message . '<br>' . @$result->message[1]->message);
                 redirect(base_url() . "bank");
             }
-            $this->session->set_flashdata("failed", $result->message);
+            $this->session->set_flashdata("failed", @$result->message[0]->message . '<br>' . @$result->message[1]->message);
             redirect(base_url() . "bank");
         }
 
         $data['title'] = NAMETITLE . " - Wallet to Bank Completed";
 
         $this->load->view('tamplate/header', $data);
-        $this->load->view('tamplate/navbar-bottom');
         $this->load->view('member/tobank/bank-notif');
         $this->load->view('tamplate/footer');
     }

@@ -50,9 +50,6 @@ class Card extends CI_Controller
                 return;               
             }
 
-            // print_r(@$result->message->status);
-            // die;
-
             @$card_id     = $result->message->card_id;
             @$account_id  = $result->message->account_id;
 
@@ -169,7 +166,7 @@ class Card extends CI_Controller
         $result = apitrackless(URLAPI . "/v1/member/card/activate_card", json_encode($mdata));
         if (@$result->code != "200") {
             $this->session->set_flashdata('failed', "Please check your phone format or 3ds Password");
-            redirect ("homepage/card?requestcard=YWN0aXZlbm93");
+            redirect ("card/requestcard?requestcard=YWN0aXZlbm93");
             return;
         }
 
@@ -447,14 +444,15 @@ class Card extends CI_Controller
             "card_detail"    => $_SESSION["carddetail"]
         );
 
-        // Comment this for Debugging Request Card
-        $result = apitrackless(URLAPI . "/v1/member/card/activate_physical_card", json_encode($mdata));
 
-        if (@$result->code != "200") {
-            $this->session->set_flashdata('failed', "Please check shipping address, your phone format or 3ds Password");
-            redirect ("card/requestcard_physical?requestcard_physical=cmVxdWVzdGNhcmRfcGh5c2ljYWw=");
-            return;
-        }
+        // Comment this for Debugging Request Card
+        // $result = apitrackless(URLAPI . "/v1/member/card/activate_physical_card", json_encode($mdata));
+        // if (@$result->code != "200") {
+        //     $this->session->set_flashdata('failed', "Please check shipping address, your phone format or 3ds Password");
+        //     redirect ("card/requestcard_physical?requestcard_physical=cmVxdWVzdGNhcmRfcGh5c2ljYWw=");
+        //     return;
+        // }
+        // Comment this for Debugging Request Card
 
         $data=array(
             "title"                         => NAMETITLE . " - Card Success",
@@ -522,7 +520,7 @@ class Card extends CI_Controller
         $this->form_validation->set_rules('confirmamount', 'Confirm Amount', 'trim|required|greater_than[0]|matches[amount]');
         if ($this->form_validation->run() == FALSE) {
             $this->session->set_flashdata("failed", validation_errors());
-            redirect("homepage/topupcard");
+            redirect("card/topupcard");
         }
 
         $mdata = array(
@@ -536,7 +534,7 @@ class Card extends CI_Controller
 
         if (@$result->code != 200) {
             $this->session->set_flashdata("failed", $result->message);
-            redirect(base_url() . "homepage/topupcard");
+            redirect(base_url() . "card/topupcard");
         }
 
         $transfer_type  = $this->security->xss_clean($input->post("transfer_type"));
@@ -565,7 +563,7 @@ class Card extends CI_Controller
         $this->form_validation->set_rules('amount', 'Amount', 'trim|required|greater_than[0]');
         if ($this->form_validation->run() == FALSE) {
             $this->session->set_flashdata("failed", validation_errors());
-            redirect("homepage/topupcard");
+            redirect("card/topupcard");
         }
 
         $mdata = array(
@@ -576,9 +574,11 @@ class Card extends CI_Controller
         );        
 
         $result = apitrackless(URLAPI . "/v1/member/card/topupprocess", json_encode($mdata));
+        // print_r(json_encode($result));
+        // die;
         if (@$result->code != 200) {
             $this->session->set_flashdata("failed", $result->message);
-            redirect(base_url() . "homepage/topupcard");
+            redirect(base_url() . "card/topupcard");
         }
 
         $data=array(
