@@ -3,6 +3,9 @@
         <h3 class="fw-bold text-blue-freedy mb-4">MASTER WALLET <?= $_SESSION["mwallet"] ?></h3>
         <h6 class="fw-bold">Balance</h6>
         <h4 class="fw-bold"><?= $_SESSION["symbol"] ?> <?= number_format(balanceadmin($_SESSION["currency"]),2) ?></h4>
+        <?php if ($_SESSION["role"]=="super admin"){?>
+        <h4 class="fw-bold"><?= $_SESSION["symbol"] ?> <?= number_format($_SESSION["tcbalance"],2) ?></h4>
+        <?php } ?>
     </div>
     <img src="<?=base_url()?>assets/img/logo-only.svg" alt="logo" style="height: 75px;" class="me-5">
 </div>
