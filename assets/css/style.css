@@ -290,15 +290,15 @@ color: rgba(255, 255, 255, 0.8);
 .btn-card-confirm-nocard{
   padding: 1rem 3rem;
   transition: 0.5s;
-  color: #fff;
+  color: #000000;
   border: none;
-  background: #0F4E97;
+  background: linear-gradient(97.98deg, #319CFF 8.71%, #AED8FF 42.93%, #0B86F8 122.46%);
   border-radius: 26.386px;
 }
 
 .btn-card-confirm-nocard:hover{
-  color: #fff;
-  
+  color: #000000;
+
 }
 
 .wrap-3dsecure {
@@ -413,14 +413,14 @@ color: rgba(255, 255, 255, 0.8);
 .btn-card-confirm{
   padding: 1rem 3rem;
   transition: 0.5s;
-  color: #fff;
+  color: #000000;
   border: none;
-  background: #0F4E97;
+  background: linear-gradient(97.98deg, #319CFF 8.71%, #AED8FF 42.93%, #0B86F8 122.46%);
   border-radius: 26.386px;
 }
 
 .btn-card-confirm:hover{
-  color: #fff;
+  color: #000000;
   
 }
 
@@ -505,14 +505,16 @@ color: rgba(255, 255, 255, 0.8);
 
 .card-topup {
   height: 80px;
-  background: linear-gradient(#84D3FF, #84D3FF) padding-box,
-  linear-gradient(to right, #00A7DC, #2262ac, #0F4E97) border-box;
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+  linear-gradient(to right, #0066FF, #0066FF, #0066FF) border-box;
   border-radius: 12px;
   border: 3px solid transparent;
 }
 
 .card-topup:hover{
-  color: #012855;
+  background: linear-gradient(#0066FF, #0066FF) padding-box,
+  linear-gradient(to right, #0066FF, #0066FF, #0066FF) border-box;
+  color: #ffffff;
 }
 
 .card-balance div:nth-child(1) {

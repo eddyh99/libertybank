@@ -535,8 +535,7 @@ class Link extends CI_Controller
                 );
             $url = URLAPI . "/v1/member/findme/set_business";
             $result   = apitrackless($url, json_encode($mdata));
-            // print_r(json_encode($result));
-            // die;
+
 
             if (@$result->code == 5055) {
                 $this->session->set_flashdata('failed', $result->message);

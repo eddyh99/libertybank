@@ -12644,7 +12644,7 @@ body {
 }
 
 .sb-sidenav-dark .sb-sidenav-menu .nav-link.active .sb-nav-link-icon {
-  color: #0F4E97;
+  color: #0066FF;
 }
 
 .sb-sidenav-dark .sb-sidenav-footer {
@@ -12853,7 +12853,7 @@ body {
 
 /* Freedy CSS */
 .box-dashboard-freedy-top {
-  border: 3px solid #0F4E97;
+  border: 3px solid #0066FF;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
   border-radius: 35px;
 }
@@ -12863,30 +12863,33 @@ body {
 }
 
 .list-currency a>.box-list {
-  background: #0F4E97;
+  background: #0066FF;
   border-radius: 10px;
   color: #fff;
 }
 
+.list-currency a>.box-list:hover{
+  background: #00337E;
+}
+
 .text-blue-freedy {
-  background: linear-gradient(263.23deg, #0F4E97 6.67%, #00A7DC 70.3%);
+  background: linear-gradient(263.23deg, #0066FF 6.67%, #0066FF 70.3%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .btn-freedy-blue {
-  background: linear-gradient(180deg, #0F4E97 0%, #00A7DC 100%);
-  box-shadow: 0px 4px 15px #0F4E97;
-  border-radius: 8px;
+  background: linear-gradient(263deg, #319CFF 0%, #AED8FF 50%, #0B86F8 100%);
+  border-radius: 9999px;
   border: 1px solid #0F4E97;
-  color: #fff;
+  color: #000000;
 }
 
 .btn-freedy-blue:hover {
-  background: linear-gradient(180deg, #0F4E97 0%, #00A7DC 100%);
+  background: linear-gradient(263deg, #AED8FF 0%, #319CFF 50%, #0B86F8 100%);
   border: 1px solid #0F4E97;
-  color: #fff;
+  color: #000000;
 }
 
 .btn-freedy-white {
@@ -13018,7 +13021,7 @@ body {
 }
 
 .attention-box {
-  background: linear-gradient(180deg, #00A7DC 0%, #0F4E97 100%);
+  background: linear-gradient(180deg, #0066ff 0%, #0F4E97 100%);
   border: 3px solid #0F4E97;
   border-radius: 10px;
 }

@@ -103,7 +103,9 @@ class Receive extends CI_Controller
         );
 
         $result = apitrackless(URLAPI . "/v1/member/wallet/topup", json_encode($mdata));
-
+        // print_r(json_encode($result->message));
+        // die;
+        
         if (@$result->code != "200") {
             $this->session->set_flashdata('failed', $result->message);
             redirect("receive/localbank");
@@ -114,8 +116,6 @@ class Receive extends CI_Controller
         $body['data'] = $result->message;
         $body['amount'] = $amount;
 
-        // print_r(json_encode($result->message));
-        // die;
 
         $this->load->view('tamplate/header', $data);
         $this->load->view('tamplate/navbar-top');
@@ -197,6 +197,8 @@ class Receive extends CI_Controller
         );
 
         $result = apitrackless(URLAPI . "/v1/member/wallet/topup", json_encode($mdata));
+        // print_r(json_encode($result->message));
+        // die;
 
         if (@$result->code != "200") {
             $this->session->set_flashdata('failed', $result->message);
@@ -207,8 +209,6 @@ class Receive extends CI_Controller
         $data['title'] = NAMETITLE . " - Top Up Process";
         $body['data'] = $result->message;
         $body['amount'] = $amount;
-        // print_r(json_encode($result->message));
-        // die;
 
         $this->load->view('tamplate/header', $data);
         $this->load->view('tamplate/navbar-top');

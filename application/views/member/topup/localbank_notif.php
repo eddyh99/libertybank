@@ -29,7 +29,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <!-- Account Number / IBAN -->
+                                <!-- IBAN / Account Number  -->
                                 <?php if (($_SESSION["currency"] == "USD")) { ?>
                                     <label class="form-label"><?= @$data->payinBankAccount->details[1]->label ?></label>
                                 <?php } else { ?>
@@ -50,7 +50,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <!-- Account Number / BIC/SWIFT -->
+                                <!-- BIC/SWIFT / Account Number  -->
                                 <?php if (($_SESSION["currency"] == "EUR")) { ?>
                                     <label class="form-label"><?= @$data->payinBankAccount->details[2]->label ?></label>
                                 <?php } else { ?>

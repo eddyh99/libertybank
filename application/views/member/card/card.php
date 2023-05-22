@@ -41,9 +41,9 @@
         <div class="col-12 col-lg-8 col-xl-6">
             <div class="container" style="margin-bottom: 8rem;">
                 <div class="app-container py-5 d-flex flex-column justify-content-center align-items-center ">
-                    <h1 class="text-center f-poppins text-blue-freedy my-5">SUCCESS</h1>
-                    <img src="<?= base_url()?>assets/img/speedybank/check-success.png" alt="success">
-                    <h1 class="text-center f-poppins text-blue-freedy my-5">YOUR CARD BALANCE WILL BE UPDATE WITHIN 2 WORKING DAYS</h1>
+                    <h1 class="text-center f-hahmlet text-blue-freedy my-5">SUCCESS</h1>
+                    <img src="<?= base_url()?>assets/img/logo-only.svg" alt="success">
+                    <h1 class="text-center f-hahmlet text-blue-freedy my-5">YOUR CARD BALANCE WILL BE UPDATE WITHIN 2 WORKING DAYS</h1>
                     <div class="text-start d-flex justify-content-center mt-5 mb-4">
                         <a href="<?= base_url(); ?>card"
                             class="btn-card-confirm d-inline-flex align-items-center justify-content-center align-self-center">
@@ -90,7 +90,7 @@
                                 <div class="d-flex justify-content-end">
                                     <input type="text" id="cardnumcopy" class="text-end mx-3 d-inline-block w-100" value="<?=$detailcard->cardnumber?>" readonly>
                                     <span id="btncardnumcopy">
-                                        <img src="<?= base_url()?>assets/img/speedybank/copy.png" class="img-fluid" alt="copy">
+                                        <img src="<?= base_url()?>assets/img/copy.png" class="img-fluid" alt="copy">
                                     </span>
 
                                 </div>
@@ -123,12 +123,12 @@
                         </div>
                         <div class="row my-4">
                             <a href="<?= base_url(); ?>card/topupcard" class="col-12 mx-auto card-topup d-flex align-items-center justify-content-center">
-                                <span class="text-blue-freed fw-bold">
+                                <span class="text-blue-freed fw-bold f-hahmlet">
                                     Top Up Your Card
                                 </span>
                             </a>
                             <a href="<?= base_url(); ?>card/historycard" class="col-12 mx-auto card-topup d-flex align-items-center justify-content-center mt-4">
-                                <span class="text-blue-freed fw-bold">
+                                <span class="text-blue-freed fw-bold f-hahmlet">
                                     History
                                 </span>
                             </a>

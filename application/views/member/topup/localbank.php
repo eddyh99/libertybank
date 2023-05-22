@@ -27,56 +27,6 @@
                                 </p>
                             </div>   
                             <label class="mb-4">Min Top up :  <?=@number_format($bank->minimum,2)?> <?=$currency?> </label>
-                            <?php
-                                if ($currency == "EUR") {
-                            ?>
-                                <form method="POST" action="<?= base_url() ?>receive/localbank_confirm" class="input-piggy-style" id="form_submit" onsubmit="return validate()">
-                                    <input type="hidden" id="token"
-                                        name="<?php echo $this->security->get_csrf_token_name(); ?>"
-                                        value="<?php echo $this->security->get_csrf_hash(); ?>">
-
-                                    <div class="my-3">
-                                        <label class="ms-2 form-label">AMOUNT</label>
-                                        <input type="text" class="form-control money-input" name="amount" id="amount"
-                                            placeholder="Amount">
-                                    </div>
-                                    <div class="mb-5">
-                                        <label class="ms-2 form-label">CONFIRM AMOUNT</label>
-                                        <input type="text" class="form-control money-input" name="confirm_amount"
-                                            id="confirm_amount" placeholder="Confirm Amount">
-                                    </div>
-                                    <div class="d-flex justify-content-center">
-                                        <button class="btn btn-confirm">
-                                            Next
-                                        </button>
-                                    </div>
-
-                                </form>
-                            <?php }elseif($currency == "USD"){?>
-                                <form method="POST" action="<?= base_url() ?>receive/localbank_confirm" class="input-piggy-style" id="form_submit" onsubmit="return validate()">
-                                    <input type="hidden" id="token"
-                                        name="<?php echo $this->security->get_csrf_token_name(); ?>"
-                                        value="<?php echo $this->security->get_csrf_hash(); ?>">
-
-                                    <div class="my-3">
-                                        <label class="ms-2 form-label">AMOUNT</label>
-                                        <input type="text" class="form-control money-input" name="amount" id="amount"
-                                            placeholder="Amount">
-                                    </div>
-                                    <div class="mb-5">
-                                        <label class="ms-2 form-label">CONFIRM AMOUNT</label>
-                                        <input type="text" class="form-control money-input" name="confirm_amount"
-                                            id="confirm_amount" placeholder="Confirm Amount">
-                                    </div>
-                                    <div class="d-flex justify-content-center">
-                                        <button class="btn btn-confirm">
-                                            Next
-                                        </button>
-                                    </div>
-                                </form>
-                            <?php } else {
-                            ?>
-
                             <form method="POST" action="<?= base_url() ?>receive/localbank_confirm" class="input-piggy-style" id="form_submit" onsubmit="return validate()">
                                 <input type="hidden" id="token"
                                     name="<?php echo $this->security->get_csrf_token_name(); ?>"
@@ -97,10 +47,7 @@
                                         Next
                                     </button>
                                 </div>
-
                             </form>
-
-                            <?php } ?>
                         </div>
                     </div>
                 </div>
