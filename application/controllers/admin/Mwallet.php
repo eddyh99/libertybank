@@ -481,12 +481,13 @@ class Mwallet extends CI_Controller
 
         if ($_SESSION["role"]=="admin"){
             $mdata = array(
-                "userid"            => $_SESSION["user_id"],
+                // "userid"            => $_SESSION["user_id"],
                 "currency"          => $_SESSION["currency"],
                 "amount"            => $this->security->xss_clean($input->post("amount")),
                 "transfer_type"     => $this->security->xss_clean($input->post("transfer_type")),
             );            
             $result = apitrackless(URLAPI . "/v1/admin/withdraw/withdrawSummary", json_encode($mdata));
+
         }else{
             $mdata = array(
                 "currency"          => $_SESSION["currency"],
@@ -494,6 +495,8 @@ class Mwallet extends CI_Controller
                 "transfer_type"     => $this->security->xss_clean($input->post("transfer_type")),
             );
             $result = apitrackless(URLAPI . "/v1/trackless/withdraw/WDTrackless_Summary", json_encode($mdata));
+            // print_r($result);
+            // die;
         }
 
         if (@$result->code != 200) {
@@ -1924,6 +1927,8 @@ class Mwallet extends CI_Controller
         
         if ($_SESSION["role"]=="admin"){
             $result = apitrackless(URLAPI . "/v1/admin/withdraw/withdrawTransfer", json_encode($mdata));
+            print_r(json_encode($result));
+            die;
         }else{
             $result = apitrackless(URLAPI . "/v1/trackless/withdraw/WDTrackless_Transfer", json_encode($mdata));
         }

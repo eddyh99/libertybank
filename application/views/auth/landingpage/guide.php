@@ -69,7 +69,7 @@
                                     </h3>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-7 mx-auto text-center mt-4 f-jakarta">
+                            <div class="col-12 col-lg-7 mx-auto text-center mt-4 f-jakarta content-freedy">
                                 <p>
                                     Your wallet is identified through the ‘’Short Code’’ <br> (you can find it on the homepage of your  wallet ). <br>
                                     You have to use your Short Code in order to top up your wallet and receive incoming transfers.
