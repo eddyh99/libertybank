@@ -43,7 +43,7 @@ h6 {
 # Sections
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 40px 0;
   overflow: hidden;
 }
 
@@ -99,6 +99,17 @@ font-weight: 400;
 font-size: 16px;
 line-height: 180%;
 color: rgba(255, 255, 255, 0.8);
+}
+
+.bg-flowers .right {
+  right: 0;
+} 
+
+.bg-section-reward {
+  background: url(../img/bg-line.png), linear-gradient(180deg, #65B5FF 85.96%, #65B5FF 100%, #65B5FF 100%);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% auto;
 }
 
 /*--------------------------------------------------------------
@@ -1292,16 +1303,16 @@ color: #000000;
 }
 
 .buble-soon{
-  font-size: 24px;
-  background: linear-gradient(245.3deg, #77BEFF 30.48%, #84D3FF 58.47%);
-  width: 150px;
-  height: 150px;
+  font-size: 16px;
+  background: linear-gradient(90.30deg, #319CFF 0%, #AED8FF 40.47%, #0B86F8 100%);
+  width: 100px;
+  height: 100px;
   border-radius: 9999999px;
 }
 
 .buble-soon.abs {
-  right: 0px;
-  top: 89px;
+  right: -24px;
+  bottom: -21px;
   z-index: -1;
 }
 
@@ -5651,7 +5662,7 @@ color: #000000;
   }
 
   .list-different .items-different img {
-    height: 120px;
+    height: 90px;
   }
 
 
@@ -5766,6 +5777,11 @@ color: #000000;
     bottom: -36px;
   }
 
+  .hero-abs a img {
+    width: 268px;
+    height: auto;
+  }
+
   .card-input-dlh+.card .m-dlh {
     margin-left: 15px;
   }
@@ -5843,9 +5859,12 @@ color: #000000;
 
 
 @media (min-width: 450px) {
+
+  
+  
   .bg-hero {
     width: 100%;
-    height: 1000px;
+    height: 758px;
     background-image: url(../img/bg-hero-middle.png);
     background-repeat: no-repeat;
     background-position: center top;
@@ -5854,7 +5873,12 @@ color: #000000;
 
   .hero-abs {
     right: 15px;
-    bottom: 190px;
+    bottom: -24px;
+  }
+
+  .hero-abs a img {
+    width: 268px;
+    height: auto;
   }
 
 
@@ -5862,6 +5886,18 @@ color: #000000;
 
 
 @media (min-width: 576px) {
+
+.bg-section-reward {
+  background: url(../img/bg-line.png), linear-gradient(180deg, #65B5FF 85.96%, rgba(217, 217, 217, 0) 100%, rgba(217, 217, 217, 0) 100%);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% auto;
+}
+  
+  .buble-soon.abs {
+    right: 17px;
+    top: 78px;
+  }
   
 
   .card-number div:nth-child(2) input,
@@ -8046,7 +8082,7 @@ color: #000000;
   }
 
   .list-different .items-different img {
-    height: 120px;
+    height: 90px;
   }
 
 
@@ -8156,9 +8192,14 @@ color: #000000;
 
 @media (min-width: 768px) {
 
+  .buble-soon.abs {
+    right: 17px;
+    top: 50px;
+  }
+
   .bg-hero {
     width: 100%;
-    height: 800px;
+    height: 700px;
     background-image: url(../img/bg-hero-md.png);
     background-repeat: no-repeat;
     background-position: center top;
@@ -8167,7 +8208,12 @@ color: #000000;
 
   .hero-abs {
     right: 15px;
-    bottom: 142px;
+    bottom: 42px;
+  }
+
+  .hero-abs a img {
+    width: 268px;
+    height: auto;
   }
 
   .gmaps-search-val {
@@ -8189,13 +8235,9 @@ color: #000000;
     font-size: 14px;
   }
 
-  .transfer-money h1
-  {
-    font-size: 50px;
-  }
 
   .title-first-debit {
-    font-size: 45px;
+    font-size: 28px;
   }
 
   
@@ -8211,6 +8253,7 @@ color: #000000;
     position: absolute;
     left: 0;
     top: 20%;
+    z-index: -1;
   }
 
   .currencies-card div {
@@ -8367,14 +8410,14 @@ color: #000000;
 
   .content-freedy h2 {
     font-weight: 600;
-    font-size: 32px;
+    font-size: 27px;
     line-height: 145.69%;
 
   }
 
   .content-freedy h3 {
     font-weight: 600;
-    font-size: 36px;
+    font-size: 30px;
     line-height: 177.9%;
 
     color: #CB0000;
@@ -10031,7 +10074,7 @@ color: #000000;
   .box-title-accordion .head {
     display: block;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 110%;
     color: #CB0000;
   }
@@ -10380,7 +10423,7 @@ color: #000000;
   }
 
   .list-different .items-different img {
-    height: 120px;
+    height: 90px;
   }
 
 
@@ -10507,7 +10550,7 @@ color: #000000;
   
   .bg-hero {
     width: 100%;
-    height: 981px;
+    height: 920px;
     background-image: url(../img/bg-hero-md.png);
     background-repeat: no-repeat;
     background-position: center top;
@@ -10515,8 +10558,13 @@ color: #000000;
   }
 
   .hero-abs {
-    right: 60px;
-    bottom: 142px;
+    right: 77px;
+    bottom: 72px;
+  }
+  
+  .hero-abs a img {
+    width: 268px;
+    height: auto;
   }
 
 
@@ -10587,6 +10635,7 @@ color: #000000;
     position: absolute;
     left: 0;
     top: 10%;
+    z-index: -1;
   }
 
   .box-service-list .icon img {
@@ -10865,10 +10914,22 @@ color: #000000;
 
 @media (min-width: 1024px){
 
+  .about h4 {
+    font-size: 32px;
+}
+
+  .title-first-debit {
+    font-size: 40px;
+  }
+
+  .transfer-money h1
+  {
+    font-size: 40px;
+  }
 
 
   .hero h1 {
-    font-size: 60px;
+    font-size: 54px;
   }
   
   .card-balance div:nth-child(1) {
@@ -10926,7 +10987,7 @@ color: #000000;
 @media (min-width: 1200px) {
   .bg-hero {
     width: 100%;
-    height: 800px;
+    height: 663px;
     background-image: url(../img/bg-hero-desktop.png);
     background-repeat: no-repeat;
     background-position: center top;
@@ -10935,8 +10996,8 @@ color: #000000;
   }
 
   .hero-abs {
-    right: 84px;
-    bottom: 188px;
+    right: 152px;
+    bottom: 53px;
   }
 
   .hero-abs a img {
@@ -11133,13 +11194,13 @@ color: #000000;
 
   .content-freedy h2 {
     font-weight: 600;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 145.69%;
   }
 
   .content-freedy h3 {
     font-weight: 600;
-    font-size: 36px;
+    font-size: 30px;
     line-height: 177.9%;
 
     color: #CB0000;
@@ -11147,7 +11208,7 @@ color: #000000;
 
   .content-freedy p {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 180%;
     color: #000000;
   }
@@ -12783,7 +12844,7 @@ color: #000000;
 
   .title-top-header {
     font-weight: 600;
-    font-size: 40px !important;
+    font-size: 30px !important;
     line-height: 110%;
     color: #CB0000 !important;
   }
@@ -12831,7 +12892,7 @@ color: #000000;
   .box-title-accordion .head {
     display: block;
     font-weight: 700;
-    font-size: 33px;
+    font-size: 28px;
     line-height: 110%;
     color: #CB0000;
   }
@@ -12854,7 +12915,7 @@ color: #000000;
     border: 4px solid  #0066FF;
     border-radius: 5px;
     padding: 0.75rem;
-    min-height: 400px;
+    min-height: 460px;
   }
 
   .freedy-card.multibtop {
@@ -13169,7 +13230,7 @@ color: #000000;
   }
 
   .list-different .items-different img {
-    height: 120px;
+    height: 90px;
   }
 
 
@@ -13288,9 +13349,24 @@ color: #000000;
 }
 
 @media (min-width: 1400px) {
+  .bg-hero {
+    width: 100%;
+    height: 765px;
+    background-image: url(../img/bg-hero-desktop.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+  
+  }
+
   .hero-abs {
-    right: 179px;
-    bottom: 96px;
+    right: 202px;
+    bottom: 69px;
+  }
+
+  .hero-abs a img {
+    width: 268px;
+    height: auto;
   }
 }
 
@@ -13437,14 +13513,14 @@ color: #000000;
 }
 
 
-.bg-flowers {
+/* .bg-flowers {
   background: url(../img/bg-guide.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% auto;
   padding: 170px 0px;
 
-}
+} */
 .bg-crypto {
   background: url(../img/speedybank/bg-crypto.png);
   background-repeat: no-repeat;
@@ -13452,12 +13528,6 @@ color: #000000;
   background-size: 100% auto;
 }
 
-.bg-section-reward {
-  background: url(../img/bg-line.png), linear-gradient(180deg, #65B5FF 85.96%, rgba(217, 217, 217, 0) 100%, rgba(217, 217, 217, 0) 100%);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 100% auto;
-}
 
 .bg-section-become {
   background: url(../img/bg-line2.png), #F0F6FF;

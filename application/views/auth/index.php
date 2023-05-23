@@ -86,7 +86,7 @@
                 <div class="d-none d-lg-block col-lg-3 col-xl-5"></div>
             </div>
             <div class="hero-abs position-absolute">
-                <a href="">
+                <a href="https://caymanfinancialgroup.ky/" target="_blank">
                     <img src="<?= base_url()?>assets/img/cayman-logo-small.png" alt="logo cayman">
                 </a>
             </div>
@@ -102,11 +102,11 @@
         <div class="container p-r">
             <div class="row gx-0">
                 <div class="row transfer-money">
-                    <div class="col-12 col--lg-8 mx-auto text-start text-lg-center">
+                    <div class="col-12 col-lg-8 mx-auto text-start text-lg-center">
                         <h1 class="f-hahmlet fw-bold">Where The <span>Banking World</span> <br> Meet The <span>Crypto World </span></h1>
                     </div>
                 </div>
-                <div class="row mt-5 pt-3">
+                <div class="row mt-0 mt-lg-5 pt-3">
                     <div class="col-12 col-lg-6 d-flex flex-column justify-content-center mb-5 ps-lg-5">
                         <div class="content-freedy p-r">
                             <span class="fw-bold">FEATURES OF THE ANONYMOUS <a href="<?= base_url()?>link/multi_currencies" class="text-decoration-underline">MULTI CURRENCIES ACCOUNT </a></span>
@@ -205,7 +205,7 @@
                                     Make purchases around the world with your cryptocurrencies
                                 </li>
                             </ul>
-                            <div class="buble-soon abs ms-5 d-flex justify-content-center align-items-center text-center f-jakarta fw-bolder mt-5 position-absolute">
+                            <div class="buble-soon abs d-flex justify-content-center align-items-center text-center f-jakarta fw-bolder mt-5 position-absolute">
                                 <span translate="no">
                                     COMING <br> SOON
                                 </span>
@@ -276,7 +276,7 @@
         <div class="container">
             <div class="row d-flex align-items-center">
                 <div class="col-12 col-lg-7">
-                    <h1 class="f-hahmlet title-first-debit fw-bold mb-5">The First Debit Card <br> <span>that protects the anonymity of your purchases</span></h1>
+                    <h1 class="f-hahmlet title-first-debit fw-bold mb-5">The First Debit Card <br> <span>that protects the anonymity <br> of your purchases</span></h1>
                     <div class="row">
                         <div class="col-12 col-md-6 wrap-card-first-debit">
                             <div class="card-first-debit mt-3 p-4 f-jakarta fw-semibold">
@@ -318,7 +318,7 @@
     <!-- ======= Start Get Reward ======= -->
     <section id="reward" class="about bg-section-reward">
         <div class="container p-r">
-            <div class="row gx-0 d-flex align-items-center">
+            <div class="row gx-0 d-flex align-items-start">
                 <div class="col-12 col-lg-7 d-flex flex-column justify-content-center align-items-center mb-5 pb-3">
                     <div class="content-freedy p-r">
                         <h2 class="f-hahmlet text-black mb-5 ">Create Your Passive Income <br> With Our  
@@ -326,10 +326,10 @@
                                 Affiliate Campaign
                             </span>
                         </h2>
-                        <p class="fw-normal f-jakarta pe-xl-5 me-xl-5" style="color: #000000;">
+                        <p class="fw-normal f-hahmlet pe-xl-5 me-xl-5" style="color: #000000;">
                             Each account has a personal referral link (with a referral code) you just need to share your referral link and allow your contacts to register on the platform using it.
                         </p>
-                        <p class="fw-normal f-jakarta pe-xl-5 me-xl-5" style="color: #000000;">
+                        <p class="fw-normal f-hahmlet pe-xl-5 me-xl-5" style="color: #000000;">
                             You will be rewarded for every single FIAT and crypto buy & sell transaction made by those who signed up using your personal referral link.
                         </p>
                         <div class="text-start mt-4">
@@ -339,7 +339,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5 d-none d-lg-flex align-items-center justify-content-center">
+                <div class="col-lg-5 d-none d-lg-flex align-items-start justify-content-center">
                     <img src="<?= base_url(); ?>assets/img/img-4.svg" alt="" class="img-fluid">
                 </div>
             </div>
@@ -348,7 +348,35 @@
     <!-- End Get Reward -->
 
     <!-- ======= Start Accordion User Guide ======= -->
-    <section id="guide" class="about bg-flowers">
+    <section id="guide" class="about bg-flowers position-relative">
+        <div class="position-absolute left">
+            <svg width="93" height="187" viewBox="0 0 93 187" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M93 93.5C93 118.298 83.1492 142.08 65.6145 159.614C48.0799 177.149 24.2979 187 -0.499867 187L-0.5 93.5L93 93.5Z" fill="#D6E6FE"/>
+                <path d="M42.5593 80.5821C42.5593 92.0022 38.0227 102.954 29.9476 111.03C21.8724 119.105 10.9201 123.641 -0.499886 123.641L-0.499886 80.5821L42.5593 80.5821Z" fill="#E9EFFE"/>
+                <mask id="path-3-inside-1_24_413" fill="white">
+                <path d="M-1.42284 41.2139C3.38359 41.2139 8.14295 42.1606 12.5835 43.9999C17.0241 45.8393 21.0589 48.5352 24.4575 51.9339C27.8562 55.3325 30.5521 59.3673 32.3915 63.8079C34.2308 68.2484 35.1775 73.0078 35.1775 77.8142C35.1775 82.6207 34.2308 87.38 32.3915 91.8206C30.5521 96.2611 27.8561 100.296 24.4575 103.695C21.0588 107.093 17.024 109.789 12.5835 111.629C8.14293 113.468 3.38357 114.415 -1.42286 114.415L-1.42284 77.8142L-1.42284 41.2139Z"/>
+                </mask>
+                <path d="M-1.42284 41.2139C3.38359 41.2139 8.14295 42.1606 12.5835 43.9999C17.0241 45.8393 21.0589 48.5352 24.4575 51.9339C27.8562 55.3325 30.5521 59.3673 32.3915 63.8079C34.2308 68.2484 35.1775 73.0078 35.1775 77.8142C35.1775 82.6207 34.2308 87.38 32.3915 91.8206C30.5521 96.2611 27.8561 100.296 24.4575 103.695C21.0588 107.093 17.024 109.789 12.5835 111.629C8.14293 113.468 3.38357 114.415 -1.42286 114.415L-1.42284 77.8142L-1.42284 41.2139Z" stroke="#0066FF" stroke-width="10" mask="url(#path-3-inside-1_24_413)"/>
+                <mask id="path-4-inside-2_24_413" fill="white">
+                <path d="M-1.42277 15.9936C10.8042 15.9936 22.7566 19.6193 32.923 26.4122C43.0893 33.2052 51.0131 42.8603 55.6921 54.1565C60.3712 65.4528 61.5954 77.8829 59.2101 89.8749C56.8247 101.867 50.9369 112.882 42.2911 121.528C33.6453 130.174 22.6299 136.062 10.6378 138.447C-1.3542 140.833 -13.7843 139.608 -25.0806 134.929C-36.3768 130.25 -46.0319 122.326 -52.8248 112.16C-59.6178 101.994 -63.2435 90.0413 -63.2435 77.8143L-1.42278 77.8143L-1.42277 15.9936Z"/>
+                </mask>
+                <path d="M-1.42277 15.9936C10.8042 15.9936 22.7566 19.6193 32.923 26.4122C43.0893 33.2052 51.0131 42.8603 55.6921 54.1565C60.3712 65.4528 61.5954 77.8829 59.2101 89.8749C56.8247 101.867 50.9369 112.882 42.2911 121.528C33.6453 130.174 22.6299 136.062 10.6378 138.447C-1.3542 140.833 -13.7843 139.608 -25.0806 134.929C-36.3768 130.25 -46.0319 122.326 -52.8248 112.16C-59.6178 101.994 -63.2435 90.0413 -63.2435 77.8143L-1.42278 77.8143L-1.42277 15.9936Z" stroke="#B5D2FD" stroke-width="6" mask="url(#path-4-inside-2_24_413)"/>
+            </svg>
+        </div>
+        <div class="position-absolute right">
+            <svg width="83" height="180" viewBox="0 0 83 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 90C2.08673e-06 66.1305 9.4821 43.2387 26.3603 26.3604C43.2386 9.48216 66.1304 3.3861e-05 89.9999 0L90 90L0 90Z" fill="#D6EBFE"/>
+                <path d="M48.5527 102.434C48.5527 91.4417 52.9195 80.8994 60.6924 73.1265C68.4653 65.3536 79.0076 60.9868 90.0001 60.9868L90.0001 102.434L48.5527 102.434Z" fill="#E9EFFE"/>
+                <mask id="path-3-inside-1_24_425" fill="white">
+                <path d="M90.888 140.329C86.2615 140.329 81.6803 139.418 77.4059 137.647C73.1316 135.877 69.2478 133.282 65.9764 130.01C62.705 126.739 60.1099 122.855 58.3395 118.581C56.569 114.306 55.6577 109.725 55.6577 105.099C55.6577 100.472 56.569 95.891 58.3395 91.6166C60.11 87.3423 62.705 83.4585 65.9764 80.1871C69.2479 76.9157 73.1316 74.3206 77.406 72.5501C81.6803 70.7797 86.2615 69.8684 90.888 69.8684L90.888 105.099L90.888 140.329Z"/>
+                </mask>
+                <path d="M90.888 140.329C86.2615 140.329 81.6803 139.418 77.4059 137.647C73.1316 135.877 69.2478 133.282 65.9764 130.01C62.705 126.739 60.1099 122.855 58.3395 118.581C56.569 114.306 55.6577 109.725 55.6577 105.099C55.6577 100.472 56.569 95.891 58.3395 91.6166C60.11 87.3423 62.705 83.4585 65.9764 80.1871C69.2479 76.9157 73.1316 74.3206 77.406 72.5501C81.6803 70.7797 86.2615 69.8684 90.888 69.8684L90.888 105.099L90.888 140.329Z" stroke="#0066FF" stroke-width="10" mask="url(#path-3-inside-1_24_425)"/>
+                <mask id="path-4-inside-2_24_425" fill="white">
+                <path d="M90.8879 164.605C79.1186 164.605 67.6136 161.115 57.8278 154.577C48.042 148.038 40.4149 138.744 35.911 127.871C31.4071 116.997 30.2287 105.033 32.5248 93.4895C34.8208 81.9463 40.4883 71.3433 48.8104 63.0211C57.1326 54.699 67.7356 49.0315 79.2788 46.7354C90.8219 44.4394 102.787 45.6178 113.66 50.1217C124.534 54.6256 133.827 62.2527 140.366 72.0385C146.905 81.8244 150.395 93.3293 150.395 105.099L90.8879 105.099L90.8879 164.605Z"/>
+                </mask>
+                <path d="M90.8879 164.605C79.1186 164.605 67.6136 161.115 57.8278 154.577C48.042 148.038 40.4149 138.744 35.911 127.871C31.4071 116.997 30.2287 105.033 32.5248 93.4895C34.8208 81.9463 40.4883 71.3433 48.8104 63.0211C57.1326 54.699 67.7356 49.0315 79.2788 46.7354C90.8219 44.4394 102.787 45.6178 113.66 50.1217C124.534 54.6256 133.827 62.2527 140.366 72.0385C146.905 81.8244 150.395 93.3293 150.395 105.099L90.8879 105.099L90.8879 164.605Z" stroke="#B5D6FD" stroke-width="6" mask="url(#path-4-inside-2_24_425)"/>
+            </svg>
+        </div>
         <div class="container p-r">
             <div class="row gx-0">
                 <div class="accordion text-center" id="accordionFreedy">
@@ -516,7 +544,7 @@
             </div>
             <div class="col-lg-5 col-12 pe-2 my-5 footer-links text-center">
                 <div class="d-flex flex-row flex-wrap align-items-center justify-content-center w-100">
-                    <a href="https://tracklessbank.com/" target="_blank">
+                    <a href="https://caymanfinancialgroup.ky/" target="_blank">
                         <img src="<?= base_url() ?>assets/img/cayman-logo-small.png" alt="logo-cayman" class="trackless">
                     </a>
                 </div>
@@ -554,7 +582,7 @@
 </footer>
 <!-- End Footer -->
 
-<a href="#top" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<a href="#headertop" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <?php if (@isset($_SESSION["success"])) { ?>
     <div class="alert alert-success alert-dismissible" id="success-alert" style="display: grid; position: fixed; top: 10px; z-index: 99999; padding: 1rem;
