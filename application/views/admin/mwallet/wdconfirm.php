@@ -103,9 +103,15 @@
                         </div>
                         <div class="mb-3">
                             <span class="form-label">New Balance</span>
-                            <span class="form-control border-0 px-0"><?= $_SESSION['symbol']; ?>
-                                <?= number_format(balanceadmin($_SESSION["currency"]) - $data["deduct"], 2, ".", ",") ?>
-                            </span>
+                            <?php if($_SESSION["role"]=="admin"){?>
+                                <span class="form-control border-0 px-0"><?= $_SESSION['symbol']; ?>
+                                    <?= number_format(balanceadmin($_SESSION["currency"]) - $data["deduct"], 2, ".", ",") ?>
+                                </span>
+                            <?php } else {?>
+                                    <span class="form-control border-0 px-0"><?= $_SESSION['symbol']; ?>
+                                        <?= number_format($_SESSION["tcbalance"],2) - number_format($data["deduct"], 2, ".", ",")?>
+                                    </span>
+                            <?php } ?>
                         </div>
                         <div class="mb-3">
                             <a href="<?= base_url() ?>admin/mwallet/withdraw" class="btn btn-freedy-white px-4 py-2 me-2 shadow-none">Cancel</a>

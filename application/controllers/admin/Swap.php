@@ -62,14 +62,16 @@ class Swap extends CI_Controller
                 "target"    => $target,
                 "amount"    => $amount
             );
+
             if($_SESSION["role"]=="super admin"){
-                $result = apitrackless(URLAPI . "/v1/admin/swap/swaptrackless_summary", json_encode($mdata));
+                $result = apitrackless(URLAPI . "/v1/trackless/swap/swaptrackless_summary", json_encode($mdata));
+                // print_r(json_encode($result));
+                // die;
+            } else {
+                $result = apitrackless(URLAPI . "/v1/admin/swap/swap_summary", json_encode($mdata));
                 // print_r(json_encode($result));
                 // die;
             }
-            $result = apitrackless(URLAPI . "/v1/admin/swap/swap_summary", json_encode($mdata));
-            // print_r(json_encode($result));
-            // die;
             if (@$result->code != 200) {
                 header("HTTP/1.1 500 Internal Server Error");
                 $error = array(
@@ -125,6 +127,7 @@ class Swap extends CI_Controller
         );
 
 
+
         $data = array(
             "title"     => NAMETITLE . " - Swap",
             "content"   => "admin/swap/swap-confirm",
@@ -160,12 +163,14 @@ class Swap extends CI_Controller
                 "amount"    => $amount,
                 "quoteid"   => $quoteid,
             );
+
             if($_SESSION["role"]=="super admin"){
-                $result = apitrackless(URLAPI . "/v1/admin/swap/swaptracklessProcess", json_encode($mdata));
-                print_r($result);
-                die;
+                $result = apitrackless(URLAPI . "/v1/trackless/swap/swaptracklessProcess", json_encode($mdata));
+
+            }else {
+                $result = apitrackless(URLAPI . "/v1/admin/swap/swapProcess", json_encode($mdata));
             }
-            $result = apitrackless(URLAPI . "/v1/admin/swap/swapProcess", json_encode($mdata));
+
             if (@$result->code != 200) {
                 $this->session->set_flashdata("failed", $result->message);
                 redirect('admin/swap');
