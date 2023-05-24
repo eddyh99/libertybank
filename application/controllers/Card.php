@@ -574,7 +574,7 @@ class Card extends CI_Controller
         );        
 
         $result = apitrackless(URLAPI . "/v1/member/card/topupprocess", json_encode($mdata));
-        // print_r(json_encode($result));
+        // v(json_encode($result));
         // die;
         if (@$result->code != 200) {
             $this->session->set_flashdata("failed", $result->message);

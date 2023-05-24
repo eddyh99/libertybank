@@ -89,6 +89,16 @@ class Link extends CI_Controller
         $this->load->view('tamplate/wrapper', $data);
     }
 
+    public function download_app()
+    {
+        $data = array(
+            "title"     => NAMETITLE . " - Download App",
+            "content"   => "auth/landingpage/download",
+        );
+
+        $this->load->view('tamplate/wrapper', $data);
+    }
+
     public function privacy_policy()
     {
         $data = array(

@@ -389,7 +389,7 @@
 
 
                 <div class="col-12 mb-5 ">
-                    <div class="col-12 text-center mb-5">
+                    <div class="col-12 text-center mb-5 features-text ">
                         <h3 class="fw-bold text-blue-freedy f-hahmlet">How to top up crypto wallet</h3>
 
                         <p class="mt-3 f-jakarta">In order to topup your <span translate="no"> LibertyBank </span> crypto wallet follow the procedure below :</p>
@@ -414,7 +414,7 @@
                         <div class="in-crypto">
                             <span>Step 3</span>
                             <div class="box-crypto">
-                                <p class="mb-3">Select the FIAT currency that you want to convert in USDX, enter the
+                                <p class="mb-3">Select the Fiat currency that you want to convert in USDX, enter the
                                     amount and click convert</p>
                             </div>
                         </div>
@@ -436,7 +436,7 @@
                     <div class="col-12 text-center mt-5 features-text">
                         <h3 class="fw-bold f-hahmlet text-blue-freedy">How to buy and sell crypto by placing limit order</h3>
 
-                        <p class="mt-3 col-10 mx-auto">
+                        <p class="mt-3 col-10 mx-auto f-jakarta">
                             A buy limit order will be executed only at the limit price or a lower price and a sell limit order will be executed only at the limit price or a higher one.The price is guaranteed, but the filling of the order is not. Limit orders will be executed only if the price meets the order qualifications.
                         </p>
 
