@@ -1927,8 +1927,8 @@ class Mwallet extends CI_Controller
         
         if ($_SESSION["role"]=="admin"){
             $result = apitrackless(URLAPI . "/v1/admin/withdraw/withdrawTransfer", json_encode($mdata));
-            print_r(json_encode($result));
-            die;
+            // print_r(json_encode($result));
+            // die;
         }else{
             $result = apitrackless(URLAPI . "/v1/trackless/withdraw/WDTrackless_Transfer", json_encode($mdata));
         }

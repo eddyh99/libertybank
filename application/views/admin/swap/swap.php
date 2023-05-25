@@ -35,7 +35,7 @@
 
                         <div class="swap-selection d-flex flex-column align-items-center justify-content-center">
                             <div class="col-12 col-sm-4">
-                                <span class="t-select">Convert to <?= $_SESSION["user_id"]?></span>
+                                <span class="t-select">Convert to</span>
                                 <select name="toswap" id="toswap" class="form-select">
                                     <?php if ($_SESSION["currency"] != "USD") { ?>
                                     <option data-currency="&dollar;" value="USD">USD</option>

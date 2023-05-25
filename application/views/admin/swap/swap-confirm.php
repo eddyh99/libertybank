@@ -21,8 +21,15 @@
                         </div>
                         <div class="col-12 list-send-wallet d-flex flex-column mb-3">
                             <span>New Balance</span>
-                            <span><?= $_SESSION['symbol'] ?>
-                                <?=  number_format((balanceadmin($_SESSION["currency"]) - $data["amount"]),2) ?></span>
+                            <?php if($_SESSION["role"]=="admin"){?>
+                                <span><?= $_SESSION['symbol'] ?>
+                                    <?=  number_format((balanceadmin($_SESSION["currency"]) - $data["amount"]),2) ?>
+                                </span>
+                            <?php } else {?>
+                                <span><?= $_SESSION['symbol'] ?>
+                                    <?= number_format($_SESSION["tcbalance"],2) - number_format($data["amount"],2) ?>
+                                </span>
+                            <?php } ?>
                         </div>
                         <div class="row">
                             <div class="d-flex flex-row mt-4">

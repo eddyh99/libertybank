@@ -15,7 +15,7 @@
                 <li>
                     <a class="f-bevietnam nav-link navbar-freedy scrollto" href="<?= base_url() ?>link/translate">Translate</a></li>
                 <li>
-                    <a class="f-bevietnam nav-link navbar-freedy scrollto" href="#downloadwallet">Download wallet</a></li>
+                    <a class="f-bevietnam nav-link navbar-freedy scrollto" href="<?= base_url() ?>link/download_app">Download wallet</a></li>
                 <li>
                     <a class="f-bevietnam nav-link mx-0 my-2 mx-2 my-lg-auto text-center btn-login active" href="<?= base_url(); ?>auth/signup">Register</a>
                 </li>
@@ -45,7 +45,7 @@
                 <li>
                     <a class="f-bevietnam nav-link navbar-freedy scrollto" href="<?= base_url() ?>link/translate">Translate</a></li>
                 <li>
-                    <a class="f-bevietnam nav-link navbar-freedy scrollto" href="#downloadwallet">Download wallet</a></li>
+                    <a class="f-bevietnam nav-link navbar-freedy scrollto" href="<?= base_url() ?>link/download_app">Download wallet</a></li>
                 <li>
                     <a class="f-bevietnam nav-link mx-0 my-2 mx-lg-2 my-lg-auto text-center btn-login active" href="<?= base_url(); ?>auth/signup">Register</a>
                 </li>
@@ -107,9 +107,9 @@
                     </div>
                 </div>
                 <div class="row mt-0 mt-lg-5 pt-3">
-                    <div class="col-12 col-lg-6 d-flex flex-column justify-content-center mb-5 ps-lg-5">
+                    <div class="col-12 col-lg-7 d-flex flex-column justify-content-center mb-5 ps-lg-5">
                         <div class="content-freedy p-r">
-                            <span class="fw-bold">FEATURES OF THE ANONYMOUS <a href="<?= base_url()?>link/multi_currencies" class="text-decoration-underline">MULTI CURRENCIES ACCOUNT </a></span>
+                            <span class="fw-bold bp">FEATURES OF THE ANONYMOUS <a href="<?= base_url()?>link/multi_currencies" class="text-decoration-underline">MULTI CURRENCIES ACCOUNT </a></span>
                             <ul class="p-0 f-roboto fw-semibold">
                                 <li>
                                     Account opening allows you to have banks accounts in 10 currencies  
@@ -144,7 +144,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="d-none d-lg-block col-12 col-lg-6 ">
+                    <div class="d-none d-lg-block col-12 col-lg-5 ">
                         <img class="img-fluid" src="<?= base_url()?>assets/img/img-1.svg" alt="img-1">
                     </div>
                 </div>
@@ -243,8 +243,8 @@
     <section class="bg-bank-future about">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-8 mx-auto">
-                    <h4 class="f-hahmlet text-center" style="color: #0066FF;">The Bank Of The Future</h4>
+                <div class="content-freedy col-12 col-md-8 mx-auto">
+                    <h2 class="f-hahmlet text-center" style="color: #0066FF;">The Bank Of The Future</h4>
                     <h5 class="f-hahmlet text-center mt-4">Opening a multi-currency encrypted current account on our platform requires only an email and a password without any KYC procedure, thus guaranteeing maximum protection of privacy for each FIAT or crypto transaction carried out.</h5>
                     <div class="text-center mt-4">
                         <a href="<?= base_url()?>link/multi_currencies" class="btn-content-silver d-inline-flex align-items-center justify-content-center align-self-center">
@@ -276,7 +276,14 @@
         <div class="container">
             <div class="row d-flex align-items-center">
                 <div class="col-12 col-lg-7">
-                    <h1 class="f-hahmlet title-first-debit fw-bold mb-5">The First Debit Card <br> <span>that protects the anonymity <br> of your purchases</span></h1>
+                    <div class="content-freedy">
+                        <h2 class="f-hahmlet title-first-debit fw-bold mb-5">The First Debit Card <br> <span>that protects the anonymity <br> of your purchases</span></h2>
+                    </div>
+                    <div class="content-freedy">
+                        <p class="f-hahmlet fw-semibold me-5 pe-5" style="color: #505050;">
+                            Our virtual or physical VISA debit cards are perfect for those who want to protect their financial privacy and make purchases with discretion
+                        </p>
+                    </div>
                     <div class="row">
                         <div class="col-12 col-md-6 wrap-card-first-debit">
                             <div class="card-first-debit mt-3 p-4 f-jakarta fw-semibold">
@@ -481,10 +488,10 @@
                 <div class="col-12 col-md-6 ">
                     <div class="content-freedy p-r ">
                         <h2 class="f-hahmlet text-black">
-                            Instant payments between all users of <span class="text-blue-freedy"> LibertyBank </span> <br> platform
+                            Instant payments between all <br> users of <span class="text-blue-freedy"> LibertyBank </span> <br> platform
                         </h2>
-                        <p class="f-jakarta mt-5 fw-semibold">
-                        With instant payments, the money is available in seconds in the recipient's account, 24 hours a day, 365 days a year. Receive/send/request instant payments using Wallet to wallet method.
+                        <p class="f-jakarta mt-5 fw-normal">
+                            With instant payments, the money is available in seconds in the recipient's account, 24 hours a day, 365 days a year. Receive/send/request instant payments using Wallet to wallet method.
                         </p>
                     </div>
                 </div>
@@ -509,7 +516,7 @@
                             </div>
                             <div class="col-lg-6 mb-5 ps-lg-2">
                                 <div class="content-freedy">
-                                    <h3 class="f-hahmlet"><span class="text-black">
+                                    <h2 class="f-hahmlet"><span class="text-black">
                                         100% Secure <span class="text-blue-freedy"> LibertyBank </span> 
                                     </h3>
                                     <div class="my-5 c-check">
@@ -537,7 +544,7 @@
 <footer id="contactus" class="footer p-0 p-r">
     <div class="container py-5">
         <div class="row d-flex align-items-center gy-4">
-            <div class="col-lg-3 col-12 my-5 pe-2 footer-links d-flex align-items-start justify-content-start">
+            <div class="col-lg-3 col-12 my-5 pe-2 footer-links d-flex align-items-start justify-content-center">
                 <a href="<?= base_url() ?>" class="text-decoration-none">
                     <img src="<?= base_url() ?>assets/img/logo.png" alt="mylogo" class="logo">
                 </a>
@@ -550,7 +557,7 @@
                 </div>
                 <p class="copyright py-3 m-0"> <b translate="no"> LibertyBank </b> (PAN) 
             </div>
-            <div class="col-lg-4 col-12 text-center text-black my-5 d-flex flex-column justify-content-end align-items-end align-items-lg-end">
+            <div class="col-lg-4 col-12 text-center text-black my-5 d-flex flex-column justify-content-end align-items-center align-items-lg-end">
                 <div class="d-flex flex-column justify-content-start align-items-start">
                     <div class="mb-2">
                         <span class="fw-semibold">Contact service</span>

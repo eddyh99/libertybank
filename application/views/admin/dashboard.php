@@ -7,8 +7,13 @@
                     </div>
                     <div class="col-12">
                         <div class="title d-flex flex-row">
+                        <?php if($_SESSION["role"]=="admin"){?>
                             <span class="fw-bold text-blue-freedy me-auto">Currency</span>
                             <span class="fw-bold text-blue-freedy">Balance</span>
+                        <?php } else {?>
+                                <span class="fw-bold text-blue-freedy me-auto">Balance</span>
+                                <span class="fw-bold text-blue-freedy">Bank Commission</span>
+                        <?php } ?>
                         </div>
                         <div class="list-currency">
                             <?php foreach ($currency as $dt){
