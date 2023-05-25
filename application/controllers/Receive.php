@@ -103,14 +103,14 @@ class Receive extends CI_Controller
         );
 
         $result = apitrackless(URLAPI . "/v1/member/wallet/topup", json_encode($mdata));
-        // print_r(json_encode($result->message));
-        // die;
-        
+        //echo json_encode($result);
+        //die;
         if (@$result->code != "200") {
             $this->session->set_flashdata('failed', $result->message);
             redirect("receive/localbank");
             return;
         }
+        //$result='{"content":{"payinBank":{"bankName":"Wise Europe SA\/NV","bankAddress":{"country":"BE","firstLine":"Avenue Louise 54, Room s52","postCode":"1050","city":"Brussels","state":null}},"payinBankAccount":{"currency":"EUR","details":[{"type":"recipientName","label":"Recipient name","value":"TransferWise Europe SA"},{"type":"IBAN","label":"IBAN","value":"BE79967040785533"},{"type":"BIC","label":"Bank code (BIC\/SWIFT)","value":"TRWIBEB1XXX"}]},"wiseInformation":{"localCompanyName":"Wise Europe SA","localAddress":{"country":"BE","firstLine":"Avenue Louise 54\/S52","postCode":"1050","city":"Brussels","state":null}}},"causal":"RCPT026837"}}';
 
         $data['title'] = NAMETITLE . " - Top Up Process";
         $body['data'] = $result->message;
