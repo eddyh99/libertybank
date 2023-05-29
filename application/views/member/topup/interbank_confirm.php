@@ -1,3 +1,9 @@
+<div id="load" style="display: none;">
+    <div class="img-load d-flex flex-column justify-content-center align-items-center">
+        <img src="<?= base_url()?>assets/img/logo-only.svg" alt="img-load">
+        <span class="pt-3">Loading</span>
+    </div>
+</div>
 <div class="d-flex justify-content-center">
     <div class="col-12 col-lg-8 col-xl-6">
         <div class="container" style="margin-bottom: 8rem;">

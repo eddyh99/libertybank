@@ -16,7 +16,7 @@
                             </div>
                         </div>
                         <div class="row pt-4">
-                                <label><?= @$data->payinBankAccount->details[0]->label ?></label>
+                                <label>Account Holder</label>
                                 <div class="d-flex flex-row align-items-center mb-3">
                                     <input class="form-control me-2" type="text" name="" id="inter1" value="<?= @$data->payinBankAccount->details[0]->value ?>" readonly>
                                     <a class="btn btn-copy" id="btninter1">
@@ -27,9 +27,10 @@
                                     </a>
                                 </div>
                             </div>
+
                             <div class="row">
                                 <?php if (($_SESSION["currency"] == "USD")) { ?>
-                                    <label class="form-label"><?= @$data->payinBankAccount->details[1]->label ?></label>
+                                    <label class="form-label"><?= @$data->payinBankAccount->details[2]->label ?></label>
                                 <?php } else { ?>
                                     <?php if (($_SESSION["currency"] == "EUR")) { ?>
                                         <label class="form-label"><?= @$data->payinBankAccount->details[1]->label ?> <small>(country belgium)</small></label>
@@ -37,8 +38,17 @@
                                         <label class="form-label">IBAN</label>
                                     <?php } ?>
                                 <?php } ?>
+
                                 <div class="d-flex flex-row align-items-center mb-3">
-                                    <input class="form-control me-2" type="text" name="" id="inter2" value="<?= @$data->payinBankAccount->details[1]->value ?>" readonly>
+                                    <?php if (($_SESSION["currency"] == "USD")) { ?>
+                                        <input class="form-control me-2" type="text" name="" id="inter2" value="<?= @$data->payinBankAccount->details[2]->value ?>" readonly>
+                                    <?php } else { ?>
+                                        <?php if (($_SESSION["currency"] == "EUR")) { ?>
+                                            <input class="form-control me-2" type="text" name="" id="inter2" value="<?= @$data->payinBankAccount->details[1]->value ?>" readonly>
+                                        <?php } else { ?>
+                                            <input class="form-control me-2" type="text" name="" id="inter2" value="<?= @$data->payinBankAccount->details[1]->value ?>" readonly>
+                                        <?php } ?>
+                                    <?php } ?>
                                     <a class="btn btn-copy" id="btninter2">
                                         <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M21.2497 12.0299V17.0699C21.2497 18.5686 21.2481 19.6168 21.1383 20.4204C21.0321 21.1976 20.835 21.654 20.5037 22.0102C20.306 22.2228 20.072 22.4166 19.806 22.585C19.334 22.8838 18.7141 23.0625 17.7146 23.1554C16.7076 23.2491 15.4053 23.2499 13.5997 23.2499C11.7941 23.2499 10.4918 23.2491 9.4848 23.1554C8.48527 23.0625 7.86545 22.8838 7.39345 22.585C7.12745 22.4166 6.89344 22.2228 6.6957 22.0102C6.36444 21.654 6.16736 21.1976 6.06115 20.4204C5.95134 19.6168 5.94971 18.5686 5.94971 17.0699V12.0299C5.94971 10.5311 5.95134 9.48294 6.06115 8.6793C6.16736 7.9021 6.36444 7.44568 6.6957 7.08952C6.89344 6.87692 7.12745 6.68306 7.39345 6.51467C7.86545 6.21588 8.48527 6.03723 9.4848 5.94427C10.4918 5.85062 11.7941 5.84985 13.5997 5.84985C15.4053 5.84985 16.7076 5.85062 17.7146 5.94427C18.7141 6.03723 19.334 6.21588 19.806 6.51467C20.072 6.68306 20.306 6.87692 20.5037 7.08952C20.835 7.44568 21.0321 7.9021 21.1383 8.6793C21.2481 9.48294 21.2497 10.5311 21.2497 12.0299Z" stroke="#0066FF" stroke-width="1.5"/>
@@ -47,14 +57,20 @@
                                     </a>
                                 </div>
                             </div>
+
                             <div class="row">
                                 <?php if (($_SESSION["currency"] == "EUR")) { ?>
-                                    <label class="form-label"><?= @$data->payinBankAccount->details[2]->label ?></label>
+                                    <label class="form-label">Swift/BIC</label>
                                 <?php } else { ?>
-                                    <label class="form-label"><?= @$data->payinBankAccount->details[2]->label ?></label>
-                                <?php } ?>
+                                    <label class="form-label">Swift</label>
+                                <?php }  ?>
+
                                 <div class="d-flex flex-row align-items-center mb-3">
-                                    <input class="form-control me-2" type="text" name="" id="inter3" value="<?= @$data->payinBankAccount->details[2]->value ?>" readonly>
+                                    <?php if (($_SESSION["currency"] == "EUR")) { ?>
+                                        <input class="form-control me-2" type="text" name="" id="inter3" value="<?= @$data->payinBankAccount->details[2]->value ?>" readonly>
+                                    <?php } else { ?>
+                                        <input class="form-control me-2" type="text" name="" id="inter3" value="<?= @$data->payinBankAccount->details[3]->value ?>" readonly>
+                                    <?php }  ?>
                                     <a class="btn btn-copy" id="btninter3">
                                         <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M21.2497 12.0299V17.0699C21.2497 18.5686 21.2481 19.6168 21.1383 20.4204C21.0321 21.1976 20.835 21.654 20.5037 22.0102C20.306 22.2228 20.072 22.4166 19.806 22.585C19.334 22.8838 18.7141 23.0625 17.7146 23.1554C16.7076 23.2491 15.4053 23.2499 13.5997 23.2499C11.7941 23.2499 10.4918 23.2491 9.4848 23.1554C8.48527 23.0625 7.86545 22.8838 7.39345 22.585C7.12745 22.4166 6.89344 22.2228 6.6957 22.0102C6.36444 21.654 6.16736 21.1976 6.06115 20.4204C5.95134 19.6168 5.94971 18.5686 5.94971 17.0699V12.0299C5.94971 10.5311 5.95134 9.48294 6.06115 8.6793C6.16736 7.9021 6.36444 7.44568 6.6957 7.08952C6.89344 6.87692 7.12745 6.68306 7.39345 6.51467C7.86545 6.21588 8.48527 6.03723 9.4848 5.94427C10.4918 5.85062 11.7941 5.84985 13.5997 5.84985C15.4053 5.84985 16.7076 5.85062 17.7146 5.94427C18.7141 6.03723 19.334 6.21588 19.806 6.51467C20.072 6.68306 20.306 6.87692 20.5037 7.08952C20.835 7.44568 21.0321 7.9021 21.1383 8.6793C21.2481 9.48294 21.2497 10.5311 21.2497 12.0299Z" stroke="#0066FF" stroke-width="1.5"/>
@@ -65,10 +81,10 @@
                             </div>
                             <?php if (($_SESSION["currency"] == "USD")) { ?>
                                 <div class="row">
-                                    <label class="form-label"><?= @$data->payinBankAccount->details[3]->label ?></label>
+                                    <label class="form-label">Routing Number</label>
                                     <div class="d-flex flex-row align-items-center mb-3">
-                                        <input class="form-control me-2" type="text" name="" id="inter6" value="<?= @$data->payinBankAccount->details[3]->value ?>" readonly>
-                                        <a class="btn btn-copy" id="btninter6">
+                                        <input class="form-control me-2" type="text" name="" id="inter4" value="<?= @$data->payinBankAccount->details[2]->value ?>" readonly>
+                                        <a class="btn btn-copy" id="btninter4">
                                             <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M21.2497 12.0299V17.0699C21.2497 18.5686 21.2481 19.6168 21.1383 20.4204C21.0321 21.1976 20.835 21.654 20.5037 22.0102C20.306 22.2228 20.072 22.4166 19.806 22.585C19.334 22.8838 18.7141 23.0625 17.7146 23.1554C16.7076 23.2491 15.4053 23.2499 13.5997 23.2499C11.7941 23.2499 10.4918 23.2491 9.4848 23.1554C8.48527 23.0625 7.86545 22.8838 7.39345 22.585C7.12745 22.4166 6.89344 22.2228 6.6957 22.0102C6.36444 21.654 6.16736 21.1976 6.06115 20.4204C5.95134 19.6168 5.94971 18.5686 5.94971 17.0699V12.0299C5.94971 10.5311 5.95134 9.48294 6.06115 8.6793C6.16736 7.9021 6.36444 7.44568 6.6957 7.08952C6.89344 6.87692 7.12745 6.68306 7.39345 6.51467C7.86545 6.21588 8.48527 6.03723 9.4848 5.94427C10.4918 5.85062 11.7941 5.84985 13.5997 5.84985C15.4053 5.84985 16.7076 5.85062 17.7146 5.94427C18.7141 6.03723 19.334 6.21588 19.806 6.51467C20.072 6.68306 20.306 6.87692 20.5037 7.08952C20.835 7.44568 21.0321 7.9021 21.1383 8.6793C21.2481 9.48294 21.2497 10.5311 21.2497 12.0299Z" stroke="#0066FF" stroke-width="1.5"/>
                                                 <path d="M14.3 0.899902H6.32C3.38185 0.899902 1 3.09371 1 5.7999V15.5999" stroke="#0066FF" stroke-width="1.5"/>
@@ -80,8 +96,8 @@
                             <div class="row">
                                 <label>Causal</label>
                                 <div class="d-flex flex-row align-items-center mb-3">
-                                    <input class="form-control me-2" type="text" name="" id="inter4" value="SC<?= $_SESSION["ucode"] ?>" readonly>
-                                    <a class="btn btn-copy" id="btninter4">
+                                    <input class="form-control me-2" type="text" name="" id="inter5" value="SC<?= $_SESSION["ucode"] ?>" readonly>
+                                    <a class="btn btn-copy" id="btninter5">
                                         <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M21.2497 12.0299V17.0699C21.2497 18.5686 21.2481 19.6168 21.1383 20.4204C21.0321 21.1976 20.835 21.654 20.5037 22.0102C20.306 22.2228 20.072 22.4166 19.806 22.585C19.334 22.8838 18.7141 23.0625 17.7146 23.1554C16.7076 23.2491 15.4053 23.2499 13.5997 23.2499C11.7941 23.2499 10.4918 23.2491 9.4848 23.1554C8.48527 23.0625 7.86545 22.8838 7.39345 22.585C7.12745 22.4166 6.89344 22.2228 6.6957 22.0102C6.36444 21.654 6.16736 21.1976 6.06115 20.4204C5.95134 19.6168 5.94971 18.5686 5.94971 17.0699V12.0299C5.94971 10.5311 5.95134 9.48294 6.06115 8.6793C6.16736 7.9021 6.36444 7.44568 6.6957 7.08952C6.89344 6.87692 7.12745 6.68306 7.39345 6.51467C7.86545 6.21588 8.48527 6.03723 9.4848 5.94427C10.4918 5.85062 11.7941 5.84985 13.5997 5.84985C15.4053 5.84985 16.7076 5.85062 17.7146 5.94427C18.7141 6.03723 19.334 6.21588 19.806 6.51467C20.072 6.68306 20.306 6.87692 20.5037 7.08952C20.835 7.44568 21.0321 7.9021 21.1383 8.6793C21.2481 9.48294 21.2497 10.5311 21.2497 12.0299Z" stroke="#0066FF" stroke-width="1.5"/>
                                             <path d="M14.3 0.899902H6.32C3.38185 0.899902 1 3.09371 1 5.7999V15.5999" stroke="#0066FF" stroke-width="1.5"/>
@@ -96,7 +112,7 @@
                                             value="<?= 
                                                 @$data->wiseInformation->localAddress->firstLine . ', ' . 
                                                 @$data->wiseInformation->localAddress->city . ', ' .
-                                                @$data->wiseInformation->localAddress->country . ', ' .
+                                                @$data->wiseInformation->localAddress->countryName . ', ' .
                                                 @$data->wiseInformation->localAddress->postCode
                                             ?>" readonly>
                                     <a class="btn btn-copy" id="btninter5">

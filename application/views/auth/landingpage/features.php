@@ -5,7 +5,7 @@
             <div class="col-12">
                 <div class="link-back p-0">
                     <a href="<?= base_url() ?>#technology">
-                        <img src="<?= base_url() ?>assets/img/speedybank/back-link.png" alt="galau">
+                        <img src="<?= base_url() ?>assets/img/back-link.png" alt="galau">
                     </a>
                 </div>
             </div>

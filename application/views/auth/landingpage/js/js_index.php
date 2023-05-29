@@ -1,3 +1,25 @@
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    <?php if (@isset($_SESSION["success"])) { ?>
+        Swal.fire({
+            html: '<?= $_SESSION['success'];?>',
+            showCloseButton: true,
+            showConfirmButton: false,
+            position: 'top',
+        })
+    <?php }?>
+
+    <?php if (@isset($_SESSION["failed"])) { ?>
+        Swal.fire({
+            html: '<?= $_SESSION['failed'];?>',
+            showCloseButton: true,
+            showConfirmButton: false,
+            position: 'top',
+        })
+    <?php }?>
+</script>
+
 <script>
 $("#btnaccorionOne").on("click", function() {
     var element1 = document.getElementById("seemoreOne");
@@ -105,7 +127,6 @@ $("#currency").on("change", function() {
     readreff();
 })
 
-
 // Accordion SHOW when dirrect to own hash 
 $(function(){    
     if(window.location.hash === '#guide'){
@@ -116,8 +137,5 @@ $(function(){
         $('.collapse-specifications').addClass('show');
     }
 });
-
-
-
 
 </script>

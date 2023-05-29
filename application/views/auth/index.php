@@ -570,7 +570,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <form class="d-flex justify-content-between align-items-center" action="<?= base_url(); ?>link/send_message" method="POST">
                             <input type="hidden" id="token" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
-                            <input name="email" autocomplete="off" class="in-footer d-block" type="text" placeholder="Enter your email address">
+                            <input name="email"  class="in-footer d-block" type="text" placeholder="Enter your email address">
                             <button type="submit" class="btn-in-footer d-block ms-2">Contact us</button>
                         </form>
                     </div>
@@ -591,6 +591,8 @@
 
 <a href="#headertop" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+
+
 <?php if (@isset($_SESSION["success"])) { ?>
     <div class="alert alert-success alert-dismissible" id="success-alert" style="display: grid; position: fixed; top: 10px; z-index: 99999; padding: 1rem;
 left: 0;
@@ -598,15 +600,5 @@ right: 0;
 max-width: 300px;
 margin: 0 auto;">
         <?= $_SESSION["success"]; ?>
-    </div>
-<?php } ?>
-
-<?php if (@isset($_SESSION["failed"])) { ?>
-    <div class="alert alert-danger alert-dismissible" id="danger-alert" style="display: grid; position: fixed; top: 10px; z-index: 99999; padding: 1rem;
-left: 0;
-right: 0;
-max-width: 300px;
-margin: 0 auto;">
-        <?= $_SESSION["failed"]; ?>
     </div>
 <?php } ?>

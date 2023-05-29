@@ -113,7 +113,7 @@ class Receive extends CI_Controller
         }
 
         $data['title'] = NAMETITLE . " - Top Up Process";
-        $body['data'] = $result->message;
+        $body['data'] = $result->message->content;
         $body['amount'] = $amount;
 
 
@@ -207,7 +207,7 @@ class Receive extends CI_Controller
         }
 
         $data['title'] = NAMETITLE . " - Top Up Process";
-        $body['data'] = $result->message;
+        $body['data'] = $result->message->content;
         $body['amount'] = $amount;
 
         $this->load->view('tamplate/header', $data);

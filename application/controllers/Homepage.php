@@ -3,14 +3,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Homepage extends CI_Controller
 {
+    
     public function __construct()
     {
         parent::__construct();
+        $this->load->library("mypdf");
         if (empty($this->session->userdata('user_id'))) {
             redirect(base_url('auth/login'));
         }
     }
-
+    
     public function index()
     {
         $srcref = base_url() . 'qr/ref/' . $_SESSION["ucode"] . 'Thumbnail.png';
@@ -27,10 +29,10 @@ class Homepage extends CI_Controller
         $mdata = array(
             "userid" => $_SESSION["user_id"]
         );
-
+        
         $url = URLAPI . "/v1/member/currency/getActiveCurrency";
         $currency   = apitrackless($url, json_encode($mdata))->message;
-
+        
         $data = array();
         foreach ($currency as $dt) {
             if ($dt->status == 'active') {
@@ -41,19 +43,43 @@ class Homepage extends CI_Controller
                 array_push($data, (object) $temp);
             }
         }
-
+        
         $dataobj = (object)$data;
-
+        
         $data['title'] = NAMETITLE . " - Homepage";
         $footer["extra"]    = "member/js/js_index";
         $body["currency"] = $dataobj;
-
-
+        
+        
         $this->load->view('tamplate/header', $data);
         $this->load->view('tamplate/navbar-bottom-homepage', $data);
         $this->load->view('member/index', $body);
         $this->load->view('tamplate/footer', $footer);
     }
+    
+    public function preview_qr()
+    {
+        
+        // require_once('fpdf.php');
+        $data = array(
+            "title"     => NAMETITLE . " - Preview QR CODE",
+            "content"   => "member/preview_qr",
+            "srcref"    => base_url() . 'qr/ref/' . $_SESSION["ucode"] . 'Thumbnail.png',
+        );
+        
+        // $this->load->view('tamplate/navbar-bottom-homepage', $data);
+        $this->load->view('tamplate/wrapper', $data);
+    }
+
+    public function download_qr()
+    {
+        $srcref = base_url() . 'qr/ref/' . $_SESSION["ucode"] . 'Thumbnail.png';
+        $pdf = new FPDF('P','mm',[1329,1860]);
+        $pdf->AddPage();
+        $pdf->Image($srcref,0,0,0,0,'PNG');
+        $pdf->Output($_SESSION["ucode"] . 'Thumbnail.pdf', 'D');
+    }
+
 
     public function crypto()
     {

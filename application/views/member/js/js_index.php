@@ -72,4 +72,18 @@
     });
     // End Open Eye in Member Card Already
 
+
+
+    // Download QRCODE to PDF
+    // $('.qrcode-download').click(function() {
+    // $.ajax({
+    //         type: "POST",
+    //         data: {download:1},
+    //         url: "<?= base_url()?>homepage/downloadqr",
+    //         success:function(url){
+    //             window.open(url, '_blank');
+    //         }
+    //     })
+    // });
+
 </script>
