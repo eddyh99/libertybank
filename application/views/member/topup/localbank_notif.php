@@ -10,11 +10,28 @@
                         </div>
                     </div>
                     <div class="col-12 infobank-list-app f-jakarta my-4">
-                        <div class="col-8 mx-auto pt-4">
-                            <div class="text-center">
-                                <span class="me-auto f-hahmlet text-blue-freedy fs-5 title-top-navbar">Please send your money to following bank account</span>
+                        <div class="col-12 mx-auto py-4">
+                            <div class="text-start">
+                                <span class="me-auto f-hahmlet text-blue-freedy fs-5 title-top-navbar">Please Note : </span>
+                                <br><br>
+                                <span class="me-auto f-poppins fs-6 title-top-navbar">This data can be used just once and they are valid up to 24 hours</span>
                             </div>
                         </div>
+                    </div>
+                    <div class="noted-tutor px-3">
+                        <h6 class="mb-3 fw-semibold">                                     
+                            *In case you’ve written wrong Causal it is possible to manually recover the funds by clicking the button below:
+                        </h6>
+                        <div class="d-flex justify-content-start">
+                            <a href="">
+                                <button class="btn btn-content-silver">Top up support</button>
+                            </a>
+                        </div>
+                        <p class="my-3">                       
+                            (the manual recovery operation will cost 25 $) 
+                        </p>
+                    </div>
+                    <div class="col-12 infobank-list-app f-jakarta my-4">
                         <?php if ((@$currency == "EUR") || (@$currency == "USD") ) { ?>
                             <div class="row pt-4">
                                 <!-- Recipient name -->

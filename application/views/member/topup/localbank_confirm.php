@@ -11,15 +11,15 @@
             <div class="app-container py-5">
                 <?php $this->load->view("tamplate/banner-nofiat-balance"); ?>
                 <div class="row d-flex justify-content-center">
-                    <div class="col-12">
-                        <div class="text-center">
-                            <span class="me-auto f-hahmlet text-blue-freedy fs-2 title-top-navbar">Confirmation</span>
-                        </div>
-                    </div>
                     <div class="col-12 infobank-list-app f-jakarta my-4">
+                        <div class="col-12">
+                            <div class="text-center mt-4">
+                                <span class="me-auto f-poppins fs-4 title-top-navbar">Confirmation</span>
+                            </div>
+                        </div>
                         <div class="col-8 mx-auto mt-4">
                             <div class="text-center">
-                                <span class="me-auto f-hahmlet text-blue-freedy fs-5 title-top-navbar">Do you want to make deposit following amount to your account?</span>
+                                <span class="me-auto f-inter fs-5 title-top-navbar">Do you want to confirm the amount ?</span>
                             </div>
                         </div>
                         <div class="col-12 py-4">

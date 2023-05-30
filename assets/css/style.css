@@ -5206,7 +5206,7 @@ color: #000000;
 
   .infobank-list-app {
     background: #ffffff;
-    border: 1px solid #000000;
+    border: 3px solid #000000;
     border-radius: 5px;
   }
 
@@ -7638,7 +7638,7 @@ color: #000000;
 
   .infobank-list-app {
     background: #ffffff;
-    border: 1px solid #000000;
+    border: 3px solid #000000;
     border-radius: 5px;
   }
 
@@ -9984,7 +9984,7 @@ color: #000000;
 
   .infobank-list-app {
     background: #ffffff;
-    border: 1px solid #000000;
+    border: 3px solid #000000;
     border-radius: 5px;
   }
 
@@ -12808,7 +12808,7 @@ color: #000000;
 
   .infobank-list-app {
     background: #ffffff;
-    border: 1px solid #000000;
+    border: 3px solid #000000;
     border-radius: 5px;
   }
 
@@ -13458,7 +13458,7 @@ color: #000000;
 
 .input-piggy-style label {
   font-weight: 700;
-  background: linear-gradient(263.23deg, #0F4E97 6.67%, #00A7DC 70.3%);
+  background: linear-gradient(263.23deg, #0F4E97 6.67%, #000000 70.3%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
