@@ -103,8 +103,8 @@ class Receive extends CI_Controller
         );
 
         $result = apitrackless(URLAPI . "/v1/member/wallet/topup", json_encode($mdata));
-        //echo json_encode($result);
-        //die;
+        // print_r($result);
+        // die;
         if (@$result->code != "200") {
             $this->session->set_flashdata('failed', $result->message);
             redirect("receive/localbank");
@@ -193,12 +193,13 @@ class Receive extends CI_Controller
             'userid'        => $_SESSION["user_id"],
             'amount'        => $amount,
             'currency'      => $_SESSION["currency"],
-            'transfer_type' => 'topup circuit'
+            'transfer_type' => 'topup outside'
         );
 
         $result = apitrackless(URLAPI . "/v1/member/wallet/topup", json_encode($mdata));
-        // print_r(json_encode($result->message));
+        // print_r($result);
         // die;
+
 
         if (@$result->code != "200") {
             $this->session->set_flashdata('failed', $result->message);
