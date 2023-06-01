@@ -1,3 +1,5 @@
+
+
 <div class="d-flex justify-content-center">
     <div class="col-12 col-lg-8 col-xl-6">
         <div class="container" style="margin-bottom: 8rem;">
@@ -19,9 +21,14 @@
                     <div class="col-12 infobank-list-app input-piggy-style my-4">
                         <div class="py-4">
                             <div class="noted-tutor">
-                                <a href="">
-                                    <button class="btn btn-content-">Problem support</button>
-                                </a>
+                                <h6 class="mb-3 fw-semibold">                                     
+                                    *In case you’ve written wrong Causal it is possible to manually recover the funds by clicking the button below:
+                                </h6>
+                                <div class="d-flex justify-content-center">
+                                    <a>
+                                        <button class="btn btn-content-silver">Top up support</button>
+                                    </a>
+                                </div>
                                 <p class="my-3">                       
                                     (the manual recovery operation will cost 25 $) 
                                 </p>
@@ -43,7 +50,7 @@
                                         id="confirm_amount" placeholder="Confirm Amount">
                                 </div>
                                 <div class="d-flex justify-content-center">
-                                    <button class="btn btn-confirm">
+                                    <button class="btn btn-confirm" id="btnload">
                                         Next
                                     </button>
                                 </div>
@@ -78,3 +85,4 @@
         </a>
     </div>
 </div>
+

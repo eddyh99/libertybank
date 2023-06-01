@@ -70,12 +70,48 @@ section {
   color: #CB0000;
 }
 
+#load{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  /* text-indent: 100%; */
+  /* background: #ffffff url(../img/load.gif); */
+  background: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 7%;
+  z-index: 9999999;
+}
+
+.img-load {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: blink 2s linear infinite;
+}
+
+@keyframes blink{
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .section-header p {
     font-size: 28px;
     line-height: 32px;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Auth Index 
@@ -4752,7 +4788,7 @@ color: #000000;
     width: 3.5em;
     height: 1.5em;
     background-color: #efefef !important;
-    background: url(../img/speedybank/checkbox-ball.png);
+    background: url(../img/checkbox-ball.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: left center;
@@ -4764,7 +4800,7 @@ color: #000000;
     width: 3.5em;
     height: 1.5em;
     background-color: #0066FF !important;
-    background: url(../img/speedybank/checkbox-ball-chacked.png);
+    background: url(../img/checkbox-ball-chacked.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: right center;
@@ -5170,7 +5206,7 @@ color: #000000;
 
   .infobank-list-app {
     background: #ffffff;
-    border: 1px solid #000000;
+    border: 3px solid #000000;
     border-radius: 5px;
   }
 
@@ -7183,7 +7219,7 @@ color: #000000;
     width: 3.5em;
     height: 1.5em;
     background-color: #efefef !important;
-    background: url(../img/speedyank/checkbox-ball.png);
+    background: url(../img/checkbox-ball.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: left center;
@@ -7195,7 +7231,7 @@ color: #000000;
     width: 3.5em;
     height: 1.5em;
     background-color: #0066FF !important;
-    background: url(../img/speedybank/checkbox-ball-chacked.png);
+    background: url(../img/checkbox-ball-chacked.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: right center;
@@ -7602,7 +7638,7 @@ color: #000000;
 
   .infobank-list-app {
     background: #ffffff;
-    border: 1px solid #000000;
+    border: 3px solid #000000;
     border-radius: 5px;
   }
 
@@ -9529,7 +9565,7 @@ color: #000000;
     width: 3.5em;
     height: 1.5em;
     background-color: #efefef !important;
-    background: url(../img/speedybank/checkbox-ball.png);
+    background: url(../img/checkbox-ball.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: left center;
@@ -9541,7 +9577,7 @@ color: #000000;
     width: 3.5em;
     height: 1.5em;
     background-color: #0066FF !important;
-    background: url(../img/speedybank/checkbox-ball-chacked.png);
+    background: url(../img/checkbox-ball-chacked.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: right center;
@@ -9948,7 +9984,7 @@ color: #000000;
 
   .infobank-list-app {
     background: #ffffff;
-    border: 1px solid #000000;
+    border: 3px solid #000000;
     border-radius: 5px;
   }
 
@@ -12353,7 +12389,7 @@ color: #000000;
     width: 3.5em;
     height: 1.5em;
     background-color: #efefef !important;
-    background: url(../img/speedybank/checkbox-ball.png);
+    background: url(../img/checkbox-ball.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: left center;
@@ -12365,7 +12401,7 @@ color: #000000;
     width: 3.5em;
     height: 1.5em;
     background-color: #0066FF !important;
-    background: url(../img/speedybank/checkbox-ball-chacked.png);
+    background: url(../img/checkbox-ball-chacked.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: right center;
@@ -12772,7 +12808,7 @@ color: #000000;
 
   .infobank-list-app {
     background: #ffffff;
-    border: 1px solid #000000;
+    border: 3px solid #000000;
     border-radius: 5px;
   }
 
@@ -13422,7 +13458,7 @@ color: #000000;
 
 .input-piggy-style label {
   font-weight: 700;
-  background: linear-gradient(263.23deg, #0F4E97 6.67%, #00A7DC 70.3%);
+  background: linear-gradient(263.23deg, #0F4E97 6.67%, #000000 70.3%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -13534,20 +13570,6 @@ color: #000000;
 }
 
 
-/* .bg-flowers {
-  background: url(../img/bg-guide.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100% auto;
-  padding: 170px 0px;
-
-} */
-.bg-crypto {
-  background: url(../img/speedybank/bg-crypto.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100% auto;
-}
 
 
 .bg-section-become {

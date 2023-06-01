@@ -5,7 +5,9 @@
                 <?php $this->load->view("tamplate/banner-nofiat-balance"); ?>
                 <?php if (@isset($_SESSION["failed"])) { ?>
                     <div class="col-12 alert alert-danger alert-dismissible fade show" role="alert">
-                        <span class="notif-login f-poppins"><?= $_SESSION["failed"] ?></span>
+                        <span class="notif-login f-poppins"> 
+                            <?= $_SESSION["failed"] ?>
+                        </span>
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 <?php } ?>
@@ -19,9 +21,14 @@
                     <div class="col-12 infobank-list-app input-piggy-style my-4">
                         <div class="py-4">
                             <div class="noted-tutor px-3">
-                                <a href="">
-                                    <button class="btn btn-content-">Problem support</button>
-                                </a>
+                                <h6 class="mb-3 fw-semibold">                                     
+                                    *In case you’ve written wrong Causal it is possible to manually recover the funds by clicking the button below:
+                                </h6>
+                                <div class="d-flex justify-content-center">
+                                    <a href="">
+                                        <button class="btn btn-content-silver">Top up support</button>
+                                    </a>
+                                </div>
                                 <p class="my-3">                       
                                     (the manual recovery operation will cost 25 $) 
                                 </p>

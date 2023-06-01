@@ -69,7 +69,7 @@ class Ciqrcode
 		if (!defined('QR_PNG_MAXIMUM_SIZE')) define('QR_PNG_MAXIMUM_SIZE',  $this->size);
 	}
 
-		public function generate($params = array())
+	public function generate($params = array())
 	{
 		if (
 			isset($params['black'])

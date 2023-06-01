@@ -39,6 +39,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link href="<?= base_url() ?>assets/vendor/intl-tel-input-master/build/css/intlTelInput.css" rel="stylesheet">
     <link href="<?= base_url()?>assets/vendor/jquery/jquery.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/please-wait/0.0.5/please-wait.css" rel="stylesheet" />
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">

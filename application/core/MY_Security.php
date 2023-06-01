@@ -38,7 +38,7 @@ class MY_Security extends CI_Security {
         // Contact Us Landingpage
         if(strstr($linkurl, 'link/send_message'))
         {
-            header('Location: ' . $base_url . '#technology' );
+            header('Location: ' . $base_url . '#contactus' );
         }
 
         

@@ -4,7 +4,7 @@
             <div class="d-flex flex-row">
                 <div class="d-flex flex-column">
                     <div class="copy-uqcode mt-3 mb-2 d-flex flex-row align-items-center">
-                        <span class="me-2">UNIQUE CODE : </span>
+                        <span class="me-2">Short Code : </span>
                         <input class="me-2" type="text" name="" id="uqcode" value="<?= $_SESSION["ucode"] ?>" readonly>
                         <a class="btn btn-copy me-2" id="btnuq">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,7 +24,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="<?= base_url() ?>qr/ref/<?= $_SESSION["ucode"] ?>Thumbnail.png" download class="qrcode-download ms-auto mt-3 d-flex flex-column align-items-center ps-3 pb-3">
+                <a href="<?= base_url()?>homepage/preview_qr" target="_blank" class="qrcode-download ms-auto mt-3 d-flex flex-column align-items-center ps-3 pb-3">
                     <img class="img-fluid" src="<?= base_url() ?>qr/ref/<?= $_SESSION["ucode"] ?>.png" alt="QR" width="90" height="90">
                     <div>
                         <img class="img-fluid d-block d-sm-none" src="<?=base_url()?>assets/img/speedybank/btn-qrdw-mobile.png" alt="dw-qr" width="15" height="auto">

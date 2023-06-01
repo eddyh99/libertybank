@@ -274,7 +274,13 @@ class Link extends CI_Controller
         
         $url = URLAPI . "/v1/auth/getmember_byemail?email=" . $email;
         $result   = apitrackless($url);
-
+        
+        if (@$result->message == 'Unknown user email') {
+            $this->session->set_flashdata('failed', '<span align="center">Our support service is exclusively reserved to our clients. <br>  Register for free on the platform, in few seconds, to request assistance or further information.</span>');
+            redirect(base_url('#contactus'));
+            return;
+        }
+        
         if (@$result->code != 200) {
             $this->session->set_flashdata('failed', $result->message);
             redirect(base_url('#contactus'));

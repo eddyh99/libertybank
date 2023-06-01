@@ -114,6 +114,18 @@ $("#btninter5").click(function () {
     copyText.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(copyText.value);
 });
+$("#btninter5").click(function () {
+    var copyText = document.getElementById("inter6");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+});
+$("#btninter5").click(function () {
+    var copyText = document.getElementById("inter7");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+});
 
 $("#btn-copy-qr").click(function () {
     var copyText = document.getElementById("copy-qr");
@@ -150,8 +162,8 @@ function resizeInput() {
     this.style.width = this.value.length + 1 + "ch";
 }
 
-/* SELECT OPTION JS
-Reference: http://jsfiddle.net/BB3JK/47/
-*/
+$("#btnconfirm").click(function () {
+    $('#load').show();
+});
 
 
