@@ -3,6 +3,14 @@
         <div class="container" style="margin-bottom: 8rem;">
             <div class="app-container py-5">
                 <?php $this->load->view("tamplate/banner-nofiat-balance"); ?>
+                <?php if (@isset($_SESSION["failed"])) { ?>
+                    <div class="col-12 alert alert-danger alert-dismissible fade show" role="alert">
+                        <span class="notif-login f-poppins"> 
+                            <?= $_SESSION["failed"] ?>
+                        </span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <?php } ?>
                 <div class="row d-flex justify-content-center">
                     <div class="col-12">
                         <div class="col-12 receive-note d-flex justify-content-center text-start my-4">
