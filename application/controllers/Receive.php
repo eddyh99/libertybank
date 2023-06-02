@@ -61,7 +61,7 @@ class Receive extends CI_Controller
 
         if ($this->form_validation->run() == FALSE) {
             $this->session->set_flashdata('failed', "<p style='color:black'>" . validation_errors() . "</p>");
-            redirect("receive/localbank");
+            redirect("receive");
             return;
         }
 
@@ -88,7 +88,7 @@ class Receive extends CI_Controller
 
         if ($this->form_validation->run() == FALSE) {
             $this->session->set_flashdata('failed', "<p style='color:black'>" . validation_errors() . "</p>");
-            redirect("receive/localbank");
+            redirect("receive");
             return;
         }
 
@@ -105,15 +105,17 @@ class Receive extends CI_Controller
         $result = apitrackless(URLAPI . "/v1/member/wallet/topup", json_encode($mdata));
         // print_r($result);
         // die;
+
+        
         if (@$result->code != "200") {
             $this->session->set_flashdata('failed', $result->message);
-            redirect("receive/localbank");
+            redirect("receive");
             return;
         }
         //$result='{"content":{"payinBank":{"bankName":"Wise Europe SA\/NV","bankAddress":{"country":"BE","firstLine":"Avenue Louise 54, Room s52","postCode":"1050","city":"Brussels","state":null}},"payinBankAccount":{"currency":"EUR","details":[{"type":"recipientName","label":"Recipient name","value":"TransferWise Europe SA"},{"type":"IBAN","label":"IBAN","value":"BE79967040785533"},{"type":"BIC","label":"Bank code (BIC\/SWIFT)","value":"TRWIBEB1XXX"}]},"wiseInformation":{"localCompanyName":"Wise Europe SA","localAddress":{"country":"BE","firstLine":"Avenue Louise 54\/S52","postCode":"1050","city":"Brussels","state":null}}},"causal":"RCPT026837"}}';
 
         $data['title'] = NAMETITLE . " - Top Up Process";
-        $body['data'] = $result->message->content;
+        $body['data'] = $result->message;
         $body['amount'] = $amount;
 
 
@@ -130,6 +132,7 @@ class Receive extends CI_Controller
         } else {
             $currency = $_GET['currency'];
         }
+
         $url = URLAPI . "/v1/trackless/bank/getBank?currency=" . $currency;
         $result = apitrackless($url);
         if ($result->code != 200) {
@@ -151,18 +154,21 @@ class Receive extends CI_Controller
     {
         $this->form_validation->set_rules('amount', 'Amount', 'trim|required|greater_than[0]');
         $this->form_validation->set_rules('confirm_amount', 'Confirm Amount', 'trim|required|greater_than[0]|matches[amount]');
+        $this->form_validation->set_rules('currency', 'Currency', 'trim');
 
         if ($this->form_validation->run() == FALSE) {
             $this->session->set_flashdata('failed', "<p style='color:black'>" . validation_errors() . "</p>");
-            redirect("receive/interbank");
+            redirect("receive");
             return;
         }
-
+  
         $input              = $this->input;
         $amount             = $this->security->xss_clean($input->post("amount"));
+        $currency             = $this->security->xss_clean($input->post("currency"));
         
         $infolist = array(
             'amount'         => $amount,
+            'currency'       => $currency
         );
 
         $data['title'] = NAMETITLE . " - Top up Confirmation";
@@ -179,37 +185,41 @@ class Receive extends CI_Controller
     {
 
         $this->form_validation->set_rules('amount', 'Amount', 'trim|required|greater_than[0]');
+        $this->form_validation->set_rules('currency', 'Currency', 'trim');
 
         if ($this->form_validation->run() == FALSE) {
             $this->session->set_flashdata('failed', "<p style='color:black'>" . validation_errors() . "</p>");
-            redirect("receive/interbank");
+            redirect("receive");
             return;
         }
 
         $input              = $this->input;
         $amount             = $this->security->xss_clean($input->post("amount"));
+        $currency             = $this->security->xss_clean($input->post("currency"));
         
         $mdata = array(
             'userid'        => $_SESSION["user_id"],
             'amount'        => $amount,
-            'currency'      => $_SESSION["currency"],
+            'currency'      => $currency,
             'transfer_type' => 'topup outside'
         );
 
         $result = apitrackless(URLAPI . "/v1/member/wallet/topup", json_encode($mdata));
-        // print_r($result);
+        // print_r(json_encode($result));
         // die;
 
 
         if (@$result->code != "200") {
             $this->session->set_flashdata('failed', $result->message);
-            redirect("receive/interbank");
+            redirect("receive");
             return;
         }
 
         $data['title'] = NAMETITLE . " - Top Up Process";
-        $body['data'] = $result->message->content;
+        $body['data'] = $result->message;
         $body['amount'] = $amount;
+        $body['currency'] = $currency;
+        $body['coma'] = ',';
 
         $this->load->view('tamplate/header', $data);
         $this->load->view('tamplate/navbar-top');
