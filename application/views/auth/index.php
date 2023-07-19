@@ -591,14 +591,3 @@
 
 <a href="#headertop" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-
-
-<?php if (@isset($_SESSION["success"])) { ?>
-    <div class="alert alert-success alert-dismissible" id="success-alert" style="display: grid; position: fixed; top: 10px; z-index: 99999; padding: 1rem;
-left: 0;
-right: 0;
-max-width: 300px;
-margin: 0 auto;">
-        <?= $_SESSION["success"]; ?>
-    </div>
-<?php } ?>

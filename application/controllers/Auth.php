@@ -252,7 +252,8 @@ class Auth extends CI_Controller
 			'currency'  => "USD",
 			'symbol'    => "&dollar;",
 			'ucode'     => @$result->message->ucode,
-			'referral'  => @$result->message->refcode
+			'referral'  => @$result->message->refcode,
+			'email'		=> $uname
 		);
 		$this->session->set_userdata($session_data);
 		if ($result->message->role == 'member') {

@@ -633,6 +633,181 @@ color: rgba(255, 255, 255, 0.8);
 
 
 /*--------------------------------------------------------------
+# SUPPORT
+--------------------------------------------------------------*/
+.input-support{
+  outline: none;
+  border: 2px solid #D8DDE3;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 10px 10px 20px;
+  height: 60px;
+  width: 60%;
+}
+
+.input-support option {
+  color: rgb(89, 89, 89);
+}
+
+.input-support::placeholder {
+  color: #4C5C6B;
+}
+
+
+.card-input-support {
+  background-color: #FAFAFA;
+}
+
+
+.card-input-support+.card {
+  /* box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.25), inset 2px 2px 4px rgba(0, 0, 0, 0.25); */
+  height: calc(50px + 2*1rem);
+  color: rgb(0, 0, 0);
+  border: 2px solid #00DD9C;
+  border-radius: 16px;
+
+}
+
+.card-input-support+.card:hover {
+  cursor: pointer;
+}
+
+.card-input-support:checked+.card {
+  border: 2px solid #00DD9C;
+  -webkit-transition: border .3s;
+  -o-transition: border .3s;
+  transition: border .3s;
+
+}
+
+.card-input-support+.card .c-support {
+  border: 1px solid black;
+  width: 20px; 
+  height: 20px;
+  border-radius: 999999px;
+  margin-left: 10px;
+}
+
+.card-input-support:checked+.card .c-support {
+  background-color: #00DD9C;
+  border: 1px solid #00DD9C;
+}
+
+.card-input-support+.card .m-support {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.btn-support {
+  background-color: #00DD9C;
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 20px 70px;
+}
+
+.btn-support:hover {
+  background-color: #00b57f;
+  color: #ffffff;
+}
+
+
+.input-outlined {
+  position: relative;
+}
+
+.input-outlined label {
+  position: absolute;
+  font-size: 1rem;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: #00DD9C;
+  padding: 0 0.3rem;
+  margin: 0 0.5rem;
+  transition: .1s ease-out;
+  transform-origin: left top;
+  pointer-events: none;
+}
+
+.input-outlined input {
+  font-size: 1rem;
+  outline: none;
+  border: 2px solid #00DD9C;
+  border-radius: 5px;  
+  padding: 1rem 0.7rem;
+  color: gray;
+  transition: 0.1s ease-out;
+}
+
+.input-outlined input:focus {
+  border-color: #00DD9C; 
+}
+
+
+.input-outlined input:focus + label {
+  color: #00DD9C;
+  top: 0;
+  transform: translateY(-50%) scale(.9);
+}
+
+.input-outlined input:not(:placeholder-shown) + label {
+  top: 0;
+  transform: translateY(-50%) scale(.9);
+}
+
+
+
+.select-support-text {
+	position: relative;
+	font-family: inherit;
+	background-color: transparent;
+	padding: 10px 10px 10px 10px;
+	font-size: 18px;
+  height: 60px;
+	border-radius: 8px;
+  border: 2px solid #00DD9C;
+}
+
+/* Remove focus */
+.select-support-text:focus {
+	outline: none;
+  border: 2px solid #00DD9C;
+}
+
+
+.select-support:after {
+	position: absolute;
+	top: 18px;
+	right: 50px;
+	/* Styling the down arrow */
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid rgba(0, 0, 0, 0.12);
+  
+	pointer-events: none;
+}
+
+/* LABEL ======================================= */
+.select-label {
+	color: rgba(0,0,0, 0.26);
+  background: white;
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+  padding: 0 5px;
+	left: 10px;
+	top: 12px;
+	transition: 0.2s ease all;
+}
+
+
+/*--------------------------------------------------------------
 # GUIDE
 --------------------------------------------------------------*/
 .logo-text.wallet span{

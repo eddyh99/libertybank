@@ -103,7 +103,7 @@ class Receive extends CI_Controller
         );
 
         $result = apitrackless(URLAPI . "/v1/member/wallet/topup", json_encode($mdata));
-        // print_r(json_encode($result->message));
+        // print_r(json_encode($result));
         // die;
 
         

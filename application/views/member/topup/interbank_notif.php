@@ -134,7 +134,7 @@
                             <div class="col-12 list-send-wallet d-flex flex-column mb-3">
                             </div>
                             <div class="col-12 d-flex flex-row mt-5">
-                                <a href="<?= base_url() ?>receive/interbank" class="btn btn-wallet-cancle py-2 me-auto">Cancel</a>
+                                <a href="<?= base_url() ?>receive" class="btn btn-wallet-cancle py-2 me-auto">Cancel</a>
                                 <a href="<?= base_url() ?>homepage/wallet" class="btn btn-confirm" >Confirm</a>
                             </div>
                         </div>

