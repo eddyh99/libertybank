@@ -55,7 +55,7 @@
                                     <?php if (($_SESSION["currency"] == "EUR")) { ?>
                                         <label class="form-label"> IBAN <small>(country belgium)</small></label>
                                     <?php } else { ?>
-                                        <label class="form-label"><?= @$data->payinBankAccount->details[1]->label?></label>
+                                        <label class="form-label"><?= @$data->content->payinBankAccount->details[1]->label?></label>
                                     <?php } ?>
                                 <?php } ?>
                                 
