@@ -73,6 +73,9 @@
     // End Open Eye in Member Card Already
 
 
+    $("#btn-card-load").click(function () {
+        $('#load').show();
+    });
 
 
 </script>
