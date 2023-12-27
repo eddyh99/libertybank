@@ -100,7 +100,7 @@ if (stripos($_SERVER['HTTP_HOST'],'sandbox') === 0){ //
     define('URLAPI', "https://api.sandbox.tracklessbank.com");
     define('LINKQRCODE', "/liberybank/wallet/send");
 }else{
-    define('URLAPI', "https://api.tracklessbank.com");
+    define('URLAPI', "https://api.sandbox.tracklessbank.com");
     define('LINKQRCODE', "/wallet/send");
 }
 
